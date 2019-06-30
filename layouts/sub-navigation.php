@@ -6,11 +6,11 @@
         </div>
         <div class="client-contact-item">
             <span class="fa fa-phone"></span>
-            <span class="client-contact-text">(+632) 756 2154</span>
+            <span class="client-contact-text">(+632) 962 5744</span>
         </div>
         <div class="client-contact-item">
             <span class="fa fa-mobile"></span>
-            <span class="client-contact-text">(+63917) 829 6319</span>
+            <span class="client-contact-text">(+639) 255 36 3651</span>
         </div>
     </div>
     <div class="container">

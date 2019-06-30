@@ -44,8 +44,8 @@
                     </div>
                     <div class="contact-details">
                         <h4>Contact Information</h4>
-                        <h3>+6329625744</h3>
-                        <h3>+639255363651</h3>
+                        <h3>(+632) 962 5744</h3>
+                        <h3>(+639) 255 36 3651</h3>
                         <h3 class="emphasized">inquiry@m-aestheticsclinic.com</h3>
                     </div>
                 </div>

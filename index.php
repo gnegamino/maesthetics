@@ -38,11 +38,11 @@
                 </div>
                 <div class="client-contact-item">
                     <span class="fa fa-phone"></span>
-                    <span class="client-contact-text">(+632) 756 2154</span>
+                    <span class="client-contact-text">(+632) 962 5744</span>
                 </div>
                 <div class="client-contact-item">
                     <span class="fa fa-mobile"></span>
-                    <span class="client-contact-text">(+63917) 829 6319</span>
+                    <span class="client-contact-text">(+639) 255 36 3651</span>
                 </div>
             </div>
             <div class="container">
@@ -74,7 +74,9 @@
                     <div class="right">
                         <div class="navigation-bar-group social-media">
                             <div class="social-media-link facebook">
-                                <i class="fa fa-facebook-square fa-2x"></i>
+                                <a target="_blank" href="https://www.facebook.com/maestheticsclinic">
+                                    <i class="fa fa-facebook-square fa-2x"></i>
+                                </a>
                             </div>
                             <div class="social-media-link instagram">
                                 <i class="fa fa-instagram fa-2x"></i>
