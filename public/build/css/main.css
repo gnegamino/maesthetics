@@ -13,7 +13,6 @@
   src: url("/assets/fonts/EncodeSans-Light.ttf");
 }
 #app {
-  font-family: ESRegular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,6 +23,7 @@ body {
   background-color: #000;
   overflow-x: hidden;
   color: #FFFFFF;
+  font-family: ESRegular;
 }
 
 .navigation-bar {
@@ -188,29 +188,6 @@ body {
 }
 .content-section.section--light .content-paragraph {
   color: #333333;
-}
-
-.hero-title {
-  padding-top: 20%;
-}
-.hero-title h1 {
-  font-size: 65px;
-  color: #E3AD43;
-  text-transform: uppercase;
-}
-.hero-title h2 {
-  font-size: 18px;
-  width: 60%;
-  line-height: 2;
-}
-.hero-title.hero-title--left {
-  text-align: left;
-}
-.hero-title.hero-title--right {
-  text-align: right;
-}
-.hero-title.hero-title--right h2 {
-  float: right;
 }
 
 .book-now {
@@ -423,6 +400,79 @@ body {
 }
 #sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram:hover {
   color: #D62976;
+}
+
+.about #sub-navigation-bar {
+  visibility: visible;
+  opacity: 1;
+}
+.about .owner-section {
+  top: 0px;
+  background-color: #FFFFFF;
+}
+.about .owner-section h2, .about .owner-section h3, .about .owner-section h6 {
+  color: #0d0d0d;
+}
+.about .our-team .member-name {
+  font-size: 25px;
+  text-align: left;
+  font-weight: 700;
+}
+.about .our-team .member-position {
+  font-size: 20px;
+  text-align: left;
+}
+.about .our-team .team-detail {
+  margin-top: 30px;
+  display: flex;
+}
+.about .our-team .team-detail img {
+  width: 25%;
+}
+.about .our-team .team-detail .detail {
+  margin-left: 30px;
+}
+.about .our-team .team-detail .detail p {
+  text-align: left;
+  line-height: 2;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.about .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .gallery img {
+  flex: 1;
+  width: 20%;
+  height: 256px;
+  padding: 15px;
+}
+.about .gallery img:hover {
+  opacity: 0.7;
+}
+.about .hero-title {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+.about .hero-title h1 {
+  font-size: 65px;
+  color: #E3AD43;
+  text-transform: uppercase;
+}
+.about .hero-title h2 {
+  font-size: 18px;
+  width: 60%;
+  line-height: 2;
+}
+.about .hero-title.hero-title--left {
+  text-align: left;
+}
+.about .hero-title.hero-title--right {
+  text-align: right;
+}
+.about .hero-title.hero-title--right h2 {
+  float: right;
 }
 
 /*# sourceMappingURL=main.css.map */

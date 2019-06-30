@@ -190,28 +190,6 @@ body {
     }
 }
 
-.hero-title {
-    padding-top: 20%;
-    h1 {
-        font-size: 65px;
-        color: $primary-color;
-        text-transform: uppercase;
-    }
-    h2 {
-        font-size: 18px;
-        width: 60%;
-        line-height: 2;
-    }
-    &.hero-title--left {
-        text-align: left;
-    }
-    &.hero-title--right {
-        text-align: right;
-        h2 {
-            float: right;
-        }
-    }
-}
 
 // HOME
 .book-now {
@@ -413,6 +391,84 @@ body {
                         color: #D62976;
                     }
                 }
+            }
+        }
+    }
+}
+
+// About Us
+.about {
+    #sub-navigation-bar {
+        visibility: visible;
+        opacity: 1;
+    }
+    .owner-section {
+        top: 0px;
+        background-color: $light-color;
+        h2, h3, h6 {
+            color: lighten($dark-color, 5%);
+        }
+    }
+    .our-team {
+        .member-name {
+            font-size: 25px;
+            text-align: left;
+            font-weight: 700;
+        }
+        .member-position {
+            font-size: 20px;
+            text-align: left;
+        }
+        .team-detail {
+            margin-top: 30px;
+            display: flex;
+            img {
+                width: 25%;
+            }
+            .detail {
+                margin-left: 30px;
+                p {
+                    text-align: left;
+                    line-height: 2;
+                    margin-top: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            flex: 1;
+            width: 20%;
+            height: 256px;
+            padding: 15px;
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+    .hero-title {
+        padding-top: 20%;
+        padding-bottom: 20%;
+        h1 {
+            font-size: 65px;
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 18px;
+            width: 60%;
+            line-height: 2;
+        }
+        &.hero-title--left {
+            text-align: left;
+        }
+        &.hero-title--right {
+            text-align: right;
+            h2 {
+                float: right;
             }
         }
     }
