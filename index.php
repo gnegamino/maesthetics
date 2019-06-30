@@ -48,7 +48,7 @@
             <div class="container">
                 <div class="sub-navigation-bar">
                     <div class="left">
-                        <a to="/">
+                        <a href="index.php">
                             <div class="sub-client-logo">
                                 <img class="client-logo-img" src="/assets/images/client-logo.png">
                             </div>

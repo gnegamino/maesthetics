@@ -30,6 +30,11 @@ body {
     color: $light-color;
     font-family: ESRegular;
 }
+.footer {
+    text-align: center;
+    padding: 20px 0px;
+    background: lighten($dark-color, 8%);
+}
 .navigation-bar {
     justify-content: center;
     align-items: center;
@@ -382,10 +387,16 @@ body {
                 display: flex;
                 .social-media-link {
                     padding: 15px;
-                    transition: .4s;
                     cursor: pointer;
-                    &.facebook:hover {
-                        color: #3b5998;
+                    &.facebook {
+                        a {
+                            color: $light-color;
+                            text-decoration: none;
+                            transition: .4s;
+                            &:hover {
+                                color: #3b5998;
+                            }
+                        }
                     }
                     &.instagram:hover {
                         color: #D62976;

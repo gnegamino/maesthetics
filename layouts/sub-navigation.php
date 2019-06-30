@@ -16,12 +16,17 @@
     <div class="container">
         <div class="sub-navigation-bar">
             <div class="left">
-                <a to="/">
+                <a href="index.php">
                     <div class="sub-client-logo">
                         <img class="client-logo-img" src="/assets/images/client-logo.png">
                     </div>
                 </a>
                 <div class="navigation-bar-group">
+                    <div class="navigation-bar-content">
+                        <a href="index.php">
+                            Home
+                        </a>
+                    </div>
                     <div class="navigation-bar-content">
                         <a href="about.php">
                             About
@@ -42,7 +47,9 @@
             <div class="right">
                 <div class="navigation-bar-group social-media">
                     <div class="social-media-link facebook">
-                        <i class="fa fa-facebook-square fa-2x"></i>
+                        <a target="_blank" href="https://www.facebook.com/maestheticsclinic">
+                            <i class="fa fa-facebook-square fa-2x"></i>
+                        </a>
                     </div>
                     <div class="social-media-link instagram">
                         <i class="fa fa-instagram fa-2x"></i>

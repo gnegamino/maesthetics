@@ -26,6 +26,12 @@ body {
   font-family: ESRegular;
 }
 
+.footer {
+  text-align: center;
+  padding: 20px 0px;
+  background: #141414;
+}
+
 .navigation-bar {
   justify-content: center;
   align-items: center;
@@ -392,10 +398,14 @@ body {
 }
 #sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link {
   padding: 15px;
-  transition: 0.4s;
   cursor: pointer;
 }
-#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook:hover {
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.4s;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook a:hover {
   color: #3b5998;
 }
 #sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram:hover {
