@@ -1,0 +1,20 @@
+{
+  "name": "maesthetics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gnegamino/maesthetics.git",
+  "author": "Gian Carlo Egamino <gnegamino@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass:compile": "sass Assets/scss/main.scss public/build/css/main.css",
+    "sass:watch": "sass --watch Assets/scss:public/build/css"
+  },
+  "dependencies": {
+    "bootstrap": "3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "sass": "^1.22.1"
+  }
+}
