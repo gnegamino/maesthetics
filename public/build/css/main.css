@@ -1,0 +1,563 @@
+@import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '/node_modules/font-awesome/css/font-awesome.min.css';
+@font-face {
+  font-family: ESRegular;
+  src: url("/assets/fonts/EncodeSans-Regular.ttf");
+}
+@font-face {
+  font-family: ESBold;
+  src: url("/assets/fonts/EncodeSans-Bold.ttf");
+}
+@font-face {
+  font-family: ESLight;
+  src: url("/assets/fonts/EncodeSans-Light.ttf");
+}
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #000;
+  overflow-x: hidden;
+  color: #FFFFFF;
+  font-family: ESRegular;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0px;
+  background: #141414;
+}
+
+.navigation-bar {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  z-index: 1;
+}
+.navigation-bar .navigation-bar-content {
+  font-weight: ESBold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navigation-bar .navigation-bar-content a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.navigation-bar .navigation-bar-content a:hover {
+  transition: 0.4s;
+  color: #E3AD43;
+  cursor: pointer;
+}
+.navigation-bar .navigation-bar-content a:focus {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.client-contact {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  background: #000;
+}
+.client-contact .client-contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.client-contact .client-contact-item .client-contact-text {
+  margin-left: 5px;
+  display: block;
+}
+
+.client-floating-contact {
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+  padding: 15px;
+  background-color: #FFFFFF;
+  color: #444;
+}
+
+.intro-client-brand {
+  position: relative;
+  float: right;
+  top: 270px;
+  margin-right: 200px;
+  width: 600px;
+  text-align: right;
+}
+.intro-client-brand h1 {
+  color: #E3AD43;
+  font-size: 50px;
+}
+.intro-client-brand p {
+  font-size: 20px;
+}
+
+.intro-left {
+  position: relative;
+  float: left;
+  top: 490px;
+  margin-left: 200px;
+  width: 600px;
+  text-align: left;
+}
+.intro-left h1 {
+  color: #E3AD43;
+  font-size: 50px;
+}
+.intro-left p {
+  font-size: 20px;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax-intro {
+  background-image: url("/assets/images/parallax-1.jpg");
+}
+
+.parallax-1 {
+  background-image: url("/assets/images/parallax-1.jpg");
+}
+
+.parallax-2 {
+  background-image: url("/assets/images/stock/stock-8.jpg");
+}
+
+.parallax-3 {
+  background-image: url("/assets/images/stock/stock-1.jpg");
+}
+
+.parallax-4 {
+  background-image: url("/assets/images/parallax-4.jpg");
+}
+
+.regular-content {
+  height: 100vh;
+}
+
+.pushed-content {
+  margin-top: 128px;
+}
+
+.content-section {
+  padding: 40px 0px;
+  background-color: black;
+}
+.content-section .content-header {
+  font-size: 40px;
+  color: #E3AD43;
+}
+.content-section .content-sub-header {
+  font-size: 25px;
+  color: #E3AD43;
+}
+.content-section .content-paragraph {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 2;
+}
+.content-section.section--slate {
+  background-color: #202021;
+  color: #FFFFFF;
+}
+.content-section.section--slate .content-header {
+  font-size: 40px;
+  color: #E3AD43;
+}
+.content-section.section--slate .content-paragraph {
+  color: #FFFFFF;
+}
+.content-section.section--light {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.content-section.section--light .content-header {
+  font-size: 40px;
+  color: #333333;
+}
+.content-section.section--light .content-sub-header {
+  color: #333;
+}
+.content-section.section--light .content-paragraph {
+  color: #333333;
+}
+
+.book-now {
+  color: #FFFFFF;
+  font-weight: ESBold;
+  width: 50%;
+  margin: 25px auto 0px auto;
+}
+.book-now h3 {
+  font-size: 24px;
+}
+.book-now .book-appointment {
+  color: #FFFFFF;
+  font-size: 32px;
+  margin-top: 35px;
+}
+.book-now .book-appointment p {
+  margin-bottom: 0px;
+}
+
+.intro-container {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  font-size: 21px;
+}
+
+.client-logo {
+  justify-content: center;
+}
+.client-logo .client-logo-img {
+  width: 300px;
+}
+
+.background {
+  width: 100vw;
+  z-index: -9999;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-initial {
+  background-image: url("/assets/images/bg-1.png");
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+}
+.bg-initial img {
+  width: 100%;
+}
+
+.bg-bldg {
+  background: url("/assets/images/stock/stock-1.jpg");
+  height: 980px;
+  width: 100%;
+  position: relative;
+  top: 300px;
+}
+
+.bg-2 {
+  background: url("/assets/images/stock/stock-2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 900px;
+}
+
+.owner-section {
+  display: flex;
+  position: relative;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 30px 0px;
+  color: #444;
+  background: #141414;
+}
+.owner-section h2 {
+  font-weight: 300;
+}
+.owner-section .doctor-mike {
+  display: flex;
+}
+.owner-section .doctor-mike-image {
+  width: 300px;
+  height: 440px;
+  border: 4px #000 solid;
+}
+.owner-section .doctor-mike-details {
+  margin-left: 40px;
+  flex: 1;
+  text-align: left;
+}
+.owner-section .doctor-mike-details h2 {
+  color: #E3AD43;
+  margin-bottom: 20px;
+}
+.owner-section .doctor-mike-details h3 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.owner-section .doctor-mike-affiliations {
+  margin-top: 25px;
+}
+.owner-section .doctor-mike-affiliations h3 {
+  color: #E3AD43;
+}
+.owner-section .doctor-mike-affiliations h6 {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.home-services {
+  position: relative;
+  top: 260px;
+}
+.home-services-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.home-services-list h1 {
+  color: #E3AD43;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.home-services-list ul {
+  padding-left: 10px;
+  list-style: none;
+}
+.home-services-list ul li {
+  font-size: 28px;
+  text-align: left;
+  padding: 20px 0px;
+}
+.home-services-list ul li .service-list-icon {
+  color: #E3AD43;
+  margin-right: 10px;
+}
+
+#main-navigation-bar {
+  margin-top: 40px;
+  height: 80px;
+}
+
+.home #sub-navigation-bar {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#sub-navigation-bar {
+  display: flex;
+  flex-direction: column;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10000;
+  background-color: #1a1a1a;
+}
+#sub-navigation-bar .client-contact {
+  width: 100%;
+}
+#sub-navigation-bar .sub-navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+#sub-navigation-bar .sub-navigation-bar > .left {
+  display: flex;
+}
+#sub-navigation-bar .sub-navigation-bar > .left .sub-client-logo img {
+  width: 80px;
+}
+#sub-navigation-bar .sub-navigation-bar > .left .navigation-bar-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+#sub-navigation-bar .sub-navigation-bar > .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media {
+  display: flex;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link {
+  padding: 15px;
+  cursor: pointer;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.4s;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook a:hover {
+  color: #3b5998;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram:hover {
+  color: #D62976;
+}
+
+.about .owner-section {
+  top: 0px;
+  background-color: #FFFFFF;
+}
+.about .owner-section h2, .about .owner-section h3, .about .owner-section h6 {
+  color: #0d0d0d;
+}
+.about .our-team .member-name {
+  font-size: 25px;
+  text-align: left;
+  font-weight: 700;
+}
+.about .our-team .member-position {
+  font-size: 20px;
+  text-align: left;
+}
+.about .our-team .team-detail {
+  margin-top: 30px;
+  display: flex;
+}
+.about .our-team .team-detail img {
+  width: 25%;
+}
+.about .our-team .team-detail .detail {
+  margin-left: 30px;
+}
+.about .our-team .team-detail .detail p {
+  text-align: left;
+  line-height: 2;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.about .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .gallery img {
+  flex: 1;
+  width: 20%;
+  height: 256px;
+  padding: 15px;
+}
+.about .gallery img:hover {
+  opacity: 0.7;
+}
+
+.hero-title {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+.hero-title h1 {
+  font-size: 65px;
+  color: #E3AD43;
+  text-transform: uppercase;
+}
+.hero-title h2 {
+  font-size: 18px;
+  width: 60%;
+  line-height: 2;
+}
+.hero-title.hero-title--left {
+  text-align: left;
+}
+.hero-title.hero-title--right {
+  text-align: right;
+}
+.hero-title.hero-title--right h2 {
+  float: right;
+}
+
+.services .content-and-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.services .content-and-picture .detail {
+  margin-left: 25px;
+  text-align: left;
+}
+.services .content-and-picture .detail .detail-button {
+  background-color: #000;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border: none;
+  transition: 0.4s;
+}
+.services .content-and-picture .detail .detail-button:hover {
+  background-color: #333333;
+}
+
+.contact .contact-form .contact-form-header {
+  color: #E3AD43;
+  padding: 40px 0px;
+  font-size: 40px;
+}
+.contact .form-margin {
+  margin-top: 25px;
+}
+.contact .form-input--modified {
+  border-radius: 0px;
+  border: none;
+}
+.contact .form-input--modified:focus {
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
+  outline: 0 none;
+}
+.contact input[type=text].form-input--modified {
+  height: 50px;
+}
+.contact .contact-submit {
+  width: 150px;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 0px;
+  background-color: #E3AD43;
+  border-color: #d49720;
+  transition: 0.4s;
+}
+.contact .contact-submit:hover {
+  background-color: #e0a32d;
+  outline: none;
+}
+.contact .contact-detail-location {
+  display: flex;
+  padding: 40px 0px;
+}
+.contact .contact-detail-location .emphasized {
+  color: #E3AD43;
+}
+.contact .contact-detail-location .left .location {
+  text-align: left;
+}
+.contact .contact-detail-location .left .contact-details {
+  text-align: left;
+  margin-top: 30px;
+}
+.contact .contact-detail-location .left h3 {
+  font-size: 18px;
+}
+.contact .contact-detail-location .right {
+  flex: 1;
+  margin-left: 40px;
+}
+
+/*# sourceMappingURL=main.css.map */
