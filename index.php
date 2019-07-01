@@ -95,7 +95,7 @@
             </h3>
             <div class="book-appointment">
                 <p>BOOK APPOINTMENT NOW!</p>
-                <p>+632 962 5744 / +639 25 536 3651</p>
+                <p>(+632) 962 5744 / (+639) 255 36 3651</p>
             </div>
         </div>
         <div class="bg-bldg">
