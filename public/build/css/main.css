@@ -114,6 +114,12 @@
     text-align: center;
   }
 
+  div.home #main-navigation-bar {
+    display: none;
+  }
+  div.home #mini-navigation-bar .client-contact {
+    flex-direction: column;
+  }
   div.home .bg-initial {
     height: 90vh;
   }

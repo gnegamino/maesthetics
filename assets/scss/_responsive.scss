@@ -108,6 +108,14 @@
         }
     }
     div.home {
+        #main-navigation-bar {
+            display: none;
+        }
+        #mini-navigation-bar {
+            .client-contact {
+                flex-direction: column;
+            }
+        }
         .bg-initial {
             height: 90vh;
         }
