@@ -1,6 +1,7 @@
 @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '/node_modules/font-awesome/css/font-awesome.min.css';
 @import 'variables';
+@import 'responsive';
 
 @font-face {
     font-family: ESRegular;
@@ -409,7 +410,9 @@ body {
         }
     }
 }
-
+#mini-navigation-bar {
+    display: none;
+}
 // About Us
 .about {
     .owner-section {

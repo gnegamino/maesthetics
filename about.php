@@ -68,3 +68,5 @@
 </div>
 
 <?php require_once('layouts/master_footer.php'); ?>
+
+<script src="/assets/js/index.js"></script>

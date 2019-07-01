@@ -59,3 +59,38 @@
         </div>
     </div>
 </div>
+<div id="mini-navigation-bar">
+    <div class="client-contact">
+        <div class="client-contact-item">
+            <span class="fa fa-envelope"></span>
+            <span class="client-contact-text">info@maesthetics.com</span>
+        </div>
+        <div class="client-contact-item">
+            <span class="fa fa-phone"></span>
+            <span class="client-contact-text">(+632) 962 5744</span>
+        </div>
+        <div class="client-contact-item">
+            <span class="fa fa-mobile"></span>
+            <span class="client-contact-text">(+639) 255 36 3651</span>
+        </div>
+    </div>
+    <div class="mini-dropdown-navigation">
+        <div class="main-menu">
+            <div id="toggle-menu" class="hamburger-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="brand-name">
+                <img src="/assets/images/M logo.png">
+                <span>M-Aesthetics</span>
+            </div>
+        </div>
+        <div class="dropdown-navigation">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

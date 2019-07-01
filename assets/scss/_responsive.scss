@@ -1,0 +1,121 @@
+@media (max-width: 576px) {
+    div.pushed-content {
+        margin-top: 0px;
+        .client-contact {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    div#sub-navigation-bar {
+        display: none;
+    }
+    div#mini-navigation-bar {
+        background-color: lighten($dark-color, 10%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .mini-dropdown-navigation {
+            display: flex;
+            flex-direction: column;
+            .main-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px;
+                .hamburger-toggle {
+                    border: 1px $dark-color solid;
+                    padding: 5px 8px;
+                    &:hover {
+                        background-color: lighten($dark-color, 5%);
+                    }
+                    i {
+                        font-size: 32px;
+                        color: $primary-color;
+                    }
+                }
+                .brand-name {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px;
+                    img {
+                        width: 15%;
+                    }
+                    span {
+                        color: $light-color;
+                        font-size: 20px;
+                        font-family: ESLight;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .dropdown-navigation {
+                background-color: lighten($dark-color, 8%);
+                display: none;
+                ul {
+                    list-style: none;
+                    padding-left: 0px;
+                    margin-bottom: 0px;
+                    li {
+                        a {
+                            color: $light-color;
+                            padding: 5px;
+                            display: block;
+                            text-decoration: none;
+                            font-size: 16px;
+                            &:hover {
+                                background-color: lighten($dark-color, 5%);
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.contact {
+        .contact-form {
+            .contact-form-header {
+                padding: 45px 0px 10px 0px;
+            }
+            .contact-form-content {
+                .form-control {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .contact-submit {
+            width: 100px;
+            height: 50px;
+        }
+        .contact-detail-location {
+            flex-direction: column;
+            padding: 20px 0px;
+            .left {
+                .location, .contact-details {
+                    text-align: center;
+                }
+            }
+            .right {
+                margin-top: 10px;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+
+}
