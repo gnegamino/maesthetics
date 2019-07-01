@@ -1,13 +1,12 @@
 @media (max-width: 576px) {
-    div.about {
-        .regular-content {
-            height: 50vh;
-        }
+    div.regular-content {
+        height: 50vh;
     }
-    .content-section {
+    div.content-section {
+        padding: 20px 0px;
         .content-paragraph {
             line-height: 1.5;
-            font-size: 14px;
+            font-size: 16px;
         }
     }
     div.hero-title {
@@ -91,6 +90,123 @@
                     }
                 }
             }
+        }
+    }
+    .owner-section {
+        flex-direction: column;
+        .doctor-mike {
+            flex-direction: column;
+            .doctor-mike-image {
+                width: 60%;
+                margin: 0 auto;
+                height: auto;
+            }
+            .doctor-mike-details {
+                margin-left: 0px;
+                text-align: center;
+            }
+        }
+    }
+    div.home {
+        .bg-initial {
+            height: 90vh;
+        }
+        .bg-bldg {
+            height: 450px;
+        }
+        .bg-2 {
+            height: 800px;
+        }
+        .intro-container {
+            padding-top: 20px;
+            flex-direction: column;
+            .intro-text {
+                padding: 5px;
+                &:nth-of-type(even) {
+                    display: none;
+                }
+            }
+        }
+        .navigation-bar-content {
+            a {
+                font-size: 16px;
+            }
+        }
+        .book-now {
+            margin-top: 40px;
+            width: auto;
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .book-appointment {
+                font-size: 24px;
+            }
+        }
+        .intro-client-brand {
+            top: 80px;
+            width: auto;
+            padding: 0px 20px;
+            text-align: center;
+            float: initial;
+            margin-right: 0px;
+        }
+        .home-services {
+            .home-services-group {
+                flex-direction: column;
+                .home-services-list {
+                    h1 {
+                        text-align: center;
+                        line-height: 1.5;
+                        font-size: 20px;
+                    }
+                    ul {
+                        li {
+                            padding: 5px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .clients {
+            .carousel-inner {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    div.about {
+        .gallery {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            img {
+                width: 100%;
+                padding: 0px;
+                margin-top: 20px;
+            }
+        }
+    }
+    div.services {
+        .content-and-picture {
+            flex-direction: column;
+            padding: 0px 10px;
+            img {
+                width: 100%;
+            }
+            .detail {
+                margin-top: 20px;
+                margin-left: 0px;
+                .detail-button {
+                    float: right;
+                }
+            }
+        }
+        .content-sub-header {
+            text-align: center;
         }
     }
     div.contact {

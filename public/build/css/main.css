@@ -1,13 +1,16 @@
 @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '/node_modules/font-awesome/css/font-awesome.min.css';
 @media (max-width: 576px) {
-  div.about .regular-content {
+  div.regular-content {
     height: 50vh;
   }
 
-  .content-section .content-paragraph {
+  div.content-section {
+    padding: 20px 0px;
+  }
+  div.content-section .content-paragraph {
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   div.hero-title {
@@ -93,6 +96,109 @@
   div#mini-navigation-bar .mini-dropdown-navigation .dropdown-navigation ul li a:hover {
     background-color: #0d0d0d;
     color: #E3AD43;
+  }
+
+  .owner-section {
+    flex-direction: column;
+  }
+  .owner-section .doctor-mike {
+    flex-direction: column;
+  }
+  .owner-section .doctor-mike .doctor-mike-image {
+    width: 60%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .owner-section .doctor-mike .doctor-mike-details {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  div.home .bg-initial {
+    height: 90vh;
+  }
+  div.home .bg-bldg {
+    height: 450px;
+  }
+  div.home .bg-2 {
+    height: 800px;
+  }
+  div.home .intro-container {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+  div.home .intro-container .intro-text {
+    padding: 5px;
+  }
+  div.home .intro-container .intro-text:nth-of-type(even) {
+    display: none;
+  }
+  div.home .navigation-bar-content a {
+    font-size: 16px;
+  }
+  div.home .book-now {
+    margin-top: 40px;
+    width: auto;
+  }
+  div.home .book-now h2 {
+    font-size: 20px;
+  }
+  div.home .book-now h3 {
+    font-size: 18px;
+  }
+  div.home .book-now .book-appointment {
+    font-size: 24px;
+  }
+  div.home .intro-client-brand {
+    top: 80px;
+    width: auto;
+    padding: 0px 20px;
+    text-align: center;
+    float: initial;
+    margin-right: 0px;
+  }
+  div.home .home-services .home-services-group {
+    flex-direction: column;
+  }
+  div.home .home-services .home-services-group .home-services-list h1 {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  div.home .home-services .home-services-group .home-services-list ul li {
+    padding: 5px;
+    font-size: 16px;
+  }
+  div.home .clients .carousel-inner img {
+    width: 100%;
+  }
+
+  div.about .gallery {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  div.about .gallery img {
+    width: 100%;
+    padding: 0px;
+    margin-top: 20px;
+  }
+
+  div.services .content-and-picture {
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+  div.services .content-and-picture img {
+    width: 100%;
+  }
+  div.services .content-and-picture .detail {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  div.services .content-and-picture .detail .detail-button {
+    float: right;
+  }
+  div.services .content-sub-header {
+    text-align: center;
   }
 
   div.contact .contact-form .contact-form-header {

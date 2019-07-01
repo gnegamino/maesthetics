@@ -69,4 +69,4 @@
 
 <?php require_once('layouts/master_footer.php'); ?>
 
-<script src="/assets/js/index.js"></script>
+<script src="/assets/js/mini-navigation.js"></script>
