@@ -1,4 +1,23 @@
 @media (max-width: 576px) {
+    div.about {
+        .regular-content {
+            height: 50vh;
+        }
+    }
+    .content-section {
+        .content-paragraph {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+    }
+    div.hero-title {
+        text-align: center !important;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        h2 {
+            width: auto;
+        }
+    }
     div.pushed-content {
         margin-top: 0px;
         .client-contact {
