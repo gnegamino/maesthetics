@@ -16,13 +16,13 @@ $(function(){
         }
     });
 
-    $('body').delegate('#toggle-menu', 'click', function(){
-        var menu = $('#mini-dropdown-navigation .dropdown-navigation').css('display');
-        alert(menu);
+    $('#toggle-menu').click(function(){
+        var menu = $('.mini-dropdown-navigation .dropdown-navigation').css('display');
+
         if (menu == "none") {
-            $('#mini-dropdown-navigation .dropdown-navigation').slideDown();
+            $('.mini-dropdown-navigation .dropdown-navigation').slideDown();
         } else {
-            $('#mini-dropdown-navigation .dropdown-navigation').slideUp();
+            $('.mini-dropdown-navigation .dropdown-navigation').slideUp();
         }
     });
 });
