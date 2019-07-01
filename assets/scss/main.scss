@@ -570,3 +570,27 @@ body {
         }
     }
 }
+
+.home {
+    .clients {
+        margin-bottom: 40px;
+        .carousel-inner {
+            img {
+                margin: 0 auto;
+                width: 30%;
+            }
+        }
+        h1 {
+            margin: 40px 0px;
+        }
+        .carousel-control {
+            background-image: initial;
+            color: $primary-color;
+            opacity: 1;
+            width: 35%;
+            &:hover {
+                color: darken($primary-color, 5%);
+            }
+        }
+    }
+}

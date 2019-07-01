@@ -560,4 +560,24 @@ body {
   margin-left: 40px;
 }
 
+.home .clients {
+  margin-bottom: 40px;
+}
+.home .clients .carousel-inner img {
+  margin: 0 auto;
+  width: 30%;
+}
+.home .clients h1 {
+  margin: 40px 0px;
+}
+.home .clients .carousel-control {
+  background-image: initial;
+  color: #E3AD43;
+  opacity: 1;
+  width: 35%;
+}
+.home .clients .carousel-control:hover {
+  color: #e0a32d;
+}
+
 /*# sourceMappingURL=main.css.map */

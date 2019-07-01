@@ -150,6 +150,72 @@
                 </div>
             </div>
         </div>
+        <div class="clients">
+            <div class="container">
+                <h1>OUR CLIENTS</h1>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="/assets/images/clients/alma-concepcion-1.jpg">
+                            <div class="carousel-caption">
+                                Alma Concepcion
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/assets/images/clients/alma-concepcion.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="/assets/images/clients/cess-yambao.jpg">
+                            <div class="carousel-caption">
+                                Cess Yambao
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/assets/images/clients/jamie-go.jpg">
+                            <div class="carousel-caption">
+                                Jamie Go
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/assets/images/clients/junel-lopez.jpg">
+                            <div class="carousel-caption">
+                                Junel Lopez
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/assets/images/clients/cym-magsino.jpg">
+                            <div class="carousel-caption">
+                                Cym Magsino
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/assets/images/clients/nicole-baron.jpg">
+                            <div class="carousel-caption">
+                                Nicole Baron
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
