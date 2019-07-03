@@ -1,3 +1,9 @@
 $primary-color: #E3AD43;
 $light-color: #FFFFFF;
 $dark-color: #000;
+
+span {
+    &.primary {
+        color: $primary-color;
+    }
+}

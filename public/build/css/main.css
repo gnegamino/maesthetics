@@ -1,5 +1,9 @@
 @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '/node_modules/font-awesome/css/font-awesome.min.css';
+span.primary {
+  color: #E3AD43;
+}
+
 @media (max-width: 576px) {
   div.regular-content {
     height: 50vh;
@@ -230,17 +234,21 @@
   }
 }
 @font-face {
-  font-family: ESRegular;
-  src: url("/assets/fonts/EncodeSans-Regular.ttf");
+  font-family: Regular;
+  src: url("/assets/fonts/Raleway-Regular.ttf");
 }
 @font-face {
-  font-family: ESBold;
-  src: url("/assets/fonts/EncodeSans-Bold.ttf");
+  font-family: Bold;
+  src: url("/assets/fonts/Raleway-Bold.ttf");
 }
 @font-face {
-  font-family: ESLight;
-  src: url("/assets/fonts/EncodeSans-Light.ttf");
+  font-family: Light;
+  src: url("/assets/fonts/Raleway-Light.ttf");
 }
+html, body, #app {
+  height: 100%;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -252,7 +260,115 @@ body {
   background-color: #000;
   overflow-x: hidden;
   color: #FFFFFF;
-  font-family: ESRegular;
+  font-family: Regular;
+}
+
+.home {
+  background-image: url("/assets/images/bg-1.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .client-logo-img {
+  width: 400px;
+}
+
+.client-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.about .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-black-1.JPG");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .page-banner .motto {
+  display: flex;
+  justify-content: space-evenly;
+}
+.about .page-banner .motto h2 {
+  font-family: Light;
+}
+.about .page-banner .motto h2:nth-of-type(even) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.about .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.about .page-section {
+  -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  background-color: #1a1a1a;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.about .company-profile p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.about .company-profile .client-logo-img {
+  width: 250px;
+  margin-bottom: 40px;
+}
+.about .owner-section {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 30px 0px;
+  background: #141414;
+}
+.about .owner-section h2 {
+  font-weight: 300;
+}
+.about .owner-section .doctor-mike {
+  display: flex;
+}
+.about .owner-section .doctor-mike-image {
+  width: 300px;
+  height: 440px;
+  border: 4px #000 solid;
+}
+.about .owner-section .doctor-mike-details {
+  margin-left: 40px;
+  flex: 1;
+  text-align: left;
+}
+.about .owner-section .doctor-mike-details h2 {
+  color: #000;
+  margin-bottom: 20px;
+  color: #404040;
+  font-family: Bold;
+}
+.about .owner-section .doctor-mike-details h3 {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #666666;
+}
+.about .owner-section .doctor-mike-affiliations {
+  margin-top: 25px;
+}
+.about .owner-section .doctor-mike-affiliations h3 {
+  color: #000;
+}
+.about .owner-section .doctor-mike-affiliations h6 {
+  margin-bottom: 20px;
+  font-family: Bold;
+  font-size: 14px;
+  color: #404040;
 }
 
 .footer {
@@ -269,11 +385,11 @@ body {
   z-index: 1;
 }
 .navigation-bar .navigation-bar-content {
-  font-weight: ESBold;
   padding-left: 20px;
   padding-right: 20px;
 }
 .navigation-bar .navigation-bar-content a {
+  font-size: 18px;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -304,31 +420,6 @@ body {
   display: block;
 }
 
-.client-floating-contact {
-  position: fixed;
-  left: 0;
-  bottom: 40px;
-  padding: 15px;
-  background-color: #FFFFFF;
-  color: #444;
-}
-
-.intro-client-brand {
-  position: relative;
-  float: right;
-  top: 270px;
-  margin-right: 200px;
-  width: 600px;
-  text-align: right;
-}
-.intro-client-brand h1 {
-  color: #E3AD43;
-  font-size: 50px;
-}
-.intro-client-brand p {
-  font-size: 20px;
-}
-
 .intro-left {
   position: relative;
   float: left;
@@ -345,40 +436,8 @@ body {
   font-size: 20px;
 }
 
-.parallax {
-  height: 100vh;
-  background-attachment: fixed;
-  background-size: cover;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.parallax-intro {
-  background-image: url("/assets/images/parallax-1.jpg");
-}
-
-.parallax-1 {
-  background-image: url("/assets/images/parallax-1.jpg");
-}
-
-.parallax-2 {
-  background-image: url("/assets/images/stock/stock-8.jpg");
-}
-
-.parallax-3 {
-  background-image: url("/assets/images/stock/stock-1.jpg");
-}
-
-.parallax-4 {
-  background-image: url("/assets/images/parallax-4.jpg");
-}
-
-.regular-content {
-  height: 100vh;
-}
-
 .pushed-content {
-  margin-top: 128px;
+  margin-top: 124px;
 }
 
 .content-section {
@@ -457,13 +516,6 @@ body {
   font-size: 21px;
 }
 
-.client-logo {
-  justify-content: center;
-}
-.client-logo .client-logo-img {
-  width: 300px;
-}
-
 .background {
   width: 100vw;
   z-index: -9999;
@@ -500,53 +552,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 900px;
-}
-
-.owner-section {
-  display: flex;
-  position: relative;
-  top: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  padding: 30px 0px;
-  color: #444;
-  background: #141414;
-}
-.owner-section h2 {
-  font-weight: 300;
-}
-.owner-section .doctor-mike {
-  display: flex;
-}
-.owner-section .doctor-mike-image {
-  width: 300px;
-  height: 440px;
-  border: 4px #000 solid;
-}
-.owner-section .doctor-mike-details {
-  margin-left: 40px;
-  flex: 1;
-  text-align: left;
-}
-.owner-section .doctor-mike-details h2 {
-  color: #E3AD43;
-  margin-bottom: 20px;
-}
-.owner-section .doctor-mike-details h3 {
-  font-size: 20px;
-  color: #FFFFFF;
-}
-.owner-section .doctor-mike-affiliations {
-  margin-top: 25px;
-}
-.owner-section .doctor-mike-affiliations h3 {
-  color: #E3AD43;
-}
-.owner-section .doctor-mike-affiliations h6 {
-  margin-bottom: 20px;
-  color: #FFFFFF;
 }
 
 .home-services {
