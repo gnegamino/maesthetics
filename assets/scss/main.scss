@@ -143,6 +143,109 @@ body {
         }
     }
 }
+.services {
+    .page-banner {
+        height: 100vh;
+        background-image: url('/assets/images/static/bg-black-1.JPG');
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: 70px;
+            font-family: Regular;
+            color: $primary-color;
+        }
+    }
+    .services-buttons {
+        display: flex;
+        margin-top: 20px;
+        .btn {
+            border-radius: 0px;
+            font-size: 32px;
+            margin-left: 40px;
+            background-color: $light-color;
+            color: $dark-color;
+            padding: 15px 25px;
+            transition: .2s;
+            &:hover {
+                background-color: $primary-color;
+                color: $light-color;
+            }
+        }
+    }
+}
+.contact {
+    .contact-form {
+        background-image: url('/assets/images/static/breast-1.jpg');
+        .contact-form-header {
+            color: $primary-color;
+            padding: 40px 0px;
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+    .form-margin {
+        margin-top: 25px;
+    }
+    .form-input--modified {
+        border-radius: 0px;
+        border: none;
+        &:focus {
+            border-color: rgba(255, 215, 0, 0.8);
+            box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
+            outline: 0 none;
+        }
+    }
+    input[type="text"] {
+        &.form-input--modified {
+            height: 50px;
+        }
+    }
+    .contact-submit {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 0px;
+        background-color: $primary-color;
+        border-color: darken($primary-color, 10%);
+        transition: .4s;
+        margin-bottom: 40px;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            color: $light-color;
+            outline: none;
+        }
+    }
+    .contact-detail-location {
+        -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        -moz-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        display: flex;
+        padding: 40px 0px;
+        background-color: lighten($dark-color, 12%);
+        .emphasized {
+            color: $primary-color;
+        }
+        .left {
+            .location {
+                text-align: left;
+            }
+            .contact-details {
+                text-align: left;
+                margin-top: 30px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .right {
+            flex: 1;
+            margin-left: 40px;
+        }
+    }
+}
 
 .footer {
     text-align: center;
@@ -521,68 +624,6 @@ body {
     }
 }
 
-.contact {
-    .contact-form {
-        .contact-form-header {
-            color: $primary-color;
-            padding: 40px 0px;
-            font-size: 40px;
-        }
-    }
-    .form-margin {
-        margin-top: 25px;
-    }
-    .form-input--modified {
-        border-radius: 0px;
-        border: none;
-        &:focus {
-            border-color: rgba(255, 215, 0, 0.8);
-            box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
-            outline: 0 none;
-        }
-    }
-    input[type="text"] {
-        &.form-input--modified {
-            height: 50px;
-        }
-    }
-    .contact-submit {
-        width: 150px;
-        height: 70px;
-        font-size: 20px;
-        border-radius: 0px;
-        background-color: $primary-color;
-        border-color: darken($primary-color, 10%);
-        transition: .4s;
-        &:hover {
-            background-color: darken($primary-color, 5%);
-            outline: none;
-        }
-    }
-    .contact-detail-location {
-        display: flex;
-        padding: 40px 0px;
-        .emphasized {
-            color: $primary-color;
-        }
-        .left {
-            .location {
-                text-align: left;
-            }
-            .contact-details {
-                text-align: left;
-                margin-top: 30px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-        }
-        .right {
-            flex: 1;
-            margin-left: 40px;
-        }
-    }
-}
 
 .home {
     .clients {

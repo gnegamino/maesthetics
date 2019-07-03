@@ -4,6 +4,10 @@ span.primary {
   color: #E3AD43;
 }
 
+.flex {
+  display: flex;
+}
+
 @media (max-width: 576px) {
   div.regular-content {
     height: 50vh;
@@ -369,6 +373,103 @@ body {
   font-family: Bold;
   font-size: 14px;
   color: #404040;
+}
+
+.services .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-black-1.JPG");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.services .services-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+.services .services-buttons .btn {
+  border-radius: 0px;
+  font-size: 32px;
+  margin-left: 40px;
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 15px 25px;
+  transition: 0.2s;
+}
+.services .services-buttons .btn:hover {
+  background-color: #E3AD43;
+  color: #FFFFFF;
+}
+
+.contact .contact-form {
+  background-image: url("/assets/images/static/breast-1.jpg");
+}
+.contact .contact-form .contact-form-header {
+  color: #E3AD43;
+  padding: 40px 0px;
+  font-size: 40px;
+  text-align: center;
+}
+.contact .form-margin {
+  margin-top: 25px;
+}
+.contact .form-input--modified {
+  border-radius: 0px;
+  border: none;
+}
+.contact .form-input--modified:focus {
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
+  outline: 0 none;
+}
+.contact input[type=text].form-input--modified {
+  height: 50px;
+}
+.contact .contact-submit {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 0px;
+  background-color: #E3AD43;
+  border-color: #d49720;
+  transition: 0.4s;
+  margin-bottom: 40px;
+}
+.contact .contact-submit:hover {
+  background-color: #d49720;
+  color: #FFFFFF;
+  outline: none;
+}
+.contact .contact-detail-location {
+  -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  display: flex;
+  padding: 40px 0px;
+  background-color: #1f1f1f;
+}
+.contact .contact-detail-location .emphasized {
+  color: #E3AD43;
+}
+.contact .contact-detail-location .left .location {
+  text-align: left;
+}
+.contact .contact-detail-location .left .contact-details {
+  text-align: left;
+  margin-top: 30px;
+}
+.contact .contact-detail-location .left h3 {
+  font-size: 18px;
+}
+.contact .contact-detail-location .right {
+  flex: 1;
+  margin-left: 40px;
 }
 
 .footer {
@@ -741,61 +842,6 @@ body {
 }
 .services .content-and-picture .detail .detail-button:hover {
   background-color: #333333;
-}
-
-.contact .contact-form .contact-form-header {
-  color: #E3AD43;
-  padding: 40px 0px;
-  font-size: 40px;
-}
-.contact .form-margin {
-  margin-top: 25px;
-}
-.contact .form-input--modified {
-  border-radius: 0px;
-  border: none;
-}
-.contact .form-input--modified:focus {
-  border-color: rgba(255, 215, 0, 0.8);
-  box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
-  outline: 0 none;
-}
-.contact input[type=text].form-input--modified {
-  height: 50px;
-}
-.contact .contact-submit {
-  width: 150px;
-  height: 70px;
-  font-size: 20px;
-  border-radius: 0px;
-  background-color: #E3AD43;
-  border-color: #d49720;
-  transition: 0.4s;
-}
-.contact .contact-submit:hover {
-  background-color: #e0a32d;
-  outline: none;
-}
-.contact .contact-detail-location {
-  display: flex;
-  padding: 40px 0px;
-}
-.contact .contact-detail-location .emphasized {
-  color: #E3AD43;
-}
-.contact .contact-detail-location .left .location {
-  text-align: left;
-}
-.contact .contact-detail-location .left .contact-details {
-  text-align: left;
-  margin-top: 30px;
-}
-.contact .contact-detail-location .left h3 {
-  font-size: 18px;
-}
-.contact .contact-detail-location .right {
-  flex: 1;
-  margin-left: 40px;
 }
 
 .home .clients {
