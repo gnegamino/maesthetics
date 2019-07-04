@@ -375,6 +375,13 @@ body {
   color: #404040;
 }
 
+.services h1 {
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 40px 0px;
+  font-size: 40px;
+}
 .services .page-banner {
   height: 100vh;
   background-image: url("/assets/images/static/bg-black-1.JPG");
@@ -407,6 +414,119 @@ body {
 .services .services-buttons .btn:hover {
   background-color: #E3AD43;
   color: #FFFFFF;
+}
+.services.surgeries .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-surgeries.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services.surgeries .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+
+.media-section {
+  background-color: #FFFFFF;
+}
+
+.media-list {
+  display: flex;
+  flex-direction: column;
+}
+.media-list .media-item {
+  box-shadow: 10px 10px grey;
+  margin-top: 40px;
+  border: 1px #999999 solid;
+  display: flex;
+  align-items: center;
+}
+.media-list .media-item:nth-of-type(1) {
+  margin-top: 0px;
+}
+.media-list .media-item:last-child {
+  margin-bottom: 40px;
+}
+.media-list .media-item .media-picture img {
+  width: 200px;
+  height: 200px;
+}
+.media-list .media-item .media-detail {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.media-list .media-item .media-detail .media-title {
+  font-family: Bold;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  font-size: 24px;
+}
+.media-list .media-item .media-detail .media-description {
+  margin-top: 20px;
+  font-family: Regular;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+.media-list .media-item .media-detail .media-button {
+  margin-top: 20px;
+}
+.media-list .media-item .media-detail .media-button .view-more {
+  font-size: 16px;
+  background-color: #E3AD43;
+  color: #FFFFFF;
+  transition: 0.4s;
+  border-radius: 0px;
+}
+.media-list .media-item .media-detail .media-button .view-more:hover {
+  background-color: #d49720;
+}
+
+.media-box {
+  display: flex;
+  flex-direction: column;
+}
+.media-box-item {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-top: 20px;
+}
+.media-box-item:first-child {
+  margin-top: 0px;
+}
+.media-box-item:last-child {
+  margin-bottom: 40px;
+}
+.media-box-header {
+  display: flex;
+  align-items: center;
+}
+.media-box-header-icon {
+  border: 1px red solid;
+  width: 30px;
+  height: 30px;
+}
+.media-box-header-title {
+  font-family: Regular;
+  color: #000;
+  font-size: 32px;
+  margin-left: 15px;
+}
+.all-services-section {
+  background-color: #1f1f1f;
+  -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+}
+.all-services-section h1 {
+  color: #E3AD43;
 }
 
 .contact .contact-form {
