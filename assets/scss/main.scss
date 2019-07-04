@@ -264,8 +264,6 @@ body {
     display: flex;
     flex-direction: column;
     &-item {
-        background-color: $light-color;
-        padding: 20px;
         margin-top: 20px;
         &:first-child {
             margin-top: 0px;
@@ -277,10 +275,17 @@ body {
     &-header {
         display: flex;
         align-items: center;
+        padding: 20px;
+        background-color: $light-color;
+        transition: .4s;
+        &:hover {
+            background-color: $primary-color;
+            color: $light-color;
+            cursor: pointer;
+        }
         &-icon {
-            border: 1px red solid;
-            width: 30px;
-            height: 30px;
+            color: $dark-color;
+            font-size: 25px;
         }
         &-title {
             font-family: Regular;
@@ -290,7 +295,39 @@ body {
         }
     }
     &-content {
-        
+        display: none;
+        justify-content: flex-start;
+        border-left: 1px $light-color solid;
+        border-right: 1px $light-color solid;
+        border-bottom: 1px $light-color solid;
+        padding: 20px;
+        ul {
+            margin-left: 40px;
+            &:first-child {
+                margin-left: 0px;
+            }
+            li {
+                font-size: 20px;
+                a {
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}
+#preview-modal {
+    .media-write-up {
+        padding: 15px;
+        color: lighten($dark-color, 10%);
+        line-height: 1.5;
+        font-size: 16px;
+        background-color: $light-color;
+    }
+    .media-preview {
+        display: none;
+        &.active {
+            display: block
+        }
     }
 }
 

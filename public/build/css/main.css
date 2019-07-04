@@ -8,6 +8,43 @@ span.primary {
   display: flex;
 }
 
+.modal {
+  z-index: 10000;
+}
+.modal .modal-dialog {
+  width: 70vw;
+}
+.modal .modal-dialog .modal-content {
+  border-radius: 0px;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  background-color: #1a1a1a;
+  color: #E3AD43;
+  border-bottom: 1px #000 solid;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  text-transform: uppercase;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  background-color: #141414;
+  padding: 0px;
+}
+.modal .modal-dialog .modal-content .modal-footer {
+  background-color: #1a1a1a;
+  border-top: 1px #000 solid;
+}
+
+.btn {
+  border-radius: 0px;
+}
+.btn.btn-primary {
+  background-color: #E3AD43 !important;
+  border-color: #a77719 !important;
+}
+.btn.btn-primary:hover {
+  background-color: #d49720 !important;
+}
+
 @media (max-width: 576px) {
   div.regular-content {
     height: 50vh;
@@ -494,8 +531,6 @@ body {
   flex-direction: column;
 }
 .media-box-item {
-  background-color: #FFFFFF;
-  padding: 20px;
   margin-top: 20px;
 }
 .media-box-item:first-child {
@@ -507,11 +542,18 @@ body {
 .media-box-header {
   display: flex;
   align-items: center;
+  padding: 20px;
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+.media-box-header:hover {
+  background-color: #E3AD43;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 .media-box-header-icon {
-  border: 1px red solid;
-  width: 30px;
-  height: 30px;
+  color: #000;
+  font-size: 25px;
 }
 .media-box-header-title {
   font-family: Regular;
@@ -519,6 +561,41 @@ body {
   font-size: 32px;
   margin-left: 15px;
 }
+.media-box-content {
+  display: none;
+  justify-content: flex-start;
+  border-left: 1px #FFFFFF solid;
+  border-right: 1px #FFFFFF solid;
+  border-bottom: 1px #FFFFFF solid;
+  padding: 20px;
+}
+.media-box-content ul {
+  margin-left: 40px;
+}
+.media-box-content ul:first-child {
+  margin-left: 0px;
+}
+.media-box-content ul li {
+  font-size: 20px;
+}
+.media-box-content ul li a {
+  color: #FFFFFF;
+}
+
+#preview-modal .media-write-up {
+  padding: 15px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+#preview-modal .media-preview {
+  display: none;
+}
+#preview-modal .media-preview.active {
+  display: block;
+}
+
 .all-services-section {
   background-color: #1f1f1f;
   -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
