@@ -1,5 +1,50 @@
 @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '/node_modules/font-awesome/css/font-awesome.min.css';
+span.primary {
+  color: #E3AD43;
+}
+
+.flex {
+  display: flex;
+}
+
+.modal {
+  z-index: 10000;
+}
+.modal .modal-dialog {
+  width: 70vw;
+}
+.modal .modal-dialog .modal-content {
+  border-radius: 0px;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  background-color: #1a1a1a;
+  color: #E3AD43;
+  border-bottom: 1px #000 solid;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  text-transform: uppercase;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  background-color: #141414;
+  padding: 0px;
+}
+.modal .modal-dialog .modal-content .modal-footer {
+  background-color: #1a1a1a;
+  border-top: 1px #000 solid;
+}
+
+.btn {
+  border-radius: 0px;
+}
+.btn.btn-primary {
+  background-color: #E3AD43 !important;
+  border-color: #a77719 !important;
+}
+.btn.btn-primary:hover {
+  background-color: #d49720 !important;
+}
+
 @media (max-width: 576px) {
   div.regular-content {
     height: 50vh;
@@ -230,17 +275,21 @@
   }
 }
 @font-face {
-  font-family: ESRegular;
-  src: url("/assets/fonts/EncodeSans-Regular.ttf");
+  font-family: Regular;
+  src: url("/assets/fonts/Raleway-Regular.ttf");
 }
 @font-face {
-  font-family: ESBold;
-  src: url("/assets/fonts/EncodeSans-Bold.ttf");
+  font-family: Bold;
+  src: url("/assets/fonts/Raleway-Bold.ttf");
 }
 @font-face {
-  font-family: ESLight;
-  src: url("/assets/fonts/EncodeSans-Light.ttf");
+  font-family: Light;
+  src: url("/assets/fonts/Raleway-Light.ttf");
 }
+html, body, #app {
+  height: 100%;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -252,7 +301,406 @@ body {
   background-color: #000;
   overflow-x: hidden;
   color: #FFFFFF;
-  font-family: ESRegular;
+  font-family: Regular;
+}
+
+.home {
+  background-image: url("/assets/images/bg-1.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .client-logo-img {
+  width: 400px;
+}
+
+.client-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.about .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-black-1.JPG");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .page-banner .motto {
+  display: flex;
+  justify-content: space-evenly;
+}
+.about .page-banner .motto h2 {
+  font-family: Light;
+}
+.about .page-banner .motto h2:nth-of-type(even) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.about .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.about .page-section {
+  -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  background-color: #1a1a1a;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.about .company-profile p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.about .company-profile .client-logo-img {
+  width: 250px;
+  margin-bottom: 40px;
+}
+.about .owner-section {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 30px 0px;
+  background: #141414;
+}
+.about .owner-section h2 {
+  font-weight: 300;
+}
+.about .owner-section .doctor-mike {
+  display: flex;
+}
+.about .owner-section .doctor-mike-image {
+  width: 300px;
+  height: 440px;
+  border: 4px #000 solid;
+}
+.about .owner-section .doctor-mike-details {
+  margin-left: 40px;
+  flex: 1;
+  text-align: left;
+}
+.about .owner-section .doctor-mike-details h2 {
+  color: #000;
+  margin-bottom: 20px;
+  color: #404040;
+  font-family: Bold;
+}
+.about .owner-section .doctor-mike-details h3 {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #666666;
+}
+.about .owner-section .doctor-mike-affiliations {
+  margin-top: 25px;
+}
+.about .owner-section .doctor-mike-affiliations h3 {
+  color: #000;
+}
+.about .owner-section .doctor-mike-affiliations h6 {
+  margin-bottom: 20px;
+  font-family: Bold;
+  font-size: 14px;
+  color: #404040;
+}
+
+.services h1 {
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 40px 0px;
+  font-size: 40px;
+}
+.services .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-black-1.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.services .services-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+.services .services-buttons .btn {
+  border-radius: 0px;
+  font-size: 32px;
+  margin-left: 40px;
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 15px 25px;
+  transition: 0.2s;
+}
+.services .services-buttons .btn:hover {
+  background-color: #E3AD43;
+  color: #FFFFFF;
+}
+.services.surgeries .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-surgeries.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services.surgeries .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.services.face-skin-body .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-face-body.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services.face-skin-body .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.services.lasers-machines .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-lasers.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services.lasers-machines .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+
+.media-section {
+  background-color: #FFFFFF;
+}
+
+.media-list {
+  display: flex;
+  flex-direction: column;
+}
+.media-list .media-item {
+  box-shadow: 10px 10px grey;
+  margin-top: 40px;
+  border: 1px #999999 solid;
+  display: flex;
+  align-items: center;
+}
+.media-list .media-item:nth-of-type(1) {
+  margin-top: 0px;
+}
+.media-list .media-item:last-child {
+  margin-bottom: 40px;
+}
+.media-list .media-item .media-picture img {
+  width: 200px;
+  height: 200px;
+}
+.media-list .media-item .media-detail {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.media-list .media-item .media-detail .media-title {
+  font-family: Bold;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  font-size: 24px;
+}
+.media-list .media-item .media-detail .media-description {
+  margin-top: 20px;
+  font-family: Regular;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+.media-list .media-item .media-detail .media-button {
+  margin-top: 20px;
+}
+.media-list .media-item .media-detail .media-button .view-more {
+  font-size: 16px;
+  background-color: #E3AD43;
+  color: #FFFFFF;
+  transition: 0.4s;
+  border-radius: 0px;
+}
+.media-list .media-item .media-detail .media-button .view-more:hover {
+  background-color: #d49720;
+}
+
+.media-box {
+  display: flex;
+  flex-direction: column;
+}
+.media-box-item {
+  margin-top: 20px;
+}
+.media-box-item:first-child {
+  margin-top: 0px;
+}
+.media-box-item:last-child {
+  margin-bottom: 40px;
+}
+.media-box-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+.media-box-header:hover {
+  background-color: #E3AD43;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.media-box-header-icon {
+  color: #000;
+  font-size: 25px;
+}
+.media-box-header-title {
+  font-family: Regular;
+  color: #000;
+  font-size: 32px;
+  margin-left: 15px;
+}
+.media-box-content {
+  display: none;
+  justify-content: flex-start;
+  border-left: 1px #FFFFFF solid;
+  border-right: 1px #FFFFFF solid;
+  border-bottom: 1px #FFFFFF solid;
+  padding: 20px;
+}
+.media-box-content ul {
+  margin-left: 40px;
+}
+.media-box-content ul:first-child {
+  margin-left: 0px;
+}
+.media-box-content ul li {
+  font-size: 20px;
+}
+.media-box-content ul li a {
+  color: #FFFFFF;
+}
+
+#preview-modal .media-write-up {
+  padding: 15px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+#preview-modal .media-preview {
+  display: none;
+}
+#preview-modal .media-preview.active {
+  display: block;
+}
+
+.all-services-section {
+  background-color: #1f1f1f;
+  -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+}
+.all-services-section h1 {
+  color: #E3AD43;
+}
+
+.contact .contact-form {
+  background-image: url("/assets/images/static/breast-1.jpg");
+}
+.contact .contact-form .contact-form-header {
+  color: #E3AD43;
+  padding: 40px 0px;
+  font-size: 40px;
+  text-align: center;
+}
+.contact .form-margin {
+  margin-top: 25px;
+}
+.contact .form-input--modified {
+  border-radius: 0px;
+  border: none;
+}
+.contact .form-input--modified:focus {
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
+  outline: 0 none;
+}
+.contact input[type=text].form-input--modified {
+  height: 50px;
+}
+.contact .contact-submit {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 0px;
+  background-color: #E3AD43;
+  border-color: #d49720;
+  transition: 0.4s;
+  margin-bottom: 40px;
+}
+.contact .contact-submit:hover {
+  background-color: #d49720;
+  color: #FFFFFF;
+  outline: none;
+}
+.contact .contact-detail-location {
+  -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: inset 1px 1px 20px -1px rgba(0, 0, 0, 0.67);
+  display: flex;
+  padding: 40px 0px;
+  background-color: #1f1f1f;
+}
+.contact .contact-detail-location .emphasized {
+  color: #E3AD43;
+}
+.contact .contact-detail-location .left .location {
+  text-align: left;
+}
+.contact .contact-detail-location .left .contact-details {
+  text-align: left;
+  margin-top: 30px;
+}
+.contact .contact-detail-location .left h3 {
+  font-size: 18px;
+}
+.contact .contact-detail-location .right {
+  flex: 1;
+  margin-left: 40px;
 }
 
 .footer {
@@ -269,11 +717,11 @@ body {
   z-index: 1;
 }
 .navigation-bar .navigation-bar-content {
-  font-weight: ESBold;
   padding-left: 20px;
   padding-right: 20px;
 }
 .navigation-bar .navigation-bar-content a {
+  font-size: 18px;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -304,31 +752,6 @@ body {
   display: block;
 }
 
-.client-floating-contact {
-  position: fixed;
-  left: 0;
-  bottom: 40px;
-  padding: 15px;
-  background-color: #FFFFFF;
-  color: #444;
-}
-
-.intro-client-brand {
-  position: relative;
-  float: right;
-  top: 270px;
-  margin-right: 200px;
-  width: 600px;
-  text-align: right;
-}
-.intro-client-brand h1 {
-  color: #E3AD43;
-  font-size: 50px;
-}
-.intro-client-brand p {
-  font-size: 20px;
-}
-
 .intro-left {
   position: relative;
   float: left;
@@ -345,40 +768,8 @@ body {
   font-size: 20px;
 }
 
-.parallax {
-  height: 100vh;
-  background-attachment: fixed;
-  background-size: cover;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.parallax-intro {
-  background-image: url("/assets/images/parallax-1.jpg");
-}
-
-.parallax-1 {
-  background-image: url("/assets/images/parallax-1.jpg");
-}
-
-.parallax-2 {
-  background-image: url("/assets/images/stock/stock-8.jpg");
-}
-
-.parallax-3 {
-  background-image: url("/assets/images/stock/stock-1.jpg");
-}
-
-.parallax-4 {
-  background-image: url("/assets/images/parallax-4.jpg");
-}
-
-.regular-content {
-  height: 100vh;
-}
-
 .pushed-content {
-  margin-top: 128px;
+  margin-top: 124px;
 }
 
 .content-section {
@@ -457,13 +848,6 @@ body {
   font-size: 21px;
 }
 
-.client-logo {
-  justify-content: center;
-}
-.client-logo .client-logo-img {
-  width: 300px;
-}
-
 .background {
   width: 100vw;
   z-index: -9999;
@@ -500,53 +884,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 900px;
-}
-
-.owner-section {
-  display: flex;
-  position: relative;
-  top: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  padding: 30px 0px;
-  color: #444;
-  background: #141414;
-}
-.owner-section h2 {
-  font-weight: 300;
-}
-.owner-section .doctor-mike {
-  display: flex;
-}
-.owner-section .doctor-mike-image {
-  width: 300px;
-  height: 440px;
-  border: 4px #000 solid;
-}
-.owner-section .doctor-mike-details {
-  margin-left: 40px;
-  flex: 1;
-  text-align: left;
-}
-.owner-section .doctor-mike-details h2 {
-  color: #E3AD43;
-  margin-bottom: 20px;
-}
-.owner-section .doctor-mike-details h3 {
-  font-size: 20px;
-  color: #FFFFFF;
-}
-.owner-section .doctor-mike-affiliations {
-  margin-top: 25px;
-}
-.owner-section .doctor-mike-affiliations h3 {
-  color: #E3AD43;
-}
-.owner-section .doctor-mike-affiliations h6 {
-  margin-bottom: 20px;
-  color: #FFFFFF;
 }
 
 .home-services {
@@ -639,7 +976,12 @@ body {
 #sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook a:hover {
   color: #3b5998;
 }
-#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram:hover {
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.4s;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram a:hover {
   color: #D62976;
 }
 
@@ -736,61 +1078,6 @@ body {
 }
 .services .content-and-picture .detail .detail-button:hover {
   background-color: #333333;
-}
-
-.contact .contact-form .contact-form-header {
-  color: #E3AD43;
-  padding: 40px 0px;
-  font-size: 40px;
-}
-.contact .form-margin {
-  margin-top: 25px;
-}
-.contact .form-input--modified {
-  border-radius: 0px;
-  border: none;
-}
-.contact .form-input--modified:focus {
-  border-color: rgba(255, 215, 0, 0.8);
-  box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
-  outline: 0 none;
-}
-.contact input[type=text].form-input--modified {
-  height: 50px;
-}
-.contact .contact-submit {
-  width: 150px;
-  height: 70px;
-  font-size: 20px;
-  border-radius: 0px;
-  background-color: #E3AD43;
-  border-color: #d49720;
-  transition: 0.4s;
-}
-.contact .contact-submit:hover {
-  background-color: #e0a32d;
-  outline: none;
-}
-.contact .contact-detail-location {
-  display: flex;
-  padding: 40px 0px;
-}
-.contact .contact-detail-location .emphasized {
-  color: #E3AD43;
-}
-.contact .contact-detail-location .left .location {
-  text-align: left;
-}
-.contact .contact-detail-location .left .contact-details {
-  text-align: left;
-  margin-top: 30px;
-}
-.contact .contact-detail-location .left h3 {
-  font-size: 18px;
-}
-.contact .contact-detail-location .right {
-  flex: 1;
-  margin-left: 40px;
 }
 
 .home .clients {

@@ -1,3 +1,49 @@
 $primary-color: #E3AD43;
 $light-color: #FFFFFF;
 $dark-color: #000;
+
+span {
+    &.primary {
+        color: $primary-color;
+    }
+}
+.flex {
+    display: flex;
+}
+
+.modal {
+    z-index: 10000;
+    .modal-dialog {
+        width: 70vw;
+        .modal-content {
+            border-radius: 0px;
+            .modal-header {
+                background-color: lighten($dark-color, 10%);
+                color: $primary-color;
+                border-bottom: 1px $dark-color solid;
+                .modal-title {
+                    text-transform: uppercase;
+                }
+            }
+            .modal-body {
+                background-color: lighten($dark-color, 8%);
+                padding: 0px;
+            }
+            .modal-footer {
+                background-color: lighten($dark-color, 10%);
+                border-top: 1px $dark-color solid;
+            }
+        }
+    }
+}
+
+.btn {
+    border-radius: 0px;
+    &.btn-primary {
+        background-color: $primary-color !important;
+        border-color: darken($primary-color, 20%) !important;
+        &:hover {
+            background-color: darken($primary-color, 10%) !important;
+        }
+    }
+}

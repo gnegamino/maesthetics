@@ -2,7 +2,7 @@
     <div class="client-contact">
         <div class="client-contact-item">
             <span class="fa fa-envelope"></span>
-            <span class="client-contact-text">info@maesthetics.com</span>
+            <span class="client-contact-text">inquiry@m-aestheticsclinic.com</span>
         </div>
         <div class="client-contact-item">
             <span class="fa fa-phone"></span>
@@ -52,7 +52,9 @@
                         </a>
                     </div>
                     <div class="social-media-link instagram">
-                        <i class="fa fa-instagram fa-2x"></i>
+                        <a target="_blank" href="https://www.instagram.com/maesthetics_clinic/">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -63,7 +65,7 @@
     <div class="client-contact">
         <div class="client-contact-item">
             <span class="fa fa-envelope"></span>
-            <span class="client-contact-text">info@maesthetics.com</span>
+            <span class="client-contact-text">inquiry@m-aestheticsclinic.com</span>
         </div>
         <div class="client-contact-item">
             <span class="fa fa-phone"></span>

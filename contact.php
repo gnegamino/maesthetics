@@ -1,40 +1,44 @@
-<?php require_once('layouts/master_header.php'); ?>
+<?php
+    require_once('layouts/master_header.php');
+    require_once('layouts/sub-navigation.php');
+?>
 
-<div id="app">
-    <div class="contact pushed-content">
-        <?php require_once('layouts/sub-navigation.php'); ?>
-        <div class="contact-form parallax parallax-1">
+<div class="contact pushed-content">
+    <div class="contact-form parallax parallax-1">
+        <div class="container">
             <div class="contact-form-header">
                 Get in touch with us
             </div>
-            <div class="contact-form-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <input type="text" class="form-control form-input--modified" placeholder="Name">
-                        </div>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control form-input--modified" placeholder="Contact No.">
-                        </div>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control form-input--modified" placeholder="E-mail Address">
-                        </div>
+        </div>
+        <div class="contact-form-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control form-input--modified" placeholder="Name">
                     </div>
-                    <div class="row form-margin">
-                        <div class="col-md-12">
-                            <textarea class="form-control form-input--modified" rows="8" placeholder="Inquiries, Questions, Remarks"></textarea>
-                        </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control form-input--modified" placeholder="Contact No.">
                     </div>
-                    <div class="row form-margin">
-                        <div class="col-md-12">
-                            <button class="btn contact-submit" type="button">Submit</button>
-                        </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control form-input--modified" placeholder="E-mail Address">
+                    </div>
+                </div>
+                <div class="row form-margin">
+                    <div class="col-md-12">
+                        <textarea class="form-control form-input--modified" rows="8" placeholder="Inquiries, Questions, Remarks"></textarea>
+                    </div>
+                </div>
+                <div class="row form-margin">
+                    <div class="col-md-12" align="center">
+                        <button class="btn contact-submit" type="button">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="contact-detail-location">
         <div class="container">
-            <div class="contact-detail-location">
+            <div class="flex">
                 <div class="left">
                     <div class="location">
                         <h4>Location</h4>

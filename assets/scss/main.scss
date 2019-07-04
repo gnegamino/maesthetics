@@ -4,18 +4,20 @@
 @import 'responsive';
 
 @font-face {
-    font-family: ESRegular;
-    src: url('/assets/fonts/EncodeSans-Regular.ttf');
+    font-family: Regular;
+    src: url('/assets/fonts/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: Bold;
+    src: url('/assets/fonts/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: Light;
+    src: url('/assets/fonts/Raleway-Light.ttf');
 }
 
-@font-face {
-    font-family: ESBold;
-    src: url('/assets/fonts/EncodeSans-Bold.ttf');
-}
-
-@font-face {
-    font-family: ESLight;
-    src: url('/assets/fonts/EncodeSans-Light.ttf');
+html, body, #app {
+    height: 100%;
 }
 
 #app {
@@ -29,8 +31,423 @@ body {
     background-color: $dark-color;
     overflow-x: hidden;
     color: $light-color;
-    font-family: ESRegular;
+    font-family: Regular;
 }
+
+.home {
+    background-image: url("/assets/images/bg-1.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .client-logo-img {
+        width: 400px;
+    }
+}
+.client-logo {
+    display: flex;
+    justify-content: center;
+}
+.about {
+    .page-banner {
+        height: 100vh;
+        background-image: url('/assets/images/static/bg-black-1.JPG');
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        .motto {
+            display: flex;
+            justify-content: space-evenly;
+            h2 {
+                font-family: Light;
+                &:nth-of-type(even) {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+            }
+        }
+        h1 {
+            font-size: 70px;
+            font-family: Regular;
+            color: $primary-color;
+        }
+    }
+    .page-section {
+        -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        -moz-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        background-color: lighten($dark-color, 10%);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .company-profile {
+        p {
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+        .client-logo-img {
+            width: 250px;
+            margin-bottom: 40px;
+        }
+    }
+    .owner-section {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        padding: 30px 0px;
+        background: lighten($dark-color, 8%);
+        h2 {
+            font-weight: 300;
+        }
+        .doctor-mike {
+            display: flex;
+            &-image {
+                width: 300px;
+                height: 440px;
+                border: 4px $dark-color solid;
+            }
+            &-details {
+                margin-left: 40px;
+                flex: 1;
+                text-align: left;
+                h2 {
+                    color: $dark-color;
+                    margin-bottom: 20px;
+                    color: lighten($dark-color, 25%);
+                    font-family: Bold;
+                }
+                h3 {
+                    margin-top: 5px;
+                    font-size: 20px;
+                    color: lighten($dark-color, 40%);
+                }
+            }
+            &-affiliations {
+                margin-top: 25px;
+                h3 {
+                    color: $dark-color;
+                }
+                h6 {
+                    margin-bottom: 20px;
+                    font-family: Bold;
+                    font-size: 14px;
+                    color: lighten($dark-color, 25%);
+                }
+            }
+        }
+    }
+}
+.services {
+    h1 {
+        text-transform: uppercase;
+        color: lighten($dark-color, 10%);
+        text-align: center;
+        margin: 40px 0px;
+        font-size: 40px;
+    }
+    .page-banner {
+        height: 100vh;
+        background-image: url('/assets/images/static/bg-black-1.JPG');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: 70px;
+            font-family: Regular;
+            color: $primary-color;
+        }
+    }
+    .services-buttons {
+        display: flex;
+        margin-top: 20px;
+        .btn {
+            border-radius: 0px;
+            font-size: 32px;
+            margin-left: 40px;
+            background-color: $light-color;
+            color: $dark-color;
+            padding: 15px 25px;
+            transition: .2s;
+            &:hover {
+                background-color: $primary-color;
+                color: $light-color;
+            }
+        }
+    }
+    &.surgeries {
+        .page-banner {
+            height: 100vh;
+            background-image: url('/assets/images/static/bg-surgeries.JPG');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 70px;
+                font-family: Regular;
+                color: $primary-color;
+            }
+        }
+    }
+    &.face-skin-body {
+        .page-banner {
+            height: 100vh;
+            background-image: url('/assets/images/static/bg-face-body.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 70px;
+                font-family: Regular;
+                color: $primary-color;
+            }
+        }
+    }
+    &.lasers-machines {
+        .page-banner {
+            height: 100vh;
+            background-image: url('/assets/images/static/bg-lasers.JPG');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 70px;
+                font-family: Regular;
+                color: $primary-color;
+            }
+        }
+    }
+}
+.media-section {
+    background-color: $light-color;
+}
+.media-list {
+    display: flex;
+    flex-direction: column;
+    .media-item {
+        box-shadow: 10px 10px grey;
+        margin-top: 40px;
+        border: 1px darken($light-color, 40%) solid;
+        &:nth-of-type(1) {
+            margin-top: 0px;
+        }
+        &:last-child {
+            margin-bottom: 40px;
+        }
+        display: flex;
+        align-items: center;
+        .media-picture {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .media-detail {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            .media-title {
+                font-family: Bold;
+                text-transform: uppercase;
+                color: lighten($dark-color, 10%);
+                font-size: 24px;
+            }
+            .media-description {
+                margin-top: 20px;
+                font-family: Regular;
+                font-size: 16px;
+                line-height: 1.5;
+                color: darken($dark-color, 20%);
+            }
+            .media-button {
+                margin-top: 20px;
+                .view-more {
+                    font-size: 16px;
+                    background-color: $primary-color;
+                    color: $light-color;
+                    transition: .4s;
+                    border-radius: 0px;
+                    &:hover {
+                        background-color: darken($primary-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+.media-box {
+    display: flex;
+    flex-direction: column;
+    &-item {
+        margin-top: 20px;
+        &:first-child {
+            margin-top: 0px;
+        }
+        &:last-child {
+            margin-bottom: 40px;
+        }
+    }
+    &-header {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: $light-color;
+        transition: .4s;
+        &:hover {
+            background-color: $primary-color;
+            color: $light-color;
+            cursor: pointer;
+        }
+        &-icon {
+            color: $dark-color;
+            font-size: 25px;
+        }
+        &-title {
+            font-family: Regular;
+            color: $dark-color;
+            font-size: 32px;
+            margin-left: 15px;
+        }
+    }
+    &-content {
+        display: none;
+        justify-content: flex-start;
+        border-left: 1px $light-color solid;
+        border-right: 1px $light-color solid;
+        border-bottom: 1px $light-color solid;
+        padding: 20px;
+        ul {
+            margin-left: 40px;
+            &:first-child {
+                margin-left: 0px;
+            }
+            li {
+                font-size: 20px;
+                a {
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}
+#preview-modal {
+    .media-write-up {
+        padding: 15px;
+        color: lighten($dark-color, 10%);
+        line-height: 1.5;
+        font-size: 16px;
+        background-color: $light-color;
+    }
+    .media-preview {
+        display: none;
+        &.active {
+            display: block
+        }
+    }
+}
+
+.all-services-section {
+    background-color: lighten($dark-color, 12%);
+    -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+    -moz-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+    box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+    h1 {
+        color: $primary-color;
+    }
+}
+
+.contact {
+    .contact-form {
+        background-image: url('/assets/images/static/breast-1.jpg');
+        .contact-form-header {
+            color: $primary-color;
+            padding: 40px 0px;
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+    .form-margin {
+        margin-top: 25px;
+    }
+    .form-input--modified {
+        border-radius: 0px;
+        border: none;
+        &:focus {
+            border-color: rgba(255, 215, 0, 0.8);
+            box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
+            outline: 0 none;
+        }
+    }
+    input[type="text"] {
+        &.form-input--modified {
+            height: 50px;
+        }
+    }
+    .contact-submit {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 0px;
+        background-color: $primary-color;
+        border-color: darken($primary-color, 10%);
+        transition: .4s;
+        margin-bottom: 40px;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            color: $light-color;
+            outline: none;
+        }
+    }
+    .contact-detail-location {
+        -webkit-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        -moz-box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        box-shadow: inset 1px 1px 20px -1px rgba(0,0,0,0.67);
+        display: flex;
+        padding: 40px 0px;
+        background-color: lighten($dark-color, 12%);
+        .emphasized {
+            color: $primary-color;
+        }
+        .left {
+            .location {
+                text-align: left;
+            }
+            .contact-details {
+                text-align: left;
+                margin-top: 30px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .right {
+            flex: 1;
+            margin-left: 40px;
+        }
+    }
+}
+
 .footer {
     text-align: center;
     padding: 20px 0px;
@@ -43,10 +460,10 @@ body {
     display: flex;
     z-index: 1;
     .navigation-bar-content {
-        font-weight: ESBold;
         padding-left: 20px;
         padding-right: 20px;
         a {
+            font-size: 18px;
             color: $light-color;
             text-decoration: none;
             &:hover {
@@ -79,31 +496,6 @@ body {
     }
 }
 
-.client-floating-contact {
-    position: fixed;
-    left: 0;
-    bottom: 40px;
-    padding: 15px;
-    background-color: $light-color;
-    color: #444;
-}
-
-.intro-client-brand {
-    position: relative;
-    float: right;
-    top: 270px;
-    margin-right: 200px;
-    width: 600px;
-    text-align: right;
-    h1 {
-        color: $primary-color;
-        font-size: 50px;
-    }
-    p {
-        font-size: 20px;
-    }
-}
-
 .intro-left {
     position: relative;
     float: left;
@@ -120,35 +512,9 @@ body {
     }
 }
 
-// Parallax
-.parallax {
-    height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-attachment: fixed;
-    background-size: cover;
-}
-.parallax-intro {
-    background-image: url('/assets/images/parallax-1.jpg');
-}
-.parallax-1 {
-    background-image: url('/assets/images/parallax-1.jpg');
-}
-.parallax-2 {
-    background-image: url('/assets/images/stock/stock-8.jpg');
-}
-.parallax-3 {
-    background-image: url('/assets/images/stock/stock-1.jpg');
-}
-.parallax-4 {
-    background-image: url('/assets/images/parallax-4.jpg');
-}
-.regular-content {
-    height: 100vh;
-}
 
 .pushed-content {
-    margin-top: 128px;
+    margin-top: 124px;
 }
 
 
@@ -227,12 +593,6 @@ body {
     padding: 15px;
     font-size: 21px;
 }
-.client-logo {
-    justify-content: center;
-    .client-logo-img {
-        width: 300px;
-    }
-}
 .background {
     width: 100vw;
     z-index: -9999;
@@ -266,52 +626,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     height: 900px;
-}
-.owner-section {
-    display: flex;
-    position: relative;
-    top: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    padding: 30px 0px;
-    color: #444;
-    background: lighten($dark-color, 8%);
-    h2 {
-        font-weight: 300;
-    }
-    .doctor-mike {
-        display: flex;
-        &-image {
-            width: 300px;
-            height: 440px;
-            border: 4px $dark-color solid;
-        }
-        &-details {
-            margin-left: 40px;
-            flex: 1;
-            text-align: left;
-            h2 {
-                color: $primary-color;
-                margin-bottom: 20px;
-            }
-            h3 {
-                font-size: 20px;
-                color: $light-color;
-            }
-        }
-        &-affiliations {
-            margin-top: 25px;
-            h3 {
-                color: $primary-color;
-            }
-            h6 {
-                margin-bottom: 20px;
-                color: $light-color;
-            }
-        }
-    }
 }
 .home-services {
     position: relative;
@@ -402,8 +716,15 @@ body {
                             }
                         }
                     }
-                    &.instagram:hover {
-                        color: #D62976;
+                    &.instagram {
+                        a {
+                            color: $light-color;
+                            text-decoration: none;
+                            transition: .4s;
+                            &:hover {
+                                color: #D62976;
+                            }
+                        }
                     }
                 }
             }
@@ -511,68 +832,6 @@ body {
     }
 }
 
-.contact {
-    .contact-form {
-        .contact-form-header {
-            color: $primary-color;
-            padding: 40px 0px;
-            font-size: 40px;
-        }
-    }
-    .form-margin {
-        margin-top: 25px;
-    }
-    .form-input--modified {
-        border-radius: 0px;
-        border: none;
-        &:focus {
-            border-color: rgba(255, 215, 0, 0.8);
-            box-shadow: 0 1px 1px rgba(255, 215, 0, 0.075) inset, 0 0 8px rgba(255, 215, 0, 0.6);
-            outline: 0 none;
-        }
-    }
-    input[type="text"] {
-        &.form-input--modified {
-            height: 50px;
-        }
-    }
-    .contact-submit {
-        width: 150px;
-        height: 70px;
-        font-size: 20px;
-        border-radius: 0px;
-        background-color: $primary-color;
-        border-color: darken($primary-color, 10%);
-        transition: .4s;
-        &:hover {
-            background-color: darken($primary-color, 5%);
-            outline: none;
-        }
-    }
-    .contact-detail-location {
-        display: flex;
-        padding: 40px 0px;
-        .emphasized {
-            color: $primary-color;
-        }
-        .left {
-            .location {
-                text-align: left;
-            }
-            .contact-details {
-                text-align: left;
-                margin-top: 30px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-        }
-        .right {
-            flex: 1;
-            margin-left: 40px;
-        }
-    }
-}
 
 .home {
     .clients {
