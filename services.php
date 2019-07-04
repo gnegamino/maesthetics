@@ -9,7 +9,7 @@
         <div class="services-buttons">
             <a href="surgeries.php" id="surgeries" class="btn">SURGERIES</a>
             <a href="face-skin-body.php" id="face-skin-body" class="btn">FACE, SKIN AND BODY</a>
-            <a href="lasers-machines.php" id="lasers-machines" class="btn">LASERS AND MACHINES</button>
+            <a href="lasers-machines.php" id="lasers-machines" class="btn">LASERS AND MACHINES</a></button>
         </div>
     </div>
 </div>

@@ -468,6 +468,38 @@ body {
   font-family: Regular;
   color: #E3AD43;
 }
+.services.face-skin-body .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-face-body.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services.face-skin-body .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.services.lasers-machines .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/static/bg-lasers.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.services.lasers-machines .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
 
 .media-section {
   background-color: #FFFFFF;
@@ -944,7 +976,12 @@ body {
 #sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.facebook a:hover {
   color: #3b5998;
 }
-#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram:hover {
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.4s;
+}
+#sub-navigation-bar .sub-navigation-bar > .right .social-media .social-media-link.instagram a:hover {
   color: #D62976;
 }
 

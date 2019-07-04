@@ -202,6 +202,42 @@ body {
             }
         }
     }
+    &.face-skin-body {
+        .page-banner {
+            height: 100vh;
+            background-image: url('/assets/images/static/bg-face-body.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 70px;
+                font-family: Regular;
+                color: $primary-color;
+            }
+        }
+    }
+    &.lasers-machines {
+        .page-banner {
+            height: 100vh;
+            background-image: url('/assets/images/static/bg-lasers.JPG');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 70px;
+                font-family: Regular;
+                color: $primary-color;
+            }
+        }
+    }
 }
 .media-section {
     background-color: $light-color;
@@ -680,8 +716,15 @@ body {
                             }
                         }
                     }
-                    &.instagram:hover {
-                        color: #D62976;
+                    &.instagram {
+                        a {
+                            color: $light-color;
+                            text-decoration: none;
+                            transition: .4s;
+                            &:hover {
+                                color: #D62976;
+                            }
+                        }
                     }
                 }
             }
