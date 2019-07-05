@@ -37,4 +37,3 @@
 </body>
 
 <script src="/assets/js/index.js"></script>
-<script src="/assets/js/mini-navigation.js"></script>
