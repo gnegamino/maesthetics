@@ -45,6 +45,14 @@ span.primary {
   background-color: #d49720 !important;
 }
 
+.carousel-caption {
+  font-size: 24px;
+}
+
+.fa-whatsapp {
+  color: #00E676;
+}
+
 @media (max-width: 576px) {
   div.regular-content {
     height: 50vh;
@@ -314,6 +322,11 @@ body {
 .home .client-logo-img {
   width: 400px;
 }
+.home .client-logo {
+  display: block;
+  justify-content: initial;
+  text-align: center;
+}
 
 .client-logo {
   display: flex;
@@ -499,6 +512,67 @@ body {
   font-size: 70px;
   font-family: Regular;
   color: #E3AD43;
+}
+
+.gallery h1 {
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 40px 0px;
+  font-size: 40px;
+}
+.gallery .page-banner {
+  height: 100vh;
+  background-image: url("/assets/images/bg-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.gallery .page-banner h1 {
+  font-size: 70px;
+  font-family: Regular;
+  color: #E3AD43;
+}
+.gallery .media-gallery-section {
+  background-color: #FFFFFF;
+}
+.gallery .media-gallery-section .media-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+.gallery .media-gallery-section .media-gallery .media-gallery-item {
+  margin-top: 40px;
+  margin-left: 40px;
+  -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.67);
+}
+.gallery .media-gallery-section .media-gallery .media-gallery-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.gallery .media-gallery-section .media-gallery .media-gallery-item img {
+  width: 250px;
+  height: 200px;
+}
+
+#gallery-modal .single-image, #gallery-modal .album {
+  display: none;
+}
+#gallery-modal img {
+  max-width: 100%;
+}
+#gallery-modal .single-image .image-caption {
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .media-section {
@@ -695,6 +769,12 @@ body {
   text-align: left;
   margin-top: 30px;
 }
+.contact .contact-detail-location .left .contact-details .viber-icon {
+  width: 28px;
+}
+.contact .contact-detail-location .left .contact-details .whatsapp-icon {
+  width: 28px;
+}
 .contact .contact-detail-location .left h3 {
   font-size: 18px;
 }
@@ -740,6 +820,12 @@ body {
   justify-content: center;
   padding: 5px 0px;
   background: #000;
+}
+.client-contact .whatsapp-icon {
+  width: 24px;
+}
+.client-contact .viber-icon {
+  width: 24px;
 }
 .client-contact .client-contact-item {
   display: flex;

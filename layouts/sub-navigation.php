@@ -12,6 +12,11 @@
             <span class="fa fa-mobile"></span>
             <span class="client-contact-text">(+639) 255 36 3651</span>
         </div>
+        <div class="client-contact-item">
+            <img src="/assets/images/viber.png" class="viber-icon">
+            <img src="/assets/images/whatsapp.png" class="whatsapp-icon">
+            <span class="client-contact-text">(0925) 536 3651</span>
+        </div>
     </div>
     <div class="container">
         <div class="sub-navigation-bar">
@@ -35,6 +40,11 @@
                     <div class="navigation-bar-content">
                         <a href="services.php">
                             Services
+                        </a>
+                    </div>
+                    <div class="navigation-bar-content">
+                        <a href="gallery.php">
+                            Gallery
                         </a>
                     </div>
                     <div class="navigation-bar-content">
@@ -91,6 +101,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="services.php">Services</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>

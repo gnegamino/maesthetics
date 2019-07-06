@@ -50,6 +50,11 @@
                         <h4>Contact Information</h4>
                         <h3>(+632) 962 5744</h3>
                         <h3>(+639) 255 36 3651</h3>
+                        <h3>
+                            <img src="/assets/images/viber.png" class="viber-icon">
+                            <img src="/assets/images/whatsapp.png" class="whatsapp-icon">
+                            (0925) 536 3651
+                        </h3>
                         <h3 class="emphasized">inquiry@m-aestheticsclinic.com</h3>
                     </div>
                 </div>

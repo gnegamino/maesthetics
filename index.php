@@ -23,17 +23,16 @@
             </a>
         </div>
         <div class="navigation-bar-content">
+            <a href="gallery.php">
+                Gallery
+            </a>
+        </div>
+        <div class="navigation-bar-content">
             <a href="contact.php">
                 Contact Us
             </a>
         </div>
     </div>
-    <!-- <div class="book-now">
-        <div class="book-appointment">
-            <p>BOOK APPOINTMENT NOW!</p>
-            <p>(+632) 962 5744 / (+639) 255 36 3651</p>
-        </div>
-    </div> -->
 </body>
 
 <script src="/assets/js/index.js"></script>

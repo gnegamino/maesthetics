@@ -43,6 +43,11 @@ body {
     .client-logo-img {
         width: 400px;
     }
+    .client-logo {
+        display: block;
+        justify-content: initial;
+        text-align: center;
+    }
 }
 .client-logo {
     display: flex;
@@ -236,6 +241,72 @@ body {
                 font-family: Regular;
                 color: $primary-color;
             }
+        }
+    }
+}
+
+.gallery {
+    h1 {
+        text-transform: uppercase;
+        color: lighten($dark-color, 10%);
+        text-align: center;
+        margin: 40px 0px;
+        font-size: 40px;
+    }
+    .page-banner {
+        height: 100vh;
+        background-image: url('/assets/images/bg-1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: 70px;
+            font-family: Regular;
+            color: $primary-color;
+        }
+    }
+    .media-gallery-section {
+        background-color: $light-color;
+        .media-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+            .media-gallery-item {
+                margin-top: 40px;
+                margin-left: 40px;
+                -webkit-box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.67);
+                -moz-box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.67);
+                box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.67);
+                &:hover {
+                    opacity: .8;
+                    cursor: pointer;
+                }
+                img {
+                    width: 250px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+#gallery-modal {
+    .single-image, .album {
+        display: none;
+    }
+    img {
+        max-width: 100%;
+    }
+    .single-image {
+        .image-caption {
+            background-color: $light-color;
+            color: $dark-color;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
         }
     }
 }
@@ -436,6 +507,12 @@ body {
             .contact-details {
                 text-align: left;
                 margin-top: 30px;
+                .viber-icon {
+                    width: 28px;
+                }
+                .whatsapp-icon {
+                    width: 28px;
+                }
             }
             h3 {
                 font-size: 18px;
@@ -484,6 +561,12 @@ body {
     justify-content: center;
     padding: 5px 0px;
     background: $dark-color;
+    .whatsapp-icon {
+        width: 24px;
+    }
+    .viber-icon {
+        width: 24px;
+    }
     .client-contact-item {
         display: flex;
         justify-content: center;

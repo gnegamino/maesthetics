@@ -50,4 +50,18 @@ $(function(){
             mediaContent.slideUp();
         }
     });
+
+    $('.media-gallery-item').click(function(){
+        var mediaGalleryItem = $(this).data('media-gallery-item');
+
+        $('#gallery-modal').modal('show');
+        
+        if (mediaGalleryItem == "single") {
+            $('#gallery-modal .single-image').show();
+            $('#gallery-modal .album').hide();
+        } else {
+            $('#gallery-modal .album').show();
+            $('#gallery-modal .single-image').hide();
+        }
+    });
 });
