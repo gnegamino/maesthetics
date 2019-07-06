@@ -13,7 +13,7 @@
             <div class="media-list">
                 <div class="media-item" data-media-name="HIFU">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">HIFU</div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="media-item" data-media-name="carbon lasers">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Carbon Lasers</div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="media-item" data-media-name="hair removal">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Hair Removal</div>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="media-item" data-media-name="oxygen facial">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Oxygen Facial</div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="media-item" data-media-name="fractional lasers">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Fractional Lasers</div>
@@ -137,10 +137,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -170,10 +170,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -203,10 +203,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -236,10 +236,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -269,10 +269,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 

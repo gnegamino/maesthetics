@@ -13,21 +13,21 @@ $(function(){
 
     // SERVICES
     $("#surgeries").mouseover(function() {
-        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-surgeries.JPG")');
+        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-surgeries.jpg")');
     }).mouseout(function() {
-        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-black-1.JPG")');
+        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-black-1.jpg")');
     });
 
     $("#face-skin-body").mouseover(function() {
-        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-face-body.JPG")');
+        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-face-body.jpg")');
     }).mouseout(function() {
-        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-black-1.JPG")');
+        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-black-1.jpg")');
     });
 
     $("#lasers-machines").mouseover(function() {
-        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-lasers.JPG")');
+        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-lasers.jpg")');
     }).mouseout(function() {
-        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-black-1.JPG")');
+        $('.page-banner').css('background-image', 'url("/assets/images/static/bg-black-1.jpg")');
     });
 
     $(".view-more").click(function(){

@@ -10,109 +10,109 @@
     <div class="media-gallery-section">
         <div class="media-gallery">
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
             <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.JPG">
+                <img src="/assets/images/static/breast-1.jpg">
             </div>
         </div>
     </div>
@@ -129,7 +129,7 @@
             </div>
             <div class="modal-body">
                 <div class="single-image">
-                    <img src="/assets/images/static/breast-1.JPG">
+                    <img src="/assets/images/static/breast-1.jpg">
                     <div class="image-caption">
                         This is a sample caption
                     </div>
@@ -145,13 +145,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                                 <div class="carousel-caption">
                                     This is a sample caption
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                                 <div class="carousel-caption">
                                     This is a sample caption
                                 </div>

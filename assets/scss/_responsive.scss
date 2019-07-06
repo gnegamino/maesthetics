@@ -1,27 +1,221 @@
+// @media (max-width: 576px) {
+//     div.regular-content {
+//         height: 50vh;
+//     }
+//     div.content-section {
+//         padding: 20px 0px;
+//         .content-paragraph {
+//             line-height: 1.5;
+//             font-size: 16px;
+//         }
+//     }
+//     div.hero-title {
+//         text-align: center !important;
+//         padding-top: 10%;
+//         padding-bottom: 10%;
+//         h2 {
+//             width: auto;
+//         }
+//     }
+//     div.pushed-content {
+//         margin-top: 0px;
+//         .client-contact {
+//             flex-direction: column;
+//             justify-content: center;
+//         }
+//     }
+//     div#sub-navigation-bar {
+//         display: none;
+//     }
+//     div#mini-navigation-bar {
+//         background-color: lighten($dark-color, 10%);
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         .mini-dropdown-navigation {
+//             display: flex;
+//             flex-direction: column;
+//             .main-menu {
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 padding: 8px;
+//                 .hamburger-toggle {
+//                     border: 1px $dark-color solid;
+//                     padding: 5px 8px;
+//                     &:hover {
+//                         background-color: lighten($dark-color, 5%);
+//                     }
+//                     i {
+//                         font-size: 32px;
+//                         color: $primary-color;
+//                     }
+//                 }
+//                 .brand-name {
+//                     flex: 1;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     padding: 8px;
+//                     img {
+//                         width: 15%;
+//                     }
+//                     span {
+//                         color: $light-color;
+//                         font-size: 20px;
+//                         font-family: ESLight;
+//                         margin-left: 5px;
+//                     }
+//                 }
+//             }
+//             .dropdown-navigation {
+//                 background-color: lighten($dark-color, 8%);
+//                 display: none;
+//                 ul {
+//                     list-style: none;
+//                     padding-left: 0px;
+//                     margin-bottom: 0px;
+//                     li {
+//                         a {
+//                             color: $light-color;
+//                             padding: 5px;
+//                             display: block;
+//                             text-decoration: none;
+//                             font-size: 16px;
+//                             &:hover {
+//                                 background-color: lighten($dark-color, 5%);
+//                                 color: $primary-color;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     .owner-section {
+//         flex-direction: column;
+//         .doctor-mike {
+//             flex-direction: column;
+//             .doctor-mike-image {
+//                 width: 60%;
+//                 margin: 0 auto;
+//                 height: auto;
+//             }
+//             .doctor-mike-details {
+//                 margin-left: 0px;
+//                 text-align: center;
+//             }
+//         }
+//     }
+//     body.home {
+//         .intro-container {
+//             padding-top: 20px;
+//             flex-direction: column;
+//             text-align: center;
+//             .intro-text {
+//                 padding: 5px;
+//                 &:nth-of-type(even) {
+//                     display: none;
+//                 }
+//             }
+//         }
+//         .navigation-bar-content {
+//             a {
+//                 font-size: 14px;
+//             }
+//         }
+//     }
+//     div.home {
+//         #main-navigation-bar {
+//             display: none;
+//         }
+//         #mini-navigation-bar {
+//             .client-contact {
+//                 flex-direction: column;
+//             }
+//         }
+//     }
+//     div.about {
+//         .gallery {
+//             flex-direction: column;
+//             flex-wrap: nowrap;
+//             img {
+//                 width: 100%;
+//                 padding: 0px;
+//                 margin-top: 20px;
+//             }
+//         }
+//     }
+//     div.services {
+//         .content-and-picture {
+//             flex-direction: column;
+//             padding: 0px 10px;
+//             img {
+//                 width: 100%;
+//             }
+//             .detail {
+//                 margin-top: 20px;
+//                 margin-left: 0px;
+//                 .detail-button {
+//                     float: right;
+//                 }
+//             }
+//         }
+//         .content-sub-header {
+//             text-align: center;
+//         }
+//     }
+//     div.contact {
+//         .contact-form {
+//             .contact-form-header {
+//                 padding: 45px 0px 10px 0px;
+//             }
+//             .contact-form-content {
+//                 .form-control {
+//                     margin-top: 10px;
+//                 }
+//             }
+//         }
+//         .contact-submit {
+//             width: 100px;
+//             height: 50px;
+//         }
+//         .contact-detail-location {
+//             flex-direction: column;
+//             padding: 20px 0px;
+//             .left {
+//                 .location, .contact-details {
+//                     text-align: center;
+//                 }
+//             }
+//             .right {
+//                 margin-top: 10px;
+//                 margin-left: 0px;
+//             }
+//         }
+//     }
+// }
+
 @media (max-width: 576px) {
-    div.regular-content {
-        height: 50vh;
-    }
-    div.content-section {
-        padding: 20px 0px;
-        .content-paragraph {
-            line-height: 1.5;
-            font-size: 16px;
-        }
-    }
-    div.hero-title {
-        text-align: center !important;
-        padding-top: 10%;
-        padding-bottom: 10%;
-        h2 {
-            width: auto;
-        }
-    }
-    div.pushed-content {
-        margin-top: 0px;
-        .client-contact {
+    body.home {
+        .intro-container {
+            padding-top: 20px;
             flex-direction: column;
-            justify-content: center;
+            text-align: center;
+            .intro-text {
+                padding: 5px;
+                &:nth-of-type(even) {
+                    display: none;
+                }
+            }
+        }
+        .navigation-bar-content {
+            a {
+                font-size: 14px;
+            }
+        }
+        .client-logo-img {
+            width: 250px;
         }
     }
     div#sub-navigation-bar {
@@ -32,6 +226,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        .client-contact {
+            flex-direction: column;
+            background-color: lighten($dark-color, 12%);
+        }
         .mini-dropdown-navigation {
             display: flex;
             flex-direction: column;
@@ -63,7 +261,7 @@
                     span {
                         color: $light-color;
                         font-size: 20px;
-                        font-family: ESLight;
+                        font-family: Light;
                         margin-left: 5px;
                     }
                 }
@@ -78,7 +276,7 @@
                     li {
                         a {
                             color: $light-color;
-                            padding: 5px;
+                            padding: 10px 15px;
                             display: block;
                             text-decoration: none;
                             font-size: 16px;
@@ -92,157 +290,95 @@
             }
         }
     }
-    .owner-section {
-        flex-direction: column;
-        .doctor-mike {
-            flex-direction: column;
-            .doctor-mike-image {
-                width: 60%;
-                margin: 0 auto;
-                height: auto;
-            }
-            .doctor-mike-details {
-                margin-left: 0px;
+    .about {
+        .page-banner {
+            h1 {
                 text-align: center;
+                font-size: 20px;
             }
-        }
-    }
-    div.home {
-        #main-navigation-bar {
-            display: none;
-        }
-        #mini-navigation-bar {
-            .client-contact {
+            .motto {
                 flex-direction: column;
-            }
-        }
-        .bg-initial {
-            height: 90vh;
-        }
-        .bg-bldg {
-            height: 450px;
-        }
-        .bg-2 {
-            height: 800px;
-        }
-        .intro-container {
-            padding-top: 20px;
-            flex-direction: column;
-            .intro-text {
-                padding: 5px;
-                &:nth-of-type(even) {
+                h2 {
+                    text-align: center;
+                }
+                h2:nth-of-type(even) {
                     display: none;
                 }
             }
         }
-        .navigation-bar-content {
-            a {
-                font-size: 16px;
-            }
-        }
-        .book-now {
-            margin-top: 40px;
-            width: auto;
-            h2 {
-                font-size: 20px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-            .book-appointment {
-                font-size: 24px;
-            }
-        }
-        .intro-client-brand {
-            top: 80px;
-            width: auto;
-            padding: 0px 20px;
-            text-align: center;
-            float: initial;
-            margin-right: 0px;
-        }
-        .home-services {
-            .home-services-group {
+        .owner-section {
+            .doctor-mike {
                 flex-direction: column;
-                .home-services-list {
-                    h1 {
-                        text-align: center;
-                        line-height: 1.5;
-                        font-size: 20px;
+                .doctor-mike-image {
+                    width: 100%;
+                    height: 460px;
+                }
+                .doctor-mike-details {
+                    text-align: center;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    .services {
+        .services-buttons {
+            flex-direction: column;
+            margin-top: 0px;
+            a.btn {
+                margin-left: 0px;
+                margin-top: 20px;
+                font-size: 25px;
+            }
+        }
+    }
+    div.gallery {
+        .media-gallery-section {
+            .media-gallery {
+                padding: 0px 20px;
+                .media-gallery-item {
+                    margin-top: 20px;
+                    margin-left: 0px;
+                    img {
+                        width: 100%;
                     }
-                    ul {
-                        li {
-                            padding: 5px;
-                            font-size: 16px;
+                }
+            }
+        }
+    }
+    div.services {
+        &.surgeries {
+            .media-section {
+                .media-list {
+                    .media-item {
+                        flex-direction: column;
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        .media-picture {
+                            img {
+                                width: 250px;
+                                height: 250px;
+                            }
+                        }
+                        .media-detail {
+                            margin-top: 20px;
+                            .media-description {
+                                margin-top: 10px;
+                                padding-right: 20px;
+                            }
                         }
                     }
                 }
             }
         }
-        .clients {
-            .carousel-inner {
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-    div.about {
-        .gallery {
-            flex-direction: column;
-            flex-wrap: nowrap;
-            img {
-                width: 100%;
-                padding: 0px;
-                margin-top: 20px;
-            }
-        }
-    }
-    div.services {
-        .content-and-picture {
-            flex-direction: column;
-            padding: 0px 10px;
-            img {
-                width: 100%;
-            }
-            .detail {
-                margin-top: 20px;
-                margin-left: 0px;
-                .detail-button {
-                    float: right;
-                }
-            }
-        }
-        .content-sub-header {
-            text-align: center;
-        }
     }
     div.contact {
-        .contact-form {
-            .contact-form-header {
-                padding: 45px 0px 10px 0px;
-            }
-            .contact-form-content {
-                .form-control {
-                    margin-top: 10px;
-                }
-            }
-        }
-        .contact-submit {
-            width: 100px;
-            height: 50px;
-        }
         .contact-detail-location {
-            flex-direction: column;
-            padding: 20px 0px;
-            .left {
-                .location, .contact-details {
-                    text-align: center;
+            .flex {
+                flex-direction: column;
+                .right {
+                    margin-top: 40px;
+                    margin-left: 0px;
                 }
-            }
-            .right {
-                margin-top: 10px;
-                margin-left: 0px;
             }
         }
     }

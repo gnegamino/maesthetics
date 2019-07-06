@@ -37,7 +37,7 @@
             <div class="doctor-mike">
                 <img class="doctor-mike-image" src="/assets/images/mike-versoza.jpeg">
                 <div class="doctor-mike-details">
-                    <h2>Dr. Michael "MIKE" Verzosa, M.D., D.P.B.P.S</h2>
+                    <h2>Dr. Michael "Mike" Verzosa, M.D., D.P.B.P.S</h2>
                     <h3>Board Certified Plastic Surgeon</h3>
                     <h3>Volunteer, Operation Smile</h3>
                     <h3>Volunteer, Smile Train</h3>

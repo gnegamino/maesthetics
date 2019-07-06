@@ -54,33 +54,22 @@ span.primary {
 }
 
 @media (max-width: 576px) {
-  div.regular-content {
-    height: 50vh;
-  }
-
-  div.content-section {
-    padding: 20px 0px;
-  }
-  div.content-section .content-paragraph {
-    line-height: 1.5;
-    font-size: 16px;
-  }
-
-  div.hero-title {
-    text-align: center !important;
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }
-  div.hero-title h2 {
-    width: auto;
-  }
-
-  div.pushed-content {
-    margin-top: 0px;
-  }
-  div.pushed-content .client-contact {
+  body.home .intro-container {
+    padding-top: 20px;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
+  }
+  body.home .intro-container .intro-text {
+    padding: 5px;
+  }
+  body.home .intro-container .intro-text:nth-of-type(even) {
+    display: none;
+  }
+  body.home .navigation-bar-content a {
+    font-size: 14px;
+  }
+  body.home .client-logo-img {
+    width: 250px;
   }
 
   div#sub-navigation-bar {
@@ -92,6 +81,10 @@ span.primary {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  div#mini-navigation-bar .client-contact {
+    flex-direction: column;
+    background-color: #1f1f1f;
   }
   div#mini-navigation-bar .mini-dropdown-navigation {
     display: flex;
@@ -127,7 +120,7 @@ span.primary {
   div#mini-navigation-bar .mini-dropdown-navigation .main-menu .brand-name span {
     color: #FFFFFF;
     font-size: 20px;
-    font-family: ESLight;
+    font-family: Light;
     margin-left: 5px;
   }
   div#mini-navigation-bar .mini-dropdown-navigation .dropdown-navigation {
@@ -141,7 +134,7 @@ span.primary {
   }
   div#mini-navigation-bar .mini-dropdown-navigation .dropdown-navigation ul li a {
     color: #FFFFFF;
-    padding: 5px;
+    padding: 10px 15px;
     display: block;
     text-decoration: none;
     font-size: 16px;
@@ -151,134 +144,74 @@ span.primary {
     color: #E3AD43;
   }
 
-  .owner-section {
-    flex-direction: column;
-  }
-  .owner-section .doctor-mike {
-    flex-direction: column;
-  }
-  .owner-section .doctor-mike .doctor-mike-image {
-    width: 60%;
-    margin: 0 auto;
-    height: auto;
-  }
-  .owner-section .doctor-mike .doctor-mike-details {
-    margin-left: 0px;
+  .about .page-banner h1 {
     text-align: center;
-  }
-
-  div.home #main-navigation-bar {
-    display: none;
-  }
-  div.home #mini-navigation-bar .client-contact {
-    flex-direction: column;
-  }
-  div.home .bg-initial {
-    height: 90vh;
-  }
-  div.home .bg-bldg {
-    height: 450px;
-  }
-  div.home .bg-2 {
-    height: 800px;
-  }
-  div.home .intro-container {
-    padding-top: 20px;
-    flex-direction: column;
-  }
-  div.home .intro-container .intro-text {
-    padding: 5px;
-  }
-  div.home .intro-container .intro-text:nth-of-type(even) {
-    display: none;
-  }
-  div.home .navigation-bar-content a {
-    font-size: 16px;
-  }
-  div.home .book-now {
-    margin-top: 40px;
-    width: auto;
-  }
-  div.home .book-now h2 {
     font-size: 20px;
   }
-  div.home .book-now h3 {
-    font-size: 18px;
+  .about .page-banner .motto {
+    flex-direction: column;
   }
-  div.home .book-now .book-appointment {
-    font-size: 24px;
+  .about .page-banner .motto h2 {
+    text-align: center;
   }
-  div.home .intro-client-brand {
-    top: 80px;
-    width: auto;
+  .about .page-banner .motto h2:nth-of-type(even) {
+    display: none;
+  }
+  .about .owner-section .doctor-mike {
+    flex-direction: column;
+  }
+  .about .owner-section .doctor-mike .doctor-mike-image {
+    width: 100%;
+    height: 460px;
+  }
+  .about .owner-section .doctor-mike .doctor-mike-details {
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .services .services-buttons {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .services .services-buttons a.btn {
+    margin-left: 0px;
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  div.gallery .media-gallery-section .media-gallery {
     padding: 0px 20px;
-    text-align: center;
-    float: initial;
-    margin-right: 0px;
   }
-  div.home .home-services .home-services-group {
-    flex-direction: column;
-  }
-  div.home .home-services .home-services-group .home-services-list h1 {
-    text-align: center;
-    line-height: 1.5;
-    font-size: 20px;
-  }
-  div.home .home-services .home-services-group .home-services-list ul li {
-    padding: 5px;
-    font-size: 16px;
-  }
-  div.home .clients .carousel-inner img {
-    width: 100%;
-  }
-
-  div.about .gallery {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  div.about .gallery img {
-    width: 100%;
-    padding: 0px;
-    margin-top: 20px;
-  }
-
-  div.services .content-and-picture {
-    flex-direction: column;
-    padding: 0px 10px;
-  }
-  div.services .content-and-picture img {
-    width: 100%;
-  }
-  div.services .content-and-picture .detail {
+  div.gallery .media-gallery-section .media-gallery .media-gallery-item {
     margin-top: 20px;
     margin-left: 0px;
   }
-  div.services .content-and-picture .detail .detail-button {
-    float: right;
-  }
-  div.services .content-sub-header {
-    text-align: center;
+  div.gallery .media-gallery-section .media-gallery .media-gallery-item img {
+    width: 100%;
   }
 
-  div.contact .contact-form .contact-form-header {
-    padding: 45px 0px 10px 0px;
-  }
-  div.contact .contact-form .contact-form-content .form-control {
-    margin-top: 10px;
-  }
-  div.contact .contact-submit {
-    width: 100px;
-    height: 50px;
-  }
-  div.contact .contact-detail-location {
+  div.services.surgeries .media-section .media-list .media-item {
     flex-direction: column;
-    padding: 20px 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  div.contact .contact-detail-location .left .location, div.contact .contact-detail-location .left .contact-details {
-    text-align: center;
+  div.services.surgeries .media-section .media-list .media-item .media-picture img {
+    width: 250px;
+    height: 250px;
   }
-  div.contact .contact-detail-location .right {
+  div.services.surgeries .media-section .media-list .media-item .media-detail {
+    margin-top: 20px;
+  }
+  div.services.surgeries .media-section .media-list .media-item .media-detail .media-description {
     margin-top: 10px;
+    padding-right: 20px;
+  }
+
+  div.contact .contact-detail-location .flex {
+    flex-direction: column;
+  }
+  div.contact .contact-detail-location .flex .right {
+    margin-top: 40px;
     margin-left: 0px;
   }
 }
@@ -335,7 +268,7 @@ body {
 
 .about .page-banner {
   height: 100vh;
-  background-image: url("/assets/images/static/bg-black-1.JPG");
+  background-image: url("/assets/images/static/bg-black-1.jpg");
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -434,7 +367,7 @@ body {
 }
 .services .page-banner {
   height: 100vh;
-  background-image: url("/assets/images/static/bg-black-1.JPG");
+  background-image: url("/assets/images/static/bg-black-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -462,12 +395,12 @@ body {
   transition: 0.2s;
 }
 .services .services-buttons .btn:hover {
-  background-color: #E3AD43;
+  background-color: #1a1a1a;
   color: #FFFFFF;
 }
 .services.surgeries .page-banner {
   height: 100vh;
-  background-image: url("/assets/images/static/bg-surgeries.JPG");
+  background-image: url("/assets/images/static/bg-surgeries.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -499,7 +432,7 @@ body {
 }
 .services.lasers-machines .page-banner {
   height: 100vh;
-  background-image: url("/assets/images/static/bg-lasers.JPG");
+  background-image: url("/assets/images/static/bg-lasers.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

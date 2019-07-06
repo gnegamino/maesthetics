@@ -13,7 +13,7 @@
             <div class="media-list">
                 <div class="media-item" data-media-name="botox">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Botox</div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="media-item" data-media-name="fillers">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Fillers</div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="media-item" data-media-name="gluta drips">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Gluta Drips</div>
@@ -107,10 +107,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -140,10 +140,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -173,10 +173,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 

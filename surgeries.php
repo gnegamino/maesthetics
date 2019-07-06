@@ -13,7 +13,7 @@
             <div class="media-list">
                 <div class="media-item" data-media-name="rhinoplasty">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Rhinoplasty</div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="media-item" data-media-name="breast augmentation">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Breast Augmentation</div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="media-item" data-media-name="tummy tuck">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Tummy Tuck</div>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="media-item" data-media-name="liposuction">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Liposuction / Cavi Lipo</div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="media-item" data-media-name="gynecomastia">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">Gynecomastia Surgery</div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="media-item" data-media-name="ftm">
                     <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.JPG" alt="">
+                        <img src="/assets/images/static/breast-1.jpg" alt="">
                     </div>
                     <div class="media-detail">
                         <div class="media-title">FTM</div>
@@ -190,10 +190,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -223,10 +223,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -256,10 +256,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -289,10 +289,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -322,10 +322,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
@@ -355,10 +355,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="/assets/images/static/breast-1.JPG">
+                                <img src="/assets/images/static/breast-1.jpg">
                             </div>
                             <div class="item">
-                                <img src="/assets/images/static/breast-2.JPG">
+                                <img src="/assets/images/static/breast-2.jpg">
                             </div>
                         </div>
 
