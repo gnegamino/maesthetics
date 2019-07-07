@@ -1,0 +1,1 @@
+<h1 style="color: #fff">404 Page Not found.</h1>
