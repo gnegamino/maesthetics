@@ -5,10 +5,8 @@
 
 <div class="container-fluid services surgeries">
     <div class="row">
-        <div class="col-md-12">
-            <div class="page-banner">
-                <h1>SURGERIES</h1>
-            </div>
+        <div class="col-md-12 page-banner">
+            <h1>SURGERIES</h1>
         </div>
     </div>
     <div class="row">

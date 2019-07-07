@@ -5,16 +5,14 @@
 
 <div class="container-fluid about">
     <div class="row">
-        <div class="col-md-12">
-            <div class="page-banner">
-                <h1>OUR COMPANY</h1>
-                <div class="motto">
-                    <h2>More Confident</h2>
-                    <h2>●</h2>
-                    <h2>More Beautiful</h2>
-                    <h2>●</h2>
-                    <h2>More You</h2>
-                </div>
+        <div class="col-md-12 page-banner">
+            <h1>OUR COMPANY</h1>
+            <div class="motto">
+                <h2>More Confident</h2>
+                <h2>●</h2>
+                <h2>More Beautiful</h2>
+                <h2>●</h2>
+                <h2>More You</h2>
             </div>
         </div>
         <div class="col-md-12 page-section">

@@ -92,12 +92,12 @@
             <span class="client-contact-text">(+639) 255 36 3651</span>
         </div>
     </div>
-    <div class="mini-dropdown-navigation">
-        <div class="main-menu">
+    <div class="mini-dropdown-navigation clearfix">
+        <div class="main-menu clearfix">
             <div id="toggle-menu" class="hamburger-toggle">
                 <i class="fa fa-bars"></i>
             </div>
-            <div class="brand-name">
+            <div class="brand-name clearfix">
                 <img src="/assets/images/M logo.png">
                 <span>M-Aesthetics</span>
             </div>
