@@ -41,38 +41,4 @@
             </div>
         </div>
     </div>
-    <!-- <div class="intro-container">
-        <div class="intro-text">More Confident</div>
-        <div class="intro-text">●</div>
-        <div class="intro-text">More Beautiful</div>
-        <div class="intro-text">●</div>
-        <div class="intro-text">More You</div>
-    </div>
-    <div class="client-logo">
-        <img class="client-logo-img" src="/assets/images/client-logo.png">
-    </div>
-    <div id="main-navigation-bar" class="navigation-bar">
-        <div class="navigation-bar-content">
-            <a href="about.php">
-                About
-            </a>
-        </div>
-        <div class="navigation-bar-content">
-            <a href="services.php">
-                Services
-            </a>
-        </div>
-        <div class="navigation-bar-content">
-            <a href="gallery.php">
-                Gallery
-            </a>
-        </div>
-        <div class="navigation-bar-content">
-            <a href="contact.php">
-                Contact Us
-            </a>
-        </div>
-    </div> -->
 </body>
-
-<script src="/assets/js/index.js"></script>

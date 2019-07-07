@@ -97,7 +97,7 @@
                 <i class="fa fa-bars"></i>
             </div>
             <div class="brand-name clearfix">
-                <img src="/assets/images/M logo.png">
+                <img src="/assets/images/client-logo.png">
                 <span>M-Aesthetics</span>
             </div>
         </div>
