@@ -1,201 +1,3 @@
-// @media (max-width: 576px) {
-//     div.regular-content {
-//         height: 50vh;
-//     }
-//     div.content-section {
-//         padding: 20px 0px;
-//         .content-paragraph {
-//             line-height: 1.5;
-//             font-size: 16px;
-//         }
-//     }
-//     div.hero-title {
-//         text-align: center !important;
-//         padding-top: 10%;
-//         padding-bottom: 10%;
-//         h2 {
-//             width: auto;
-//         }
-//     }
-//     div.pushed-content {
-//         margin-top: 0px;
-//         .client-contact {
-//             flex-direction: column;
-//             justify-content: center;
-//         }
-//     }
-//     div#sub-navigation-bar {
-//         display: none;
-//     }
-//     div#mini-navigation-bar {
-//         background-color: lighten($dark-color, 10%);
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         .mini-dropdown-navigation {
-//             display: flex;
-//             flex-direction: column;
-//             .main-menu {
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 padding: 8px;
-//                 .hamburger-toggle {
-//                     border: 1px $dark-color solid;
-//                     padding: 5px 8px;
-//                     &:hover {
-//                         background-color: lighten($dark-color, 5%);
-//                     }
-//                     i {
-//                         font-size: 32px;
-//                         color: $primary-color;
-//                     }
-//                 }
-//                 .brand-name {
-//                     flex: 1;
-//                     display: flex;
-//                     justify-content: center;
-//                     align-items: center;
-//                     padding: 8px;
-//                     img {
-//                         width: 15%;
-//                     }
-//                     span {
-//                         color: $light-color;
-//                         font-size: 20px;
-//                         font-family: ESLight;
-//                         margin-left: 5px;
-//                     }
-//                 }
-//             }
-//             .dropdown-navigation {
-//                 background-color: lighten($dark-color, 8%);
-//                 display: none;
-//                 ul {
-//                     list-style: none;
-//                     padding-left: 0px;
-//                     margin-bottom: 0px;
-//                     li {
-//                         a {
-//                             color: $light-color;
-//                             padding: 5px;
-//                             display: block;
-//                             text-decoration: none;
-//                             font-size: 16px;
-//                             &:hover {
-//                                 background-color: lighten($dark-color, 5%);
-//                                 color: $primary-color;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     .owner-section {
-//         flex-direction: column;
-//         .doctor-mike {
-//             flex-direction: column;
-//             .doctor-mike-image {
-//                 width: 60%;
-//                 margin: 0 auto;
-//                 height: auto;
-//             }
-//             .doctor-mike-details {
-//                 margin-left: 0px;
-//                 text-align: center;
-//             }
-//         }
-//     }
-//     body.home {
-//         .intro-container {
-//             padding-top: 20px;
-//             flex-direction: column;
-//             text-align: center;
-//             .intro-text {
-//                 padding: 5px;
-//                 &:nth-of-type(even) {
-//                     display: none;
-//                 }
-//             }
-//         }
-//         .navigation-bar-content {
-//             a {
-//                 font-size: 14px;
-//             }
-//         }
-//     }
-//     div.home {
-//         #main-navigation-bar {
-//             display: none;
-//         }
-//         #mini-navigation-bar {
-//             .client-contact {
-//                 flex-direction: column;
-//             }
-//         }
-//     }
-//     div.about {
-//         .gallery {
-//             flex-direction: column;
-//             flex-wrap: nowrap;
-//             img {
-//                 width: 100%;
-//                 padding: 0px;
-//                 margin-top: 20px;
-//             }
-//         }
-//     }
-//     div.services {
-//         .content-and-picture {
-//             flex-direction: column;
-//             padding: 0px 10px;
-//             img {
-//                 width: 100%;
-//             }
-//             .detail {
-//                 margin-top: 20px;
-//                 margin-left: 0px;
-//                 .detail-button {
-//                     float: right;
-//                 }
-//             }
-//         }
-//         .content-sub-header {
-//             text-align: center;
-//         }
-//     }
-//     div.contact {
-//         .contact-form {
-//             .contact-form-header {
-//                 padding: 45px 0px 10px 0px;
-//             }
-//             .contact-form-content {
-//                 .form-control {
-//                     margin-top: 10px;
-//                 }
-//             }
-//         }
-//         .contact-submit {
-//             width: 100px;
-//             height: 50px;
-//         }
-//         .contact-detail-location {
-//             flex-direction: column;
-//             padding: 20px 0px;
-//             .left {
-//                 .location, .contact-details {
-//                     text-align: center;
-//                 }
-//             }
-//             .right {
-//                 margin-top: 10px;
-//                 margin-left: 0px;
-//             }
-//         }
-//     }
-// }
-
 @media (max-width: 576px) {
     body.home {
         .intro-container {
@@ -210,6 +12,8 @@
             }
         }
         .navigation-bar-content {
+            display: block;
+            margin-top: 5px;
             a {
                 font-size: 14px;
             }
@@ -223,24 +27,25 @@
     }
     div#mini-navigation-bar {
         background-color: lighten($dark-color, 10%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: block;
         .client-contact {
-            flex-direction: column;
+            text-align: center;
             background-color: lighten($dark-color, 12%);
+            padding: 5px 0px;
+            .whatsapp-icon {
+                width: 24px;
+            }
+            .viber-icon {
+                width: 24px;
+            }
         }
         .mini-dropdown-navigation {
-            display: flex;
-            flex-direction: column;
             .main-menu {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: 8px;
                 .hamburger-toggle {
                     border: 1px $dark-color solid;
                     padding: 5px 8px;
+                    float: left;
                     &:hover {
                         background-color: lighten($dark-color, 5%);
                     }
@@ -250,18 +55,17 @@
                     }
                 }
                 .brand-name {
-                    flex: 1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 8px;
+                    text-align: center;
                     img {
-                        width: 15%;
+                        height: 42px;
+                        float: left;
                     }
                     span {
+                        float: left;
                         color: $light-color;
                         font-size: 20px;
                         font-family: Light;
+                        margin-top: 8px;
                         margin-left: 5px;
                     }
                 }
@@ -290,21 +94,27 @@
             }
         }
     }
-    .about {
+    div.about {
         .page-banner {
+            padding-top: 250px;
             h1 {
                 text-align: center;
-                font-size: 20px;
+                font-size: 50px;
             }
             .motto {
                 flex-direction: column;
                 h2 {
+                    display: block;
                     text-align: center;
+                    font-size: 22px;
                 }
                 h2:nth-of-type(even) {
                     display: none;
                 }
             }
+        }
+        .company-profile p {
+            font-size: 16px;
         }
         .owner-section {
             .doctor-mike {
@@ -320,18 +130,33 @@
             }
         }
     }
-    .services {
+    div.services {
+        .page-banner {
+            padding-top: 100px;
+            h1 {
+                text-align: center;
+                font-size: 50px;
+            }
+        }
         .services-buttons {
-            flex-direction: column;
+            display: block;
             margin-top: 0px;
             a.btn {
+                display: block;
                 margin-left: 0px;
                 margin-top: 20px;
-                font-size: 25px;
+                font-size: 16px;
             }
         }
     }
     div.gallery {
+        .page-banner {
+            padding-top: 250px;
+            h1 {
+                text-align: center;
+                font-size: 50px;
+            }
+        }
         .media-gallery-section {
             .media-gallery {
                 padding: 0px 20px;
@@ -347,24 +172,25 @@
     }
     div.services {
         &.surgeries {
+            .page-banner {
+                padding-top: 200px;
+                h1 {
+                    text-align: center;
+                    font-size: 40px;
+                }
+            }
             .media-section {
                 .media-list {
                     .media-item {
-                        flex-direction: column;
-                        padding-top: 40px;
-                        padding-bottom: 40px;
                         .media-picture {
                             img {
-                                width: 250px;
+                                width: 100%;
                                 height: 250px;
                             }
                         }
                         .media-detail {
-                            margin-top: 20px;
-                            .media-description {
-                                margin-top: 10px;
-                                padding-right: 20px;
-                            }
+                            margin-top: 0px;
+                            padding: 20px;
                         }
                     }
                 }
@@ -373,11 +199,37 @@
     }
     div.contact {
         .contact-detail-location {
-            .flex {
-                flex-direction: column;
-                .right {
-                    margin-top: 40px;
-                    margin-left: 0px;
+            .right {
+                margin-top: 40px;
+                margin-left: 0px;
+            }
+        }
+        &.pushed-content {
+            margin-top: 0px;
+        }
+        .container {
+            margin-left: initial;
+            margin-right: initial;
+            width: 100%;
+        }
+    }
+    div.modal .modal-dialog {
+        width: inherit;
+    }
+    div.media-box {
+        &-header {
+            &-icon {
+                font-size: 20px;
+            }
+            &-title {
+                font-size: 20px;
+                margin-left: 15px;
+            }
+        }
+        &-content {
+            ul {
+                li {
+                    font-size: 16px;
                 }
             }
         }

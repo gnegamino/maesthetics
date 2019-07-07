@@ -38,8 +38,8 @@
     </div>
     <div class="contact-detail-location">
         <div class="container">
-            <div class="flex">
-                <div class="left">
+            <div class="row">
+                <div class="col-md-4 left">
                     <div class="location">
                         <h4>Location</h4>
                         <h2 class="emphasized">M Aesthetics Clinic</h2>
@@ -48,17 +48,20 @@
                     </div>
                     <div class="contact-details">
                         <h4>Contact Information</h4>
-                        <h3>(+632) 962 5744</h3>
-                        <h3>(+639) 255 36 3651</h3>
-                        <h3>
+                        <h3 class="contact-text">
+                            <i class="fa fa-phone"></i>
+                            (+632) 962-5744
+                        </h3>
+                        <h3 class="contact-text">
+                            <i class="fa fa-mobile fa-lg"></i>
                             <img src="/assets/images/viber.png" class="viber-icon">
                             <img src="/assets/images/whatsapp.png" class="whatsapp-icon">
-                            (0925) 536 3651
+                            (+63925) 536-3651
                         </h3>
                         <h3 class="emphasized">inquiry@m-aestheticsclinic.com</h3>
                     </div>
                 </div>
-                <div class="right">
+                <div class="col-md-8">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.3656118342265!2d121.0209877147896!3d14.635175689780493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b64fb70082bd%3A0x33c05cd55df8f937!2sQuezon+Ave%2C+Quezon+City%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1560830148596!5m2!1sen!2sph"
                         width="100%"

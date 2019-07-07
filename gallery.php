@@ -3,116 +3,55 @@
     require_once('layouts/sub-navigation.php');
 ?>
 
-<div class="gallery">
-    <div class="page-banner">
-        <h1>Gallery</h1>
+<div class="container-fluid gallery">
+    <div class="row">
+        <div class="col-md-12 page-banner">
+            <h1>Gallery</h1>
+        </div>
     </div>
-    <div class="media-gallery-section">
-        <div class="media-gallery">
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="album">
-                <img src="/assets/images/static/breast-1.jpg">
-            </div>
-            <div class="media-gallery-item" data-media-gallery-item="single">
-                <img src="/assets/images/static/breast-1.jpg">
+    <div class="row media-gallery-section">
+        <div class="container">
+            <div class="media-gallery">
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="single">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="album">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="single">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="album">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="single">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="album">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="single">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media-gallery-item" data-media-gallery-item="album">
+                        <img src="/assets/images/static/breast-1.jpg">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
