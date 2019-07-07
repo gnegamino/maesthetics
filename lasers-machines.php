@@ -3,107 +3,134 @@
     require_once('layouts/sub-navigation.php');
 ?>
 
+
 <div class="services lasers-machines">
-    <div class="page-banner">
-        <h1>LASERS AND MACHINES</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-banner">
+                <h1>LASERS AND MACHINES</h1>
+            </div>
+        </div>
     </div>
-    <div class="media-section">
-        <div class="container">
-            <h1>FEATURED SERVICES</h1>
-            <div class="media-list">
-                <div class="media-item" data-media-name="HIFU">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">HIFU</div>
-                        <div class="media-description">
-                            This is a facial cosmetic procedure that is usually performed to enhance the appearance of the nose. During this type of rhinoplasty, the nasal cartilage and bones are modified, or tissue is added.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-item" data-media-name="carbon lasers">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Carbon Lasers</div>
-                        <div class="media-description">
-                            Also known as augmentation mammoplasty — is surgery to increase breast size. It involves placing breast implants under breast tissue or chest muscles.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+    <div class="row">
+        <div class="col-md-12 media-section">
+            <div class="container">
+                <h1>FEATURED SERVICES</h1>
+                <div class="media-list">
+                    <div class="clearfix media-item" data-media-name="HIFU">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">HIFU</div>
+                                    <div class="media-description">
+                                        This is a facial cosmetic procedure that is usually performed to enhance the appearance of the nose. During this type of rhinoplasty, the nasal cartilage and bones are modified, or tissue is added.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="media-item" data-media-name="hair removal">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Hair Removal</div>
-                        <div class="media-description">
-                            A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-item" data-media-name="oxygen facial">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Oxygen Facial</div>
-                        <div class="media-description">
-                            A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+                    <div class="clearfix media-item" data-media-name="carbon lasers">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Carbon Lasers</div>
+                                    <div class="media-description">
+                                        Also known as augmentation mammoplasty — is surgery to increase breast size. It involves placing breast implants under breast tissue or chest muscles.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="media-item" data-media-name="fractional lasers">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Fractional Lasers</div>
-                        <div class="media-description">
-                            A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
+                    <div class="clearfix media-item" data-media-name="hair removal">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Hair Removal</div>
+                                    <div class="media-description">
+                                        A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+                    </div>
+                    <div class="clearfix media-item" data-media-name="oxygen facial">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Oxygen Facial</div>
+                                    <div class="media-description">
+                                        A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix media-item" data-media-name="fractional lasers">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Fractional Lasers</div>
+                                    <div class="media-description">
+                                        A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="all-services-section">
-        <div class="container">
-            <h1>ALL LASERS AND MACHINES SERVICES</h1>
-            <div class="media-box">
-                <div class="media-box-item">
-                    <div class="media-box-header">
-                        <div class="media-box-header-icon"><i class="fa fa-plus"></i></div>
-                        <div class="media-box-header-title">OTHERS</div>
-                    </div>
-                    <div class="media-box-content">
-                        <div class="flex">
-                            <ul>
-                                <li><a href="contact.php">Melasma Treatment</a></li>
-                                <li><a href="contact.php">Treatment for Hyperopigmentation (elbos, knees, dark spots)</a></li>
-                                <li><a href="contact.php">Tattoo Removal</a></li>
-                                <li><a href="contact.php">Diode Hair Removal</a></li>
-                                <li><a href="contact.php">Femilift</a></li>
-                                <li><a href="contact.php">Nipple Whitening</a></li>
-                                <li><a href="contact.php">Radio Frequency Cavitation</a></li>
-                            </ul>
+        <div class="col-md-12 all-services-section">
+            <div class="container">
+                <h1>ALL LASERS AND MACHINES SERVICES</h1>
+                <div class="row media-box">
+                    <div class="col-md-12">
+                        <div class="media-box-item">
+                            <div class="media-box-header">
+                                <div class="media-box-header-icon"><i class="fa fa-plus"></i></div>
+                                <div class="media-box-header-title">OTHERS</div>
+                            </div>
+                            <div class="media-box-content clearfix">
+                                <ul class="col-md-12">
+                                    <li><a href="contact.php">Melasma Treatment</a></li>
+                                    <li><a href="contact.php">Treatment for Hyperopigmentation (elbos, knees, dark spots)</a></li>
+                                    <li><a href="contact.php">Tattoo Removal</a></li>
+                                    <li><a href="contact.php">Diode Hair Removal</a></li>
+                                    <li><a href="contact.php">Femilift</a></li>
+                                    <li><a href="contact.php">Nipple Whitening</a></li>
+                                    <li><a href="contact.php">Radio Frequency Cavitation</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

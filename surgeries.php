@@ -3,160 +3,190 @@
     require_once('layouts/sub-navigation.php');
 ?>
 
-<div class="services surgeries">
-    <div class="page-banner">
-        <h1>SURGERIES</h1>
+<div class="container-fluid services surgeries">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-banner">
+                <h1>SURGERIES</h1>
+            </div>
+        </div>
     </div>
-    <div class="media-section">
-        <div class="container">
-            <h1>FEATURED SERVICES</h1>
-            <div class="media-list">
-                <div class="media-item" data-media-name="rhinoplasty">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Rhinoplasty</div>
-                        <div class="media-description">
-                            This is a facial cosmetic procedure that is usually performed to enhance the appearance of the nose. During this type of rhinoplasty, the nasal cartilage and bones are modified, or tissue is added.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-item" data-media-name="breast augmentation">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Breast Augmentation</div>
-                        <div class="media-description">
-                            Also known as augmentation mammoplasty — is surgery to increase breast size. It involves placing breast implants under breast tissue or chest muscles.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+    <div class="row">
+        <div class="col-md-12 media-section">
+            <div class="container">
+                <h1>FEATURED SERVICES</h1>
+                <div class="media-list">
+                    <div class="clearfix media-item" data-media-name="rhinoplasty">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Rhinoplasty</div>
+                                    <div class="media-description">
+                                        This is a facial cosmetic procedure that is usually performed to enhance the appearance of the nose. During this type of rhinoplasty, the nasal cartilage and bones are modified, or tissue is added.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="media-item" data-media-name="tummy tuck">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Tummy Tuck</div>
-                        <div class="media-description">
-                            A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-item" data-media-name="liposuction">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Liposuction / Cavi Lipo</div>
-                        <div class="media-description">
-                            A surgical procedure that uses a suction technique to remove fat from specific areas of the body, such as the abdomen, hips, thighs, buttocks, arms or neck. Liposuction also shapes (contours) these areas.
-                        </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+                    <div class="clearfix media-item" data-media-name="breast augmentation">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Breast Augmentation</div>
+                                    <div class="media-description">
+                                        Also known as augmentation mammoplasty — is surgery to increase breast size. It involves placing breast implants under breast tissue or chest muscles.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="media-item" data-media-name="gynecomastia">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">Gynecomastia Surgery</div>
-                        <div class="media-description">
-                            Also known as male breast reduction, is the surgical correction of overdeveloped or enlarged breasts in men.
+                    <div class="clearfix media-item" data-media-name="tummy tuck">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Tummy Tuck</div>
+                                    <div class="media-description">
+                                        A tummy tuck, also known as abdominoplasty, removes excess fat and skin and restores weakened muscles to create a smoother, firmer abdominal profile.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+                    </div>
+                    <div class="clearfix media-item" data-media-name="liposuction">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Liposuction / Cavi Lipo</div>
+                                    <div class="media-description">
+                                        A surgical procedure that uses a suction technique to remove fat from specific areas of the body, such as the abdomen, hips, thighs, buttocks, arms or neck. Liposuction also shapes (contours) these areas.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="media-item" data-media-name="ftm">
-                    <div class="media-picture">
-                        <img src="/assets/images/static/breast-1.jpg" alt="">
-                    </div>
-                    <div class="media-detail">
-                        <div class="media-title">FTM</div>
-                        <div class="media-description">
-                            This is a facial cosmetic procedure that is usually performed to enhance the appearance of the nose. During this type of rhinoplasty, the nasal cartilage and bones are modified, or tissue is added.
+                    <div class="clearfix media-item" data-media-name="gynecomastia">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">Gynecomastia Surgery</div>
+                                    <div class="media-description">
+                                        Also known as male breast reduction, is the surgical correction of overdeveloped or enlarged breasts in men.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="media-button">
-                            <button class="btn view-more">View More</button>
+                    </div>
+                    <div class="clearfix media-item" data-media-name="ftm">
+                        <div class="row">
+                            <div class="col-md-3 media-picture">
+                                <img src="/assets/images/static/breast-1.jpg" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="media-detail">
+                                    <div class="media-title">FTM</div>
+                                    <div class="media-description">
+                                        This is a facial cosmetic procedure that is usually performed to enhance the appearance of the nose. During this type of rhinoplasty, the nasal cartilage and bones are modified, or tissue is added.
+                                    </div>
+                                    <div class="media-button">
+                                        <button class="btn view-more">View More</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="all-services-section">
-        <div class="container">
-            <h1>ALL SURGERIES</h1>
-            <div class="media-box">
-                <div class="media-box-item">
-                    <div class="media-box-header">
-                        <div class="media-box-header-icon"><i class="fa fa-plus"></i></div>
-                        <div class="media-box-header-title">AESTHETICS</div>
-                    </div>
-                    <div class="media-box-content">
-                        <div class="flex">
-                            <ul>
-                                <li><a href="contact.php">Nose Trimming</a></li>
-                                <li><a href="contact.php">Face Lift</a></li>
-                                <li><a href="contact.php">Neck Lift</a></li>
-                                <li><a href="contact.php">Temporal Lift</a></li>
-                                <li><a href="contact.php">Brow Lift</a></li>
-                                <li><a href="contact.php">Eyelid Surgery</a></li>
-                                <li><a href="contact.php">Eyebag Removal</a></li>
-                                <li><a href="contact.php">Deep Setting / Slit Eye</a></li>
-                                <li><a href="contact.php">Chin Reduction</a></li>
-                                <li><a href="contact.php">Cleft Chin</a></li>
-                                <li><a href="contact.php">Double Chin Removal</a></li>
-                                <li><a href="contact.php">Lip Augmentation</a></li>
-                                <li><a href="contact.php">Lip Reduction</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="contact.php">Breast Lift</a></li>
-                                <li><a href="contact.php">Areola Repair</a></li>
-                                <li><a href="contact.php">Nipple Reduction</a></li>
-                                <li><a href="contact.php">Chin Augmentation</a></li>
-                                <li><a href="contact.php">Butt Augmentation</a></li>
-                                <li><a href="contact.php">Earring Hole Repair</a></li>
-                                <li><a href="contact.php">Mole / Wart Removal</a></li>
-                                <li><a href="contact.php">Buccal Fat Pad Removal</a></li>
-                                <li><a href="contact.php">Scar Revision</a></li>
-                                <li><a href="contact.php">Excision of Cyst</a></li>
-                                <li><a href="contact.php">Fat Transplant</a></li>
-                            </ul>
+        <div class="col-md-12 all-services-section">
+            <div class="container">
+                <h1>ALL SURGERIES</h1>
+                <div class="row media-box">
+                    <div class="col-md-12">
+                        <div class="media-box-item">
+                            <div class="media-box-header">
+                                <div class="media-box-header-icon"><i class="fa fa-plus"></i></div>
+                                <div class="media-box-header-title">AESTHETICS</div>
+                            </div>
+                            <div class="media-box-content clearfix">
+                                <ul class="col-md-6">
+                                    <li><a href="contact.php">Nose Trimming</a></li>
+                                    <li><a href="contact.php">Face Lift</a></li>
+                                    <li><a href="contact.php">Neck Lift</a></li>
+                                    <li><a href="contact.php">Temporal Lift</a></li>
+                                    <li><a href="contact.php">Brow Lift</a></li>
+                                    <li><a href="contact.php">Eyelid Surgery</a></li>
+                                    <li><a href="contact.php">Eyebag Removal</a></li>
+                                    <li><a href="contact.php">Deep Setting / Slit Eye</a></li>
+                                    <li><a href="contact.php">Chin Reduction</a></li>
+                                    <li><a href="contact.php">Cleft Chin</a></li>
+                                    <li><a href="contact.php">Double Chin Removal</a></li>
+                                    <li><a href="contact.php">Lip Augmentation</a></li>
+                                    <li><a href="contact.php">Lip Reduction</a></li>
+                                </ul>
+                                <ul class="col-md-6">
+                                    <li><a href="contact.php">Breast Lift</a></li>
+                                    <li><a href="contact.php">Areola Repair</a></li>
+                                    <li><a href="contact.php">Nipple Reduction</a></li>
+                                    <li><a href="contact.php">Chin Augmentation</a></li>
+                                    <li><a href="contact.php">Butt Augmentation</a></li>
+                                    <li><a href="contact.php">Earring Hole Repair</a></li>
+                                    <li><a href="contact.php">Mole / Wart Removal</a></li>
+                                    <li><a href="contact.php">Buccal Fat Pad Removal</a></li>
+                                    <li><a href="contact.php">Scar Revision</a></li>
+                                    <li><a href="contact.php">Excision of Cyst</a></li>
+                                    <li><a href="contact.php">Fat Transplant</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="media-box-item">
-                    <div class="media-box-header">
-                        <div class="media-box-header-icon"><i class="fa fa-plus"></i></div>
-                        <div class="media-box-header-title">RECONSTRUCTIVE</div>
-                    </div>
-                    <div class="media-box-content">
-                        <div class="flex">
-                            <ul>
-                                <li><a href="contact.php">Cleft Lip</a></li>
-                                <li><a href="contact.php">Cleft Palate</a></li>
-                                <li><a href="contact.php">Traumatic Injuries</a></li>
-                                <li><a href="contact.php">Maxillofacial Surgery</a></li>
-                                <li><a href="contact.php">Burn Injuries</a></li>
-                                <li><a href="contact.php">Skin Tumors</a></li>
-                                <li><a href="contact.php">Hand Surgery</a></li>
-                                <li><a href="contact.php">Birth Defect</a></li>
-                            </ul>
+                    <div class="col-md-12">
+                        <div class="media-box-item">
+                            <div class="media-box-header">
+                                <div class="media-box-header-icon"><i class="fa fa-plus"></i></div>
+                                <div class="media-box-header-title">RECONSTRUCTIVE</div>
+                            </div>
+                            <div class="media-box-content clearfix">
+                                <ul class="col-md-12">
+                                    <li><a href="contact.php">Cleft Lip</a></li>
+                                    <li><a href="contact.php">Cleft Palate</a></li>
+                                    <li><a href="contact.php">Traumatic Injuries</a></li>
+                                    <li><a href="contact.php">Maxillofacial Surgery</a></li>
+                                    <li><a href="contact.php">Burn Injuries</a></li>
+                                    <li><a href="contact.php">Skin Tumors</a></li>
+                                    <li><a href="contact.php">Hand Surgery</a></li>
+                                    <li><a href="contact.php">Birth Defect</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
