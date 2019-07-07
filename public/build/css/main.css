@@ -89,6 +89,12 @@ span.primary {
     background-color: #1f1f1f;
     padding: 5px 0px;
   }
+  div#mini-navigation-bar .client-contact .whatsapp-icon {
+    width: 24px;
+  }
+  div#mini-navigation-bar .client-contact .viber-icon {
+    width: 24px;
+  }
   div#mini-navigation-bar .mini-dropdown-navigation .main-menu {
     padding: 8px;
   }
@@ -366,6 +372,9 @@ body {
 }
 #sub-navigation-bar .client-contact .viber-icon {
   width: 24px;
+}
+#sub-navigation-bar .client-contact .client-contact-text {
+  font-family: Arial, Helvetica, sans-serif;
 }
 #sub-navigation-bar .sub-navigation-bar {
   padding: 10px 0px;
@@ -796,6 +805,9 @@ body {
 }
 .contact .contact-detail-location .left h3 {
   font-size: 18px;
+}
+.contact .contact-detail-location .left .contact-text {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer {

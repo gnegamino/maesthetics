@@ -48,12 +48,15 @@
                     </div>
                     <div class="contact-details">
                         <h4>Contact Information</h4>
-                        <h3>(+632) 962 5744</h3>
-                        <h3>(+639) 255 36 3651</h3>
-                        <h3>
+                        <h3 class="contact-text">
+                            <i class="fa fa-phone"></i>
+                            (+632) 962-5744
+                        </h3>
+                        <h3 class="contact-text">
+                            <i class="fa fa-mobile fa-lg"></i>
                             <img src="/assets/images/viber.png" class="viber-icon">
                             <img src="/assets/images/whatsapp.png" class="whatsapp-icon">
-                            (0925) 536 3651
+                            (+63925) 536-3651
                         </h3>
                         <h3 class="emphasized">inquiry@m-aestheticsclinic.com</h3>
                     </div>

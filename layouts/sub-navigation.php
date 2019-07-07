@@ -8,16 +8,13 @@
                 </div>
                 <div class="client-contact-item">
                     <span class="fa fa-phone"></span>
-                    <span class="client-contact-text">(+632) 962 5744</span>
+                    <span class="client-contact-text">(+632) 962-5744</span>
                 </div>
                 <div class="client-contact-item">
-                    <span class="fa fa-mobile"></span>
-                    <span class="client-contact-text">(+639) 255 36 3651</span>
-                </div>
-                <div class="client-contact-item">
+                    <span class="fa fa-mobile fa-lg"></span>
                     <img src="/assets/images/viber.png" class="viber-icon">
                     <img src="/assets/images/whatsapp.png" class="whatsapp-icon">
-                    <span class="client-contact-text">(0925) 536 3651</span>
+                    <span class="client-contact-text">(+63925) 536-3651</span>
                 </div>
             </div>
         </div>
@@ -85,11 +82,13 @@
         </div>
         <div class="client-contact-item">
             <span class="fa fa-phone"></span>
-            <span class="client-contact-text">(+632) 962 5744</span>
+            <span class="client-contact-text">(+632) 962-5744</span>
         </div>
         <div class="client-contact-item">
-            <span class="fa fa-mobile"></span>
-            <span class="client-contact-text">(+639) 255 36 3651</span>
+            <span class="fa fa-mobile fa-lg"></span>
+            <img src="/assets/images/viber.png" class="viber-icon">
+            <img src="/assets/images/whatsapp.png" class="whatsapp-icon">
+            <span class="client-contact-text">(+63925) 536-3651</span>
         </div>
     </div>
     <div class="mini-dropdown-navigation clearfix">
