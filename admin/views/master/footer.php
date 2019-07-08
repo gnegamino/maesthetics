@@ -1,5 +1,5 @@
             <?php
-                if (isset($_SESSION['login'])) {
+                if (auth()) {
             ?>
                         </div>
                     </div>

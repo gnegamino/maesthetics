@@ -168,11 +168,16 @@ input[type="button"]:hover {
 }
 
 .side-bar-item {
-    padding: 15px;
+    padding: 10px;
     color: #a3a3a3;
     margin-top: 5px;
-    font-size: 12px;
     cursor: pointer;
+    vertical-align: middle;
+}
+
+.side-bar-item span {
+    padding-left: 5px;
+    font-size: 13px;
 }
 
 .side-bar-item:hover {

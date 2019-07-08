@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Content Editor</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 </head>
 <body>
-    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
         var app = {};
         $(function(){
@@ -18,17 +18,6 @@
                     $("input").removeAttr("disabled");
                 }
             }
-
-            $("#goto-about").on("click", function(){
-                window.location = "about";
-            });
-            $("#goto-gallery").on("click", function(){
-                window.location = "gallery";
-            });
-            $("#goto-change-password").on("click", function(){
-                window.location = "change-password";
-            });
-
         });
     </script>
     <div id="loading">
@@ -42,14 +31,18 @@
             </div>
             <div class="stretch navigation-bar-container">
                 <?php
-                    if (isset($_SESSION['login'])) {
+                    if (auth()) {
                 ?>
                     <div>
-                        <a href="http://www.demo.truckingcwlt.com/" target="_blank">Website Preview</a>
+                        <a href="http://maestheticsclinic.com/" target="_blank">
+                            Website Preview
+                        </a>
                         &nbsp;
                         |
                         &nbsp;
-                        <a href="logout">Logout</a>
+                        <a href="logout">
+                            Logout
+                        </a>
                     </div>
                 <?php
                     }
@@ -58,20 +51,12 @@
         </div>
         <div id="content">
             <?php
-                if (isset($_SESSION['login'])) {
+                if (auth()) {
             ?>
                 <div id="app-container">
-                    <div id="side-bar">
-                        <div class="side-bar-item" id="goto-about">
-                            About Content
-                        </div>
-                        <div class="side-bar-item" id="goto-gallery">
-                            Gallery
-                        </div>
-                        <div class="side-bar-item" id="goto-change-password">
-                            Change Password
-                        </div>
-                    </div>
+                    <?php
+                        require 'views/sidebar.php';
+                    ?>
                     <div id="contents">
                         <div id="content-title">
                             <div>

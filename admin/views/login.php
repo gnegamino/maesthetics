@@ -50,7 +50,7 @@
                 success: function(data){
                     $("#error-label").html(data.message);
                     if (data.message == "") {
-                        window.location = "about";
+                        window.location = "gallery";
                     } else {
                         app.loading(false);
                     }
