@@ -49,9 +49,13 @@ function routeRequest()
         require 'views/404.php';
         viewFooter();
     } else {
-        viewHeader();
-        require 'views/login.php';
-        viewFooter();
+        if (auth()) {
+            header("location: gallery");
+        } else {
+            viewHeader();
+            require 'views/login.php';
+            viewFooter();
+        }
     }
 }
 

@@ -48,10 +48,10 @@
                 },
                 dataType: "json",
                 success: function(data){
-                    $("#error-label").html(data.message);
                     if (data.message == "") {
                         window.location = "gallery";
                     } else {
+                        app.alert("error", data.message);
                         app.loading(false);
                     }
                 }
