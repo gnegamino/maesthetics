@@ -47,9 +47,9 @@
                 success: function(data){
                     if (data.message == "") {
                         app.alert("success", "Success!");
-                        $("#old-password").value = "";
-                        $("#new-password").value = "";
-                        $("#repeat-password").value = "";
+                        $("#old-password").val("");
+                        $("#new-password").val("");
+                        $("#repeat-password").val("");
                     } else {
                         app.alert("error", data.message);
                     }
