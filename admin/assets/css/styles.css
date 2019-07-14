@@ -213,6 +213,11 @@ input[type="button"]:hover {
 #menu-content {
     flex: 1;
     padding: 10px;
+    height: calc(100vh - 108px);
+    height: -webkit-calc(100vh - 108px);
+    height: -moz-calc(100vh - 108px);
+    height: -o-calc(100vh - 108px);
+    overflow-y: scroll;
 }
 
 .gallery {
@@ -224,7 +229,7 @@ input[type="button"]:hover {
 .gallery-item, .gallery-item-add {
     padding: 10px;
     width: 130px;
-    height: 100px;
+    height: 120px;
     margin: 5px;
     background-color: #fff;
     border: solid 1px #b0b0b0;
@@ -235,9 +240,23 @@ input[type="button"]:hover {
     justify-content: center;
 }
 
-.gallery-item img {
+.thumbnail {
     flex: 1;
     width: 130px;
+}
+
+.thumbnail-label-count {
+    font-size: 11px;
+    color: #595959;
+}
+
+.remove-icon {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.remove-icon:hover {
+    background-color: #e3e3e3;
 }
 
 .gallery-item:hover, .gallery-item-add:hover {
@@ -274,4 +293,75 @@ input[type="button"]:hover {
 #alert-container  table {
     width: 100%;
     height: 100%;
+}
+
+#confirm {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.7);
+}
+
+#confirm-container {
+    flex: 1;
+    background-color: #fff;
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#photo-browser {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.7);
+}
+
+#photo-browser-container {
+    flex: 1;
+    background-color: #fff;
+    max-width: 700px;
+    max-height: 500px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#photo-browser-container table{
+    width: 100%;
+    height: 100%;
+}
+
+#gallery-preview {
+    width: 300px;
+}
+
+#thumbnails {
+    height: 90px;
+    width: 690px;
+    overflow-x: scroll;
+    cursor: pointer;
+}
+
+.thumbnail-small {
+    width: 70px;
+    background-color: #fff;
+    padding: 2px;
+    border: solid 1px #6e6e6e;
+}
+
+.thumbnail-small:hover {
+    background-color: #6e6e6e;
 }

@@ -28,6 +28,15 @@
                 timeOut = setTimeout(function(){ $("#alert").css("visibility", "hidden"); }, 3000);
             }
 
+            app.confirm = function confirm(message) {
+                $("#confirm-message").html(message);
+                $("#confirm").css("visibility", "visible");
+            }
+
+            $("#confirm-no").on("click", function(){
+                $("#confirm").css("visibility", "hidden");
+            });
+
             app.loading = function loading(status) {
                 if (status) {
                     app.closeAlert();
@@ -56,6 +65,26 @@
                 </tr>
             </table>
         </div>
+    </div>
+    <div id="confirm" style="visibility: hidden;">
+         <div id="confirm-container">
+            <table>
+                <tr>
+                    <td style="width: 50px;">
+                        <img src="/assets/images/icons8-ask-question-40.png" id="confirm-icon">
+                    </td>
+                    <td style="width: 350px; padding: 10px">
+                        <span id="confirm-message">Are you sure do you want to delete these 5 photos?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <input type="button" id="confirm-yes" value="Yes">
+                        <input type="button" id="confirm-no" value="No">
+                    </td>
+                </tr>
+            </table>
+         </div>
     </div>
     <div id="container">
         <div id="navigation-bar">
