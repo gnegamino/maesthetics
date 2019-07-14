@@ -36,7 +36,7 @@
     </div>
 </div>
 
-<div id="photo-browser">
+<div id="photo-browser" style="visibility: hidden;">
     <div id="photo-browser-container">
         <table>
             <tr>
@@ -91,6 +91,14 @@
     $(function() {
         $(".remove-icon").on("click", function(){
             app.confirm("Are you sure do you want to delete these 5 photos?");
+        });
+
+        $(".gallery-item").on("click", function(){
+            $("#photo-browser").css("visibility", "visible");
+        });
+
+        $(".close-gallery").on("click", function(){
+            $("#photo-browser").css("visibility", "hidden");
         });
     });
 </script>
