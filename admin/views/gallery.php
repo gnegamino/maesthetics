@@ -105,6 +105,8 @@
     </div>
 </div>
 
+<input type="file" id="file-upload" accept="image/x-png,image/gif,image/jpeg">
+
 <script type="text/javascript">
     $(function() {
         $(".remove-icon").on("click", function(){
@@ -118,5 +120,38 @@
         $("#close-gallery").on("click", function(){
             $("#photo-browser").css("visibility", "hidden");
         });
+
+        $(".gallery-item-add").on("click", function(){
+            $("#file-upload").click();
+        });
+
+        $("#file-upload").on("change", function(){
+            createAlbum();
+        });
+
+        function createAlbum() {
+            app.loading(true);
+            var fileData = $("#file-upload").prop("files")[0];
+            var formData = new FormData();
+            formData.append('file', fileData);
+
+            $.ajax({
+                url: "create-album",
+                type: "post",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Success!");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
     });
 </script>
