@@ -6,6 +6,11 @@ html, body {
     font-size: 14px;
 }
 
+textarea {
+    font-family: Arial;
+    padding: 10px;
+}
+
 input[type="text"], input[type="password"] {
     border-style: none;
     background-color: #ffff;
@@ -364,4 +369,48 @@ input[type="button"]:hover {
 
 .thumbnail-small:hover {
     background-color: #6e6e6e;
+}
+
+#close-gallery {
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#close-gallery:hover {
+    background-color: #e3e3e3;
+}
+
+.control-bar {
+    min-width: 210px;
+    max-width: 210px;
+}
+
+.control-item {
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.control-item:hover {
+   background-color: #e3e3e3;
+}
+
+.control-item span {
+    color: #fff;
+    font-size: 12px;
+    background-color: #4d4d4d;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    position: absolute;
+    margin-top: -26px;
+    margin-left: -34px;
+    visibility: hidden;
+}
+
+.control-item:hover span{
+   visibility: visible;
 }

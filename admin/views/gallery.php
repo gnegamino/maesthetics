@@ -40,14 +40,9 @@
     <div id="photo-browser-container">
         <table>
             <tr>
-                <td>
-                    <input type="button" name="" value="Upload new Photo">
-                    <input type="button" name="" value="Remove Current Photo">
-                    <input type="button" name="" value="Delete this Album">
-                    <input type="button" name="" value="Full Preview">
-                </td>
+                <td>Preview</td>
                 <td align="right">
-                    <img src="/assets/images/icons8-delete-16.png" class="close-gallery" title="Close">
+                    <img src="/assets/images/icons8-delete-16.png" id="close-gallery" title="Close">
                 </td>
             </tr>
             <tr>
@@ -57,7 +52,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="left" valign="top">
-                    <textarea style="width: 100%; height: 100px;" placeholder="Edit photo Caption here..."></textarea>
+                    <textarea style="width: 670px; height: 60px;" placeholder="Edit photo Caption here..."></textarea>
                 </td>
             </tr>
             <tr>
@@ -65,7 +60,30 @@
                     <span>20 Photos</span>
                 </td>
                 <td align="right">
-                    <input type="button" value="Save Caption">
+                    <table class="control-bar">
+                        <tr>
+                            <td class="control-item">
+                                <img src="/assets/images/icons8-screen-resolution-26.png">
+                                <span>Full Preview</span>
+                            </td>
+                            <td class="control-item">
+                                <img src="/assets/images/icons8-delete-trash-26.png">
+                                 <span>Delete Album</span>
+                            </td>
+                            <td class="control-item">
+                                <img src="/assets/images/icons8-remove-image-26.png">
+                                <span>Remove Current Photo</span>
+                            </td>
+                            <td class="control-item">
+                                <img src="/assets/images/icons8-add-image-26.png">
+                                <span>Add Photo</span>
+                            </td>
+                            <td class="control-item">
+                                <img src="/assets/images/icons8-save-26.png">
+                                <span>Save</span>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             <tr>
@@ -93,11 +111,11 @@
             app.confirm("Are you sure do you want to delete these 5 photos?");
         });
 
-        $(".gallery-item").on("click", function(){
+        $(".thumbnail").on("click", function(){
             $("#photo-browser").css("visibility", "visible");
         });
 
-        $(".close-gallery").on("click", function(){
+        $("#close-gallery").on("click", function(){
             $("#photo-browser").css("visibility", "hidden");
         });
     });
