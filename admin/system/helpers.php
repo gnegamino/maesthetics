@@ -1,6 +1,7 @@
 <?php
 
 require 'config/database.php';
+require 'config/file.php';
 
 function response($data)
 {
@@ -71,4 +72,25 @@ function authUser($password)
     $data = getData("SELECT `password` FROM `auth` LIMIT 1");
 
     return verifyHash($password, $data[0]['password']);
+}
+
+function generateNewFileName($length = 10)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+
+    return $randomString.'_'.time();
+}
+
+function photoCountLabel($count)
+{
+    if ($count > 1) {
+        return $count." Photos";
+    }
+
+    return $count." Photo";
 }

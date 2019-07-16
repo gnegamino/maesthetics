@@ -1,35 +1,40 @@
 <div id="menu-content">
     <div class="gallery">
-        <div class="gallery-item">
+
+        <?php
+            global $fileConfig;
+
+            $query = 'SELECT
+                        P.`id`,
+                        COUNT(P.`id`) AS `total`,
+                        P.`path`
+                    FROM `gallery` AS P
+                    LEFT JOIN `gallery` AS C ON C.`parent_id` = P.`id`
+                    GROUP BY P.`id`';
+            $data = getData($query);
+
+            foreach ($data as $key => $value) {
+        ?>
+
+        <div class="gallery-item" id="item_<?php echo $value['id']; ?>">
             <table>
                 <tr>
-                    <td align="left" class="thumbnail-label-count">5 Photos</td>
+                    <td align="left" class="thumbnail-label-count"><?php echo photoCountLabel($value['total']); ?></td>
                     <td align="right">
-                        <img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_1">
+                        <img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_<?php echo $value['id']; ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">
-                        <img src="/assets/images/random.jpg" class="thumbnail">
+                    <td colspan="2" class="thumbnail-holder">
+                        <img src="/<?php echo $fileConfig['storage_path'].$value['path']; ?>" class="thumbnail" id="show_<?php echo $value['id']; ?>">
                     </td>
                 </tr>
             </table>
         </div>
-        <div class="gallery-item">
-            <table>
-                <tr>
-                    <td align="left" class="thumbnail-label-count">1 Photo</td>
-                    <td align="right">
-                        <img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_2">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <img src="/assets/images/random.jpg" class="thumbnail">
-                    </td>
-                </tr>
-            </table>
-        </div>
+
+        <?php
+            }
+        ?>
         <div class="gallery-item-add">
             <img src="/assets/images/icons8-add-image-100.png">
         </div>
@@ -46,7 +51,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center" colspan="2">
+                <td align="center" colspan="2" class="preview-holder">
                     <img src="/assets/images/random.jpg" id="gallery-preview">
                 </td>
             </tr>
@@ -109,11 +114,12 @@
 
 <script type="text/javascript">
     $(function() {
-        $(".remove-icon").on("click", function(){
+        $(".gallery").on("click", ".remove-icon", function(){
             app.confirm("Are you sure do you want to delete these 5 photos?");
         });
 
-        $(".thumbnail").on("click", function(){
+        $(".gallery").on("click", ".thumbnail", function(){
+            $("#gallery-preview").attr("src", $(this).attr("src"));
             $("#photo-browser").css("visibility", "visible");
         });
 
@@ -126,6 +132,9 @@
         });
 
         $("#file-upload").on("change", function(){
+            if ($("#file-upload").val() == "") {
+                return;
+            }
             createAlbum();
         });
 
@@ -146,12 +155,32 @@
                 success: function(data){
                     if (data.message == "") {
                         app.alert("success", "Success!");
+                        generateAlbumElement(data.id, data.path);
                     } else {
                         app.alert("error", data.message);
                     }
                     app.loading(false);
+                    $("#file-upload").val('');
                 }
             });
+        }
+
+        function generateAlbumElement(id, path) {
+            $('<div class="gallery-item">' +
+                '<table>' +
+                    '<tr>' +
+                        '<td align="left" class="thumbnail-label-count">1 Photo</td>' +
+                        '<td align="right">' +
+                            '<img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_' + id + '">' +
+                        '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td colspan="2" class="thumbnail-holder">' +
+                            '<img src="' + path + '" class="thumbnail" id="show_' + id+ '" >' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</div>').insertBefore('.gallery-item-add');
         }
     });
 </script>

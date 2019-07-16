@@ -24,22 +24,22 @@ function routeRequest()
 
     if (isset($_GET['uri'])) {
         $request = $_GET['uri'];
-        foreach ($routes as $key => $value) {
-            if ($request == $value['url']) {
-                if ($value['validatePageSession']) {
-                    validatePageSession($value['url']);
+        foreach ($routes as $key => $routeValue) {
+            if ($request == $routeValue['url']) {
+                if ($routeValue['validatePageSession']) {
+                    validatePageSession($routeValue['url']);
                 }
-                if (!$value['wantsJson']) {
+                if (!$routeValue['wantsJson']) {
                     viewHeader();
                 }
 
-                if (auth() && $value['url'] == 'login') {
+                if (auth() && $routeValue['url'] == 'login') {
                     header("location: gallery");
                 } else {
-                    require $value['target'];
+                    require $routeValue['target'];
                 }
 
-                if (!$value['wantsJson']) {
+                if (!$routeValue['wantsJson']) {
                     viewFooter();
                 }
                 return;

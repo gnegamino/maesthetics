@@ -243,7 +243,6 @@ input[type="button"]:hover {
     background-color: #fff;
     border: solid 1px #b0b0b0;
     border-radius: 3px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,6 +251,8 @@ input[type="button"]:hover {
 .thumbnail {
     flex: 1;
     width: 130px;
+    max-height: 90px;
+    cursor: pointer;
 }
 
 .thumbnail-label-count {
@@ -262,6 +263,7 @@ input[type="button"]:hover {
 .remove-icon {
     padding: 3px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .remove-icon:hover {
@@ -357,6 +359,12 @@ input[type="button"]:hover {
     width: 300px;
 }
 
+.preview-holder {
+    max-height: 200px;
+    min-height: 200px;
+    overflow-y: scroll;
+}
+
 #thumbnails {
     height: 90px;
     width: 690px;
@@ -373,6 +381,10 @@ input[type="button"]:hover {
 
 .thumbnail-small:hover {
     background-color: #6e6e6e;
+}
+
+.thumbnail-holder {
+    height: 90px;
 }
 
 #close-gallery {
@@ -418,3 +430,4 @@ input[type="button"]:hover {
 .control-item:hover span{
    visibility: visible;
 }
+
