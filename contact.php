@@ -13,6 +13,13 @@
         <div class="contact-form-content">
             <div class="container">
                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert-message alert-message--error">
+                            Please complete the fields!
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-4">
                         <input type="text" class="form-control form-input--modified" placeholder="Name">
                     </div>

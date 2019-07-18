@@ -65,3 +65,13 @@ $(function(){
         }
     });
 });
+
+function processing(state) {
+    if (state) {
+        document.body.style.overflow = "hidden";
+        document.querySelector('.processing').style.display = "block";
+    } else {
+        document.body.style.overflow = "auto";
+        document.querySelector('.processing').style.display = "none";
+    }
+}

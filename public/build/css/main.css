@@ -53,6 +53,40 @@ span.primary {
   margin-top: 117px;
 }
 
+.fa-whatsapp {
+  color: #00E676;
+}
+
+.processing {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  right: 0;
+  z-index: 10000;
+}
+.processing-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.alert-message {
+  display: none;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.alert-message--error {
+  color: #db2525;
+}
+.alert-message--success {
+  color: #24d82d;
+}
+
 @media (max-width: 576px) {
   body.home .intro-container {
     padding-top: 20px;
@@ -745,7 +779,7 @@ body {
 }
 .contact .contact-form .contact-form-header {
   color: #E3AD43;
-  padding: 40px 0px;
+  padding: 40px 0px 20px 0px;
   font-size: 40px;
   text-align: center;
 }
