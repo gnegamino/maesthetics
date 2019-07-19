@@ -6,5 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>M-Aesthetics Clinic</title>
         <link rel="stylesheet" href="/public/build/css/main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
