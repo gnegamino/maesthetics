@@ -10,6 +10,7 @@
                         P.`path`
                     FROM `gallery` AS P
                     LEFT JOIN `gallery` AS C ON C.`parent_id` = P.`id`
+                    WHERE P.`parent_id` = 0
                     GROUP BY P.`id`';
             $data = getData($query);
 
@@ -52,23 +53,38 @@
             </tr>
             <tr>
                 <td align="center" colspan="2" class="preview-holder">
-                    <img src="/assets/images/random.jpg" id="gallery-preview">
+                    <div>
+                        <img src="" id="gallery-preview">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" align="left" valign="top">
-                    <textarea style="width: 670px; height: 60px;" placeholder="Edit photo Caption here..."></textarea>
+                    <textarea style="width: 670px; height: 60px;" placeholder="Edit photo Caption here..." id="text-description"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="thumbnails">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 100%" id="thumbnail-small-spacer"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td align="left">
-                    <span>20 Photos</span>
+                    <span id="detail-count"></span>
                 </td>
                 <td align="right">
                     <table class="control-bar">
                         <tr>
                             <td class="control-item">
-                                <img src="/assets/images/icons8-screen-resolution-26.png">
+                                <img src="/assets/images/icons8-screen-resolution-26.png" id="full-preview">
                                 <span>Full Preview</span>
                             </td>
                             <td class="control-item">
@@ -80,30 +96,15 @@
                                 <span>Remove Current Photo</span>
                             </td>
                             <td class="control-item">
-                                <img src="/assets/images/icons8-add-image-26.png">
+                                <img src="/assets/images/icons8-add-image-26.png" id="add-detail">
                                 <span>Add Photo</span>
                             </td>
                             <td class="control-item">
-                                <img src="/assets/images/icons8-save-26.png">
+                                <img src="/assets/images/icons8-save-26.png" id="save-detail">
                                 <span>Save</span>
                             </td>
                         </tr>
                     </table>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div id="thumbnails">
-                        <table>
-                            <tr>
-                                <?php for ($i = 0; $i < 20; $i++) { ?>
-                                <td>
-                                    <img src="/assets/images/random.jpg" class="thumbnail-small">
-                                </td>
-                                <?php } ?>
-                            </tr>
-                        </table>
-                    </div>
                 </td>
             </tr>
         </table>
@@ -111,20 +112,29 @@
 </div>
 
 <input type="file" id="file-upload" accept="image/x-png,image/gif,image/jpeg">
+<input type="file" id="file-upload-detail" accept="image/x-png,image/gif,image/jpeg">
 
 <script type="text/javascript">
     $(function() {
+
+        var id = 0;
+        var parent_id = 0;
+
         $(".gallery").on("click", ".remove-icon", function(){
             app.confirm("Are you sure do you want to delete these 5 photos?");
         });
 
         $(".gallery").on("click", ".thumbnail", function(){
-            $("#gallery-preview").attr("src", $(this).attr("src"));
-            $("#photo-browser").css("visibility", "visible");
+            var parts = $(this).attr("id").split('_');
+            id = parts[1];
+            parent_id = id;
+            view(id);
         });
 
-        $("#close-gallery").on("click", function(){
+        $("#close-gallery").on("click", function() {
             $("#photo-browser").css("visibility", "hidden");
+            app.loading(true);
+            location.reload();
         });
 
         $(".gallery-item-add").on("click", function(){
@@ -137,6 +147,148 @@
             }
             createAlbum();
         });
+
+        $("#add-detail").on("click", function(){
+            $("#file-upload-detail").click();
+        });
+
+        $("#file-upload-detail").on("change", function(){
+            if ($("#file-upload-detail").val() == "") {
+                return;
+            }
+            createDetail();
+        });
+
+        $("#thumbnails").on("click", ".thumbnail-small", function() {
+            $(".thumbnail-small").removeClass("thumbnail-small-selected");
+            $(this).addClass("thumbnail-small-selected");
+            var path = $("#" + $(this).attr("id") + " img").attr("src");
+            $("#gallery-preview").attr("src", path);
+
+            var parts = $(this).attr("id").split('_');
+            id = parts[1];
+            loadDetail();
+        });
+
+        $("#save-detail").on("click", function() {
+            saveDescription();
+        });
+
+        $("#full-preview").on("click", function(){
+            window.open($("#select_" + id + " img").attr("src"));
+        });
+
+        function saveDescription() {
+            app.loading(true);
+            $.ajax({
+                url: "save-item-description",
+                type: "post",
+                data: {
+                    id: id,
+                    description: $("#text-description").val()
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Saved.");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
+
+        function loadDetail() {
+            app.loading(true);
+            $.ajax({
+                url: "get-item-description",
+                type: "post",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $("#text-description").val(data.description);
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
+
+        function view(id) {
+            app.loading(true);
+            $.ajax({
+                url: "view-album",
+                type: "post",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        displayDetails(data.items);
+                        $("#gallery-preview").attr("src", data.items[0].path);
+                        id = data.items[0].id;
+                        $("#text-description").val(data.items[0].description);
+                        $("#photo-browser").css("visibility", "visible");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                    $("#file-upload-detail").val('');
+                }
+            });
+        }
+
+        function displayDetails(items) {
+            $(".thumbnail-small").remove();
+            var count = items.length;
+            for (var i = 0; i < items.length; i++) {
+                generateAlbumElementDetail(items[i].id, items[i].path, i == 0);
+            }
+        }
+
+        function createDetail() {
+            app.loading(true);
+            var fileData = $("#file-upload-detail").prop("files")[0];
+            var formData = new FormData();
+            formData.append('id', id);
+            formData.append('file', fileData);
+
+            $.ajax({
+                url: "create-album-detail",
+                type: "post",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Success!");
+                        generateAlbumElementDetail(data.id, data.path);
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                    $("#file-upload-detail").val('');
+                }
+            });
+        }
+
+        function generateAlbumElementDetail(id, path, selected = false) {
+            var selectedClass = "";
+            if (selected) {
+                selectedClass = "thumbnail-small-selected";
+            }
+            $('<td class="thumbnail-small ' + selectedClass + '" id="select_' + id + '">' +
+                '<img src="/' + path + '">' +
+            '</td>').insertBefore("#thumbnail-small-spacer");
+        }
 
         function createAlbum() {
             app.loading(true);

@@ -11,3 +11,7 @@ addRoute('auth', 'backend/auth.php', true, false);
 addRoute('auth-change-password', 'backend/auth-change-password.php', true, false);
 addRoute('about-save-edit', 'backend/about-save-edit.php', true, false);
 addRoute('create-album', 'backend/create-album.php', true, false);
+addRoute('create-album-detail', 'backend/create-album-detail.php', true, false);
+addRoute('view-album', 'backend/view-album.php', true, false);
+addRoute('get-item-description', 'backend/get-item-description.php', true, false);
+addRoute('save-item-description', 'backend/save-item-description.php', true, false);

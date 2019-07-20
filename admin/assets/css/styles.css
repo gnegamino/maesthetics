@@ -148,7 +148,7 @@ input[type="button"]:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 100;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,7 +284,7 @@ input[type="button"]:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 200;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,14 +355,13 @@ input[type="button"]:hover {
     height: 100%;
 }
 
-#gallery-preview {
-    width: 300px;
+.preview-holder div {
+    overflow-y: scroll;
+    max-height: 200px;
 }
 
-.preview-holder {
-    max-height: 200px;
-    min-height: 200px;
-    overflow-y: scroll;
+#gallery-preview {
+    width: 300px;
 }
 
 #thumbnails {
@@ -373,14 +372,22 @@ input[type="button"]:hover {
 }
 
 .thumbnail-small {
-    width: 70px;
     background-color: #fff;
     padding: 2px;
-    border: solid 1px #6e6e6e;
+    border-bottom: solid 3px #fff;
+}
+
+.thumbnail-small img {
+    max-height: 50px;
+    width: 70px;
 }
 
 .thumbnail-small:hover {
-    background-color: #6e6e6e;
+    border-bottom: solid 3px #6aa0f7;
+}
+
+.thumbnail-small-selected {
+    border-bottom: solid 3px #6aa0f7;
 }
 
 .thumbnail-holder {
