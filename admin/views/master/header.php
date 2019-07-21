@@ -3,6 +3,7 @@
 <head>
     <title>Page Management</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/m-aesthetics.ico"/>
 </head>
 <body>
     <script type="text/javascript" src="/assets/js/jquery-3.4.1.min.js"></script>

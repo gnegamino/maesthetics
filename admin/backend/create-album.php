@@ -20,7 +20,7 @@ if (!in_array($extension, $validFiles)) {
 
 $newFilename = generateNewFileName().".".$extension;
 if (@move_uploaded_file($_FILES['file']['tmp_name'], $fileConfig['storage_path'].$newFilename)) {
-    runQuery(sprintf("INSERT INTO `gallery`(`path`, `description`) VALUES ('%s', '')", $newFilename));
+    runQuery(sprintf("INSERT INTO `gallery`(`path`, `description`, `created_at`) VALUES ('%s', '', NOW())", $newFilename));
     $data = getData(sprintf("SELECT `id` FROM `gallery` WHERE `path` = '%s'", $newFilename));
     response(["message" => "", "id" => $data[0]['id'], "path" =>  $fileConfig['storage_path'].$newFilename]);
     return;

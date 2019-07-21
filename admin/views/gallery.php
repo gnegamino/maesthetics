@@ -6,12 +6,13 @@
 
             $query = 'SELECT
                         P.`id`,
-                        COUNT(P.`id`) AS `total`,
+                        COUNT(C.`id`) + 1 AS `total`,
                         P.`path`
                     FROM `gallery` AS P
                     LEFT JOIN `gallery` AS C ON C.`parent_id` = P.`id`
                     WHERE P.`parent_id` = 0
-                    GROUP BY P.`id`';
+                    GROUP BY P.`id`
+                    ORDER BY P.`created_at`';
             $data = getData($query);
 
             foreach ($data as $key => $value) {
@@ -88,11 +89,7 @@
                                 <span>Full Preview</span>
                             </td>
                             <td class="control-item">
-                                <img src="/assets/images/icons8-delete-trash-26.png">
-                                 <span>Delete Album</span>
-                            </td>
-                            <td class="control-item">
-                                <img src="/assets/images/icons8-remove-image-26.png">
+                                <img src="/assets/images/icons8-remove-image-26.png" id="delete-single-item">
                                 <span>Remove Current Photo</span>
                             </td>
                             <td class="control-item">
@@ -118,16 +115,18 @@
     $(function() {
 
         var id = 0;
-        var parent_id = 0;
+        var which = 0;
 
         $(".gallery").on("click", ".remove-icon", function(){
-            app.confirm("Are you sure do you want to delete these 5 photos?");
+            which = 0;
+            var parts = $(this).attr("id").split('_');
+            id = parts[1];
+            app.confirm("Are you sure do you want to delete this album?");
         });
 
         $(".gallery").on("click", ".thumbnail", function(){
             var parts = $(this).attr("id").split('_');
             id = parts[1];
-            parent_id = id;
             view(id);
         });
 
@@ -177,6 +176,70 @@
         $("#full-preview").on("click", function(){
             window.open($("#select_" + id + " img").attr("src"));
         });
+
+        $("#delete-single-item").on("click", function(){
+            which = 1;
+            app.confirm("Are you sure do you want to delete this photo?");
+        });
+
+        $("#confirm-yes").on("click", function(){
+            $("#confirm").css("visibility", "hidden");
+            if (which == 0) {
+                deleteAlbum();
+            } else {
+                deletePhoto();
+            }
+        });
+
+        function deleteAlbum() {
+            app.loading(true);
+            $.ajax({
+                url: "delete-album",
+                type: "post",
+                data: {
+                    id: id,
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Deleted");
+                        location.reload();
+                    } else {
+                        app.alert("error", data.message);
+                        app.loading(false);
+                    }
+                }
+            });
+        }
+
+        function deletePhoto() {
+            app.loading(true);
+            $.ajax({
+                url: "delete-item",
+                type: "post",
+                data: {
+                    id: id,
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Deleted");
+                        if (data.reload) {
+                            $("#photo-browser").css("visibility", "hidden");
+                            location.reload();
+                        } else {
+                            displayDetails(data.items);
+                            $("#gallery-preview").attr("src", data.items[0].path);
+                            id = data.items[0].id;
+                            $("#text-description").val(data.items[0].description);
+                        }
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
 
         function saveDescription() {
             app.loading(true);

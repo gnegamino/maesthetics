@@ -15,3 +15,5 @@ addRoute('create-album-detail', 'backend/create-album-detail.php', true, false);
 addRoute('view-album', 'backend/view-album.php', true, false);
 addRoute('get-item-description', 'backend/get-item-description.php', true, false);
 addRoute('save-item-description', 'backend/save-item-description.php', true, false);
+addRoute('delete-item', 'backend/delete-item.php', true, false);
+addRoute('delete-album', 'backend/delete-album.php', true, false);
