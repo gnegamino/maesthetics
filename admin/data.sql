@@ -20,6 +20,7 @@ CREATE TABLE `gallery` (
   `parent_id` bigint(20) DEFAULT '0',
   `path` varchar(500) DEFAULT '',
   `description` varchar(1024) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `ix_path` (`path`),
   KEY `ix_parent_id` (`parent_id`)
