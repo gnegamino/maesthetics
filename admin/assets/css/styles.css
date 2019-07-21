@@ -73,13 +73,13 @@ input[type="button"]:hover {
 
 #footer-bar {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     background-color: #1e253b;
     border-top: 1px solid #414b6e;
     color: #a3b2e3;
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
-    text-align: right;
 }
 
 .stretch {
@@ -210,10 +210,8 @@ input[type="button"]:hover {
 }
 
 #content-title {
-    flex: 1;
     background-color: #303030;
     padding: 8px 12px;
-    padding-left: 10px;
 }
 
 .menu-title {

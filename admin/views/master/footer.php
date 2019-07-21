@@ -8,7 +8,7 @@
 
             </div>
             <div id="footer-bar">
-                Copyright &copy; 2019 M-Aesthetics Clinic. All rights reserved.
+                Copyright &copy; 2019 M-Aesthetics Clinic. All Rights Reserved.
             </div>
         </div>
     </body>
