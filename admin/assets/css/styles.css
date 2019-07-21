@@ -244,22 +244,10 @@ input[type="button"]:hover {
     flex-wrap: wrap;
 }
 
-.gallery-item, .gallery-item-add {
-    padding: 10px;
-    width: 130px;
-    height: 120px;
-    margin: 5px;
-    background-color: #fff;
-    border: solid 1px #b0b0b0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .thumbnail {
     flex: 1;
-    width: 130px;
-    max-height: 90px;
+    width: 100%;
+    max-height: 79px;
     cursor: pointer;
 }
 
@@ -271,8 +259,6 @@ input[type="button"]:hover {
 }
 
 .remove-icon {
-    margin-top: 12px;
-    margin-right: 5px;
     padding: 5px;
     border-radius: 3px;
     cursor: pointer;
@@ -406,10 +392,6 @@ input[type="button"]:hover {
     border-bottom: solid 3px #6aa0f7;
 }
 
-.thumbnail-holder {
-    height: 90px;
-}
-
 #close-gallery {
     cursor: pointer;
     padding: 3px;
@@ -472,4 +454,37 @@ input[type="button"]:hover {
 .pb-footer {
     border-top: 1px #ccc solid;
     padding: 10px 12px;
+}
+
+.gallery-item {
+    width: 130px;
+    height: 120px;
+    margin: 5px;
+    background-color: #fff;
+    border: solid 1px #b0b0b0;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.gallery-item-add {
+    width: 130px;
+    height: 120px;
+    margin: 5px;
+    background-color: #fff;
+    border: solid 1px #b0b0b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gi-item-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 8px;
+    align-items: center;
+}
+.gi-photo-count {
+    font-size: 12px;
+}
+.gi-item-content {
+    height: 90px;
 }

@@ -19,19 +19,17 @@
         ?>
 
         <div class="gallery-item" id="item_<?php echo $value['id']; ?>">
-            <table>
-                <tr>
-                    <td align="left" class="thumbnail-label-count"><?php echo photoCountLabel($value['total']); ?></td>
-                    <td align="right">
-                        <img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_<?php echo $value['id']; ?>">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="thumbnail-holder">
-                        <img src="/<?php echo $fileConfig['storage_path'].$value['path']; ?>" class="thumbnail" id="show_<?php echo $value['id']; ?>">
-                    </td>
-                </tr>
-            </table>
+            <div class="gi-item-header">
+                <div class="gi-photo-count">
+                    <?php echo photoCountLabel($value['total']); ?>
+                </div>
+                <div class="gi-photo-icon">
+                    <img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_<?php echo $value['id']; ?>">
+                </div>
+            </div>
+            <div class="gi-item-content">
+                <img src="/<?php echo $fileConfig['storage_path'].$value['path']; ?>" class="thumbnail" id="show_<?php echo $value['id']; ?>">
+            </div>
         </div>
 
         <?php
@@ -109,7 +107,7 @@
             app.confirm("Are you sure do you want to delete this album?");
         });
 
-        $(".gallery").on("click", ".thumbnail", function(){
+        $(".gallery").on("click", ".gallery-item", function(){
             var parts = $(this).attr("id").split('_');
             id = parts[1];
             view(id);
