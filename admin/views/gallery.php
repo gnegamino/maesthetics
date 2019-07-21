@@ -45,66 +45,51 @@
 
 <div id="photo-browser" style="visibility: hidden;">
     <div id="photo-browser-container">
-        <table>
-            <tr>
-                <td>Preview</td>
-                <td align="right">
-                    <img src="/assets/images/icons8-delete-16.png" id="close-gallery" title="Close">
-                </td>
-            </tr>
-            <tr>
-                <td align="center" colspan="2" class="preview-holder">
-                    <div>
-                        <img src="" id="gallery-preview">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="left" valign="top">
-                    <textarea style="width: 670px; height: 60px;" placeholder="Edit photo Caption here..." id="text-description"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div id="thumbnails">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td style="width: 100%" id="thumbnail-small-spacer"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td align="left">
-                    <span id="detail-count"></span>
-                </td>
-                <td align="right">
-                    <table class="control-bar">
+        <div class="pb-header">
+            <div class="pb-header-title">
+                Preview
+            </div>
+            <div class="pb-header-icon">
+                <img src="/assets/images/icons8-delete-16.png" id="close-gallery" title="Close">
+            </div>
+        </div>
+        <div class="pb-content">
+            <div id="thumbnails">
+                <table>
+                    <tbody>
                         <tr>
-                            <td class="control-item">
-                                <img src="/assets/images/icons8-screen-resolution-26.png" id="full-preview">
-                                <span>Full Preview</span>
-                            </td>
-                            <td class="control-item">
-                                <img src="/assets/images/icons8-remove-image-26.png" id="delete-single-item">
-                                <span>Remove Current Photo</span>
-                            </td>
-                            <td class="control-item">
-                                <img src="/assets/images/icons8-add-image-26.png" id="add-detail">
-                                <span>Add Photo</span>
-                            </td>
-                            <td class="control-item">
-                                <img src="/assets/images/icons8-save-26.png" id="save-detail">
-                                <span>Save</span>
-                            </td>
+                            <td style="width: 100%" id="thumbnail-small-spacer"></td>
                         </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+                    </tbody>
+                </table>
+            </div>
+            <div class="preview-holder">
+                <div><img src="" id="gallery-preview"></div>
+            </div>
+            <div class="edit-caption">
+                <textarea rows="8" placeholder="Edit photo Caption here..." id="text-description"></textarea>
+            </div>
+        </div>
+        <div class="pb-footer">
+            <div class="control-bar">
+                <div class="control-item">
+                    <img src="/assets/images/icons8-screen-resolution-26.png" id="full-preview">
+                    <span>Full Preview</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-remove-image-26.png" id="delete-single-item">
+                    <span>Remove Current Photo</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-add-image-26.png" id="add-detail">
+                    <span>Add Photo</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-save-26.png" id="save-detail">
+                    <span>Save</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

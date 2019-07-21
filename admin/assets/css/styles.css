@@ -1,13 +1,28 @@
+@font-face {
+    font-family: Regular;
+    src: url('/assets/fonts/EncodeSans-Regular.ttf');
+}
+@font-face {
+    font-family: Bold;
+    src: url('/assets/fonts/EncodeSans-Bold.ttf');
+}
+@font-face {
+    font-family: Light;
+    src: url('/assets/fonts/EncodeSans-Light.ttf');
+}
+
 html, body {
     padding: 0px;
     margin: 0px;
     background-color: #000;
-    font-family: Arial;
+    font-family: Regular;
     font-size: 14px;
 }
-
+* {
+    box-sizing: border-box;
+}
 textarea {
-    font-family: Arial;
+    font-family: Regular;
     padding: 10px;
 }
 
@@ -24,18 +39,16 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="button"] {
-    border: solid 1px #303030;
-    background-color: #e0e0e0;
-    color: #383838;
-    font-weight: bold;
-    padding: 5px;
-    padding-left: 6px;
-    padding-right: 6px;
+    border: solid 1px #d69d33;
+    background-color: #e3ad43;
+    color: #fff;
+    font-family: Regular;
+    padding: 5px 8px;
     border-radius: 3px;
 }
 
 input[type="button"]:hover {
-    background-color: #bababa;
+    background-color: #d69d33;
 }
 
 #container {
@@ -47,13 +60,10 @@ input[type="button"]:hover {
 }
 
 #navigation-bar {
-    flex: 1;
-    min-height: 30px;
-    max-height: 30px;
-    background-color: #e0e0e0;
+    background-color: #fff;
     border-bottom: 1px solid #575757;
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
 #content {
@@ -62,15 +72,13 @@ input[type="button"]:hover {
 }
 
 #footer-bar {
-    flex: 1;
-    min-height: 20px;
-    max-height: 20px;
+    display: flex;
+    align-items: center;
     background-color: #1e253b;
     border-top: 1px solid #414b6e;
     color: #a3b2e3;
-    font-size: 10px;
-    padding: 3px;
-    vertical-align: middle;
+    font-size: 14px;
+    padding: 10px;
     text-align: right;
 }
 
@@ -87,8 +95,9 @@ input[type="button"]:hover {
 }
 
 #client-name {
-    font-weight: bold;
-    color: #9da600;
+    font-weight: normal;
+    font-family: Bold;
+    color: #E3AD43;
 }
 
 #system-name {
@@ -106,7 +115,8 @@ input[type="button"]:hover {
 
 .navigation-bar-container a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Bold;
     color: #3d3d3d;
     font-size: 13px;
 }
@@ -201,16 +211,15 @@ input[type="button"]:hover {
 
 #content-title {
     flex: 1;
-    min-height: 20px;
-    max-height: 20px;
     background-color: #303030;
-    padding: 5px;
+    padding: 8px 12px;
     padding-left: 10px;
 }
 
 .menu-title {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Bold;
     color: #fff;
 }
 
@@ -226,7 +235,7 @@ input[type="button"]:hover {
     height: -webkit-calc(100vh - 108px);
     height: -moz-calc(100vh - 108px);
     height: -o-calc(100vh - 108px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .gallery {
@@ -242,7 +251,6 @@ input[type="button"]:hover {
     margin: 5px;
     background-color: #fff;
     border: solid 1px #b0b0b0;
-    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,10 +266,14 @@ input[type="button"]:hover {
 .thumbnail-label-count {
     font-size: 11px;
     color: #595959;
+    padding-top: 5px;
+    padding-left: 10px;
 }
 
 .remove-icon {
-    padding: 3px;
+    margin-top: 12px;
+    margin-right: 5px;
+    padding: 5px;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -280,9 +292,8 @@ input[type="button"]:hover {
 
 #alert {
     width: 100%;
-    height: 50px;
     position: fixed;
-    top: 0px;
+    top: 10px;
     left: 0px;
     z-index: 99999;
     display: flex;
@@ -291,17 +302,15 @@ input[type="button"]:hover {
 }
 
 #alert-container {
-    flex: 1;
-    background-color: #fff;
-    min-width: 400px;
-    max-width: 400px;
-    height: 50px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-#alert-container  table {
+#alert-container table {
     width: 100%;
     height: 100%;
 }
@@ -342,22 +351,27 @@ input[type="button"]:hover {
 }
 
 #photo-browser-container {
-    flex: 1;
     background-color: #fff;
     max-width: 700px;
-    max-height: 500px;
-    border-radius: 5px;
-    padding: 10px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
 }
 
-#photo-browser-container table{
+#photo-browser-container table {
     width: 100%;
     height: 100%;
 }
 
 .preview-holder div {
-    overflow-y: scroll;
-    max-height: 200px;
+    text-align: center;
+}
+
+.edit-caption {
+    padding: 20px;
+}
+.edit-caption textarea {
+    width: 100%;
 }
 
 #gallery-preview {
@@ -365,16 +379,18 @@ input[type="button"]:hover {
 }
 
 #thumbnails {
-    height: 90px;
-    width: 690px;
-    overflow-x: scroll;
-    cursor: pointer;
+    background: #f2f2f2;
+    border-bottom: 1px #ccc solid;
+    width: 670px;
+    padding: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
 }
 
 .thumbnail-small {
     background-color: #fff;
-    padding: 2px;
-    border-bottom: solid 3px #fff;
+    padding: 5px;
+    border-bottom: solid 3px transparent;
 }
 
 .thumbnail-small img {
@@ -401,12 +417,12 @@ input[type="button"]:hover {
 }
 
 #close-gallery:hover {
-    background-color: #e3e3e3;
+    background-color: #000;
 }
 
 .control-bar {
-    min-width: 210px;
-    max-width: 210px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .control-item {
@@ -429,8 +445,6 @@ input[type="button"]:hover {
     padding-right: 5px;
     border-radius: 3px;
     position: absolute;
-    margin-top: -26px;
-    margin-left: -34px;
     visibility: hidden;
 }
 
@@ -438,3 +452,24 @@ input[type="button"]:hover {
    visibility: visible;
 }
 
+
+
+
+
+.pb-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px #ccc solid;
+    padding: 10px 12px;
+    background-color: #222;
+    color: #fff;
+}
+.pb-content {
+    overflow: auto;
+    flex: 1;
+}
+.pb-footer {
+    border-top: 1px #ccc solid;
+    padding: 10px 12px;
+}
