@@ -462,7 +462,6 @@ input[type="button"]:hover {
     border: solid 1px #b0b0b0;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
 }
 .gallery-item-add {
     width: 130px;
@@ -473,6 +472,7 @@ input[type="button"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .gi-item-header {
     display: flex;
@@ -485,4 +485,5 @@ input[type="button"]:hover {
 }
 .gi-item-content {
     height: 90px;
+    cursor: pointer;
 }

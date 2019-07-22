@@ -27,8 +27,8 @@
                     <img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_<?php echo $value['id']; ?>">
                 </div>
             </div>
-            <div class="gi-item-content">
-                <img src="/<?php echo $fileConfig['storage_path'].$value['path']; ?>" class="thumbnail" id="show_<?php echo $value['id']; ?>">
+            <div class="gi-item-content" id="show_<?php echo $value['id']; ?>">
+                <img src="/<?php echo $fileConfig['storage_path'].$value['path']; ?>" class="thumbnail">
             </div>
         </div>
 
@@ -107,7 +107,7 @@
             app.confirm("Are you sure do you want to delete this album?");
         });
 
-        $(".gallery").on("click", ".gallery-item", function(){
+        $(".gallery").on("click", ".gi-item-content", function(){
             var parts = $(this).attr("id").split('_');
             id = parts[1];
             view(id);
@@ -364,20 +364,16 @@
         }
 
         function generateAlbumElement(id, path) {
-            $('<div class="gallery-item">' +
-                '<table>' +
-                    '<tr>' +
-                        '<td align="left" class="thumbnail-label-count">1 Photo</td>' +
-                        '<td align="right">' +
-                            '<img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_' + id + '">' +
-                        '</td>' +
-                    '</tr>' +
-                    '<tr>' +
-                        '<td colspan="2" class="thumbnail-holder">' +
-                            '<img src="' + path + '" class="thumbnail" id="show_' + id+ '" >' +
-                        '</td>' +
-                    '</tr>' +
-                '</table>' +
+            $('<div class="gallery-item" id="item_' + id + '">' +
+                '<div class="gi-item-header">' +
+                    '<div class="gi-photo-count">1 Photo</div>' +
+                    '<div class="gi-photo-icon">' +
+                        '<img src="/assets/images/icons8-delete-trash-16.png" class="remove-icon" title="Delete" id="delete_' + id + '">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="gi-item-content" id="show_' + id + '">' +
+                    '<img src="' + path + '" class="thumbnail">' +
+                '</div>' +
             '</div>').insertBefore('.gallery-item-add');
         }
     });
