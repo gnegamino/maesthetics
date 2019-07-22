@@ -85,11 +85,11 @@
                             </div>
                             <div class="media-box-content clearfix">
                                 <ul class="col-md-12">
-                                    <li><a href="contact.php">Facial</a></li>
-                                    <li><a href="contact.php">Whitening</a></li>
-                                    <li><a href="contact.php">Peeling</a></li>
-                                    <li><a href="contact.php">Anti Aging</a></li>
-                                    <li><a href="contact.php">V-lift / Thread Lift</a></li>
+                                    <li><a href="/contact">Facial</a></li>
+                                    <li><a href="/contact">Whitening</a></li>
+                                    <li><a href="/contact">Peeling</a></li>
+                                    <li><a href="/contact">Anti Aging</a></li>
+                                    <li><a href="/contact">V-lift / Thread Lift</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -212,7 +212,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <a href="contact.php" type="button" class="btn btn-primary">Inquire Now!</a>
+                <a href="/contact" type="button" class="btn btn-primary">Inquire Now!</a>
             </div>
         </div>
     </div>

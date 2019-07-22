@@ -22,7 +22,7 @@
     <div class="container">
         <div class="sub-navigation-bar clearfix">
             <div class="col-md-1">
-                <a href="index.php">
+                <a href="/home">
                     <div class="sub-client-logo">
                         <img class="client-logo-img" src="/assets/images/client-logo.png">
                     </div>
@@ -31,27 +31,27 @@
             <div class="col-md-9 left">
                 <div class="navigation-bar-group">
                     <div class="navigation-bar-content">
-                        <a href="index.php">
+                        <a href="home">
                             Home
                         </a>
                     </div>
                     <div class="navigation-bar-content">
-                        <a href="about.php">
+                        <a href="about">
                             About
                         </a>
                     </div>
                     <div class="navigation-bar-content">
-                        <a href="services.php">
+                        <a href="services">
                             Services
                         </a>
                     </div>
                     <div class="navigation-bar-content">
-                        <a href="gallery.php">
+                        <a href="gallery">
                             Gallery
                         </a>
                     </div>
                     <div class="navigation-bar-content">
-                        <a href="contact.php">
+                        <a href="contact">
                             Contact Us
                         </a>
                     </div>
@@ -103,11 +103,11 @@
         </div>
         <div class="dropdown-navigation">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="index">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </div>
     </div>

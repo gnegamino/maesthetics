@@ -137,32 +137,32 @@
                             </div>
                             <div class="media-box-content clearfix">
                                 <ul class="col-md-6">
-                                    <li><a href="contact.php">Nose Trimming</a></li>
-                                    <li><a href="contact.php">Face Lift</a></li>
-                                    <li><a href="contact.php">Neck Lift</a></li>
-                                    <li><a href="contact.php">Temporal Lift</a></li>
-                                    <li><a href="contact.php">Brow Lift</a></li>
-                                    <li><a href="contact.php">Eyelid Surgery</a></li>
-                                    <li><a href="contact.php">Eyebag Removal</a></li>
-                                    <li><a href="contact.php">Deep Setting / Slit Eye</a></li>
-                                    <li><a href="contact.php">Chin Reduction</a></li>
-                                    <li><a href="contact.php">Cleft Chin</a></li>
-                                    <li><a href="contact.php">Double Chin Removal</a></li>
-                                    <li><a href="contact.php">Lip Augmentation</a></li>
-                                    <li><a href="contact.php">Lip Reduction</a></li>
+                                    <li><a href="/contact">Nose Trimming</a></li>
+                                    <li><a href="/contact">Face Lift</a></li>
+                                    <li><a href="/contact">Neck Lift</a></li>
+                                    <li><a href="/contact">Temporal Lift</a></li>
+                                    <li><a href="/contact">Brow Lift</a></li>
+                                    <li><a href="/contact">Eyelid Surgery</a></li>
+                                    <li><a href="/contact">Eyebag Removal</a></li>
+                                    <li><a href="/contact">Deep Setting / Slit Eye</a></li>
+                                    <li><a href="/contact">Chin Reduction</a></li>
+                                    <li><a href="/contact">Cleft Chin</a></li>
+                                    <li><a href="/contact">Double Chin Removal</a></li>
+                                    <li><a href="/contact">Lip Augmentation</a></li>
+                                    <li><a href="/contact">Lip Reduction</a></li>
                                 </ul>
                                 <ul class="col-md-6">
-                                    <li><a href="contact.php">Breast Lift</a></li>
-                                    <li><a href="contact.php">Areola Repair</a></li>
-                                    <li><a href="contact.php">Nipple Reduction</a></li>
-                                    <li><a href="contact.php">Chin Augmentation</a></li>
-                                    <li><a href="contact.php">Butt Augmentation</a></li>
-                                    <li><a href="contact.php">Earring Hole Repair</a></li>
-                                    <li><a href="contact.php">Mole / Wart Removal</a></li>
-                                    <li><a href="contact.php">Buccal Fat Pad Removal</a></li>
-                                    <li><a href="contact.php">Scar Revision</a></li>
-                                    <li><a href="contact.php">Excision of Cyst</a></li>
-                                    <li><a href="contact.php">Fat Transplant</a></li>
+                                    <li><a href="/contact">Breast Lift</a></li>
+                                    <li><a href="/contact">Areola Repair</a></li>
+                                    <li><a href="/contact">Nipple Reduction</a></li>
+                                    <li><a href="/contact">Chin Augmentation</a></li>
+                                    <li><a href="/contact">Butt Augmentation</a></li>
+                                    <li><a href="/contact">Earring Hole Repair</a></li>
+                                    <li><a href="/contact">Mole / Wart Removal</a></li>
+                                    <li><a href="/contact">Buccal Fat Pad Removal</a></li>
+                                    <li><a href="/contact">Scar Revision</a></li>
+                                    <li><a href="/contact">Excision of Cyst</a></li>
+                                    <li><a href="/contact">Fat Transplant</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -175,14 +175,14 @@
                             </div>
                             <div class="media-box-content clearfix">
                                 <ul class="col-md-12">
-                                    <li><a href="contact.php">Cleft Lip</a></li>
-                                    <li><a href="contact.php">Cleft Palate</a></li>
-                                    <li><a href="contact.php">Traumatic Injuries</a></li>
-                                    <li><a href="contact.php">Maxillofacial Surgery</a></li>
-                                    <li><a href="contact.php">Burn Injuries</a></li>
-                                    <li><a href="contact.php">Skin Tumors</a></li>
-                                    <li><a href="contact.php">Hand Surgery</a></li>
-                                    <li><a href="contact.php">Birth Defect</a></li>
+                                    <li><a href="/contact">Cleft Lip</a></li>
+                                    <li><a href="/contact">Cleft Palate</a></li>
+                                    <li><a href="/contact">Traumatic Injuries</a></li>
+                                    <li><a href="/contact">Maxillofacial Surgery</a></li>
+                                    <li><a href="/contact">Burn Injuries</a></li>
+                                    <li><a href="/contact">Skin Tumors</a></li>
+                                    <li><a href="/contact">Hand Surgery</a></li>
+                                    <li><a href="/contact">Birth Defect</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -404,7 +404,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <a href="contact.php" type="button" class="btn btn-primary">Inquire Now!</a>
+                <a href="/contact" type="button" class="btn btn-primary">Inquire Now!</a>
             </div>
         </div>
     </div>
