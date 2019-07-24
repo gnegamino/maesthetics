@@ -121,6 +121,42 @@ $(function(){
             }
         });
     }
+
+    $('#contact-send-button').click(function(){
+        var contactName = $("#contact-name-text").val();
+        var contactNumber = $("#contact-number-text").val();
+        var contactAddress = $("#contact-address-text").val();
+        var contactRemarks = $("#contact-remarks-text").val();
+
+        $("#alert-error").css("display", "none");
+        $("#alert-success").css("display", "none");
+
+        processing(true);
+        $.ajax({
+            url: "send-inquiry",
+            type: "post",
+            data: {
+                contactName: contactName,
+                contactNumber: contactNumber,
+                contactAddress: contactAddress,
+                contactRemarks: contactRemarks
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#alert-success").css("display", "block");
+                    $("#contact-name-text").val("");
+                    $("#contact-number-text").val("");
+                    $("#contact-address-text").val("");
+                    $("#contact-remarks-text").val("");
+                } else {
+                    $("#alert-error").html(data.message);
+                    $("#alert-error").css("display", "block");
+                }
+                processing(false);
+            }
+        });
+    });
 });
 
 function processing(state) {

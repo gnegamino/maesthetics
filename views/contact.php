@@ -14,33 +14,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="alert-message alert-message--error">
+                        <div class="alert-message alert-message--error" id="alert-error">
                             Please complete the fields!
                         </div>
-                        <div class="alert-message alert-message--success">
+                        <div class="alert-message alert-message--success" id="alert-success">
                             Thank you very much!
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <input type="text" class="form-control form-input--modified" placeholder="Name">
+                        <input type="text" class="form-control form-input--modified" placeholder="Name" id="contact-name-text">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control form-input--modified" placeholder="Contact No.">
+                        <input type="text" class="form-control form-input--modified" placeholder="Contact No." id="contact-number-text">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control form-input--modified" placeholder="E-mail Address">
+                        <input type="text" class="form-control form-input--modified" placeholder="E-mail Address" id="contact-address-text">
                     </div>
                 </div>
                 <div class="row form-margin">
                     <div class="col-md-12">
-                        <textarea class="form-control form-input--modified" rows="8" placeholder="Inquiries, Questions, Remarks"></textarea>
+                        <textarea class="form-control form-input--modified" rows="8" placeholder="Inquiries, Questions, Remarks" id="contact-remarks-text"></textarea>
                     </div>
                 </div>
                 <div class="row form-margin">
                     <div class="col-md-12" align="center">
-                        <button class="btn contact-submit" type="button">Submit</button>
+                        <button class="btn contact-submit" type="button" id="contact-send-button">Submit</button>
                     </div>
                 </div>
             </div>

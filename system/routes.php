@@ -12,3 +12,4 @@ route('face-skin-body', 'views/face-skin-body.php');
 route('lasers-machines', 'views/lasers-machines.php');
 route('get-gallery-item', 'backend/get-gallery-item.php');
 route('get-gallery-album', 'backend/get-gallery-album.php');
+route('send-inquiry', 'backend/send-inquiry.php');

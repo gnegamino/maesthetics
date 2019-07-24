@@ -2,6 +2,7 @@
 
 require 'config/database.php';
 require 'config/file.php';
+require 'config/email.php';
 
 function response($data)
 {
