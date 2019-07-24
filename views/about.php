@@ -21,15 +21,12 @@
                     <div class="client-logo">
                         <img class="client-logo-img" src="/assets/images/client-logo.png">
                     </div>
-                    <p>
-                        <span class="primary">M Aesthetics Clinic</span> is a world class facility which offer various products and procedures designed to enhance one's beauty and fulfill one's fantasy of magnificence. Procedures offered include Facials, Drips and Lasers. We are equipped with brandnew, state of the art machines that produce exceptional results. Our center also houses an Operating Theater designed to accommodate all aesthetic surgeries. Patients can rest in our Recovery Room after each surgery.
-                    </p>
-                    <p>
-                        Our Surgeon is a member of the Philippine Association of Plastic, Reconstructive and Aesthetic Surgeons (PAPRAS), the only society recognized by the Philippine Medical Association. This recognition assures you the best results. 
-                    </p>
-                    <p>
-                        We are located in the heart of Quezon City's business district with ample parking and valet service. Easy access to public transporation is also available. We can also arrange accomodation, recreation and transportation for patients.
-                    </p>
+                    <?php
+                        $data = getData("SELECT `content` FROM `content` WHERE `module` = 'about' LIMIT 1");
+                        if (isset($data[0]['content'])) {
+                            echo $data[0]['content'];
+                        }
+                    ?>
                 </div>
             </div>
         </div>
