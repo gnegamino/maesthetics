@@ -1,5 +1,5 @@
 <?php
 
 $fileConfig = [
-    'storage_path' => 'storage/'
+    'storage_path' => 'http://admin-host/storage/'
 ];

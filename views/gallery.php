@@ -12,46 +12,32 @@
     <div class="row media-gallery-section">
         <div class="container">
             <div class="media-gallery">
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="single">
-                        <img src="/assets/images/static/breast-1.jpg">
+                <?php
+                    global $fileConfig;
+
+                    $query = 'SELECT
+                                P.`id`,
+                                COUNT(C.`id`) + 1 AS `count`,
+                                P.`path`
+                            FROM `gallery` AS P
+                            LEFT JOIN `gallery` AS C ON C.`parent_id` = P.`id`
+                            WHERE P.`parent_id` = 0
+                            GROUP BY P.`id`
+                            ORDER BY P.`created_at`';
+                    $data = getData($query);
+
+                    foreach ($data as $key => $value) {
+                        $type =  $value['count'] > 1 ? 'album' : 'single';
+                        $path = $fileConfig['storage_path'].$value['path'];
+                ?>
+                    <div class="col-md-3">
+                        <div class="media-gallery-item" data-media-gallery-item="<?php echo $type; ?>" id="item_<?php echo $value['id']; ?>">
+                            <img src="<?php echo $path; ?>">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="album">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="single">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="album">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="single">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="album">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="single">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media-gallery-item" data-media-gallery-item="album">
-                        <img src="/assets/images/static/breast-1.jpg">
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -76,13 +62,13 @@
                 <div class="album">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <ol class="carousel-indicators">
+                        <ol class="carousel-indicators" id="album-indicators">
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner" role="listbox" id="album-items">
                             <div class="item active">
                                 <img src="/assets/images/static/breast-1.jpg">
                                 <div class="carousel-caption">
