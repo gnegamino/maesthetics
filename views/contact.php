@@ -17,6 +17,9 @@
                         <div class="alert-message alert-message--error">
                             Please complete the fields!
                         </div>
+                        <div class="alert-message alert-message--success">
+                            Thank you very much!
+                        </div>
                     </div>
                 </div>
                 <div class="row">
