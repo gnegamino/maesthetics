@@ -487,3 +487,38 @@ input[type="button"]:hover {
     height: 90px;
     cursor: pointer;
 }
+
+.error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.error404 .client-logo {
+    text-align: center;
+}
+.error404 .client-logo-img {
+    width: 255px;
+}
+.error404 h1 {
+    color: #fff;
+}
+.error404 .return-home {
+    font-size: 25px;
+    border-radius: 0px;
+    background-color: #E3AD43;
+    border-color: #ce9937;
+    transition: .4s;
+    margin-bottom: 40px;
+    color: #fff;
+    padding: 15px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+.error404 .return-home:hover {
+    background-color: #ce9937;
+    color: #fff;
+    outline: none;
+}

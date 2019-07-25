@@ -3,7 +3,6 @@
     require_once('layouts/sub-navigation.php');
 ?>
 
-
 <div class="services lasers-machines">
     <div class="row">
         <div class="col-md-12">
@@ -122,13 +121,13 @@
                             </div>
                             <div class="media-box-content clearfix">
                                 <ul class="col-md-12">
-                                    <li><a href="contact.php">Melasma Treatment</a></li>
-                                    <li><a href="contact.php">Treatment for Hyperopigmentation (elbos, knees, dark spots)</a></li>
-                                    <li><a href="contact.php">Tattoo Removal</a></li>
-                                    <li><a href="contact.php">Diode Hair Removal</a></li>
-                                    <li><a href="contact.php">Femilift</a></li>
-                                    <li><a href="contact.php">Nipple Whitening</a></li>
-                                    <li><a href="contact.php">Radio Frequency Cavitation</a></li>
+                                    <li><a href="/contact">Melasma Treatment</a></li>
+                                    <li><a href="/contact">Treatment for Hyperopigmentation (elbos, knees, dark spots)</a></li>
+                                    <li><a href="/contact">Tattoo Removal</a></li>
+                                    <li><a href="/contact">Diode Hair Removal</a></li>
+                                    <li><a href="/contact">Femilift</a></li>
+                                    <li><a href="/contact">Nipple Whitening</a></li>
+                                    <li><a href="/contact">Radio Frequency Cavitation</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -317,7 +316,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <a href="contact.php" type="button" class="btn btn-primary">Inquire Now!</a>
+                <a href="/contact" type="button" class="btn btn-primary">Inquire Now!</a>
             </div>
         </div>
     </div>

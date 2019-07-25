@@ -84,7 +84,37 @@ span.primary {
   color: #db2525;
 }
 .alert-message--success {
-  color: #24d82d;
+  color: #93ff9b;
+}
+
+.error404 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.error404 .client-logo {
+  text-align: center;
+}
+.error404 .client-logo .client-logo-img {
+  width: 255px;
+}
+.error404 .return-home {
+  font-size: 25px;
+  border-radius: 0px;
+  background-color: #E3AD43;
+  border-color: #d49720;
+  transition: 0.4s;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+  padding: 10px 25px;
+  margin-top: 15px;
+}
+.error404 .return-home:hover {
+  background-color: #d49720;
+  color: #FFFFFF;
+  outline: none;
 }
 
 @media (max-width: 576px) {
