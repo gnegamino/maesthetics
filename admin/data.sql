@@ -25,3 +25,9 @@ CREATE TABLE `gallery` (
   KEY `ix_path` (`path`),
   KEY `ix_parent_id` (`parent_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `gallery` 
+ADD COLUMN `module` TINYINT(5) NULL DEFAULT 0 AFTER `created_at`;
+
+ALTER TABLE `gallery` 
+ADD INDEX `ix_module` (`module` ASC);

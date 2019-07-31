@@ -123,3 +123,38 @@ function correctImageOrientation($filename)
         }
     }
 }
+
+function addGallery($files, $parentId, $module, $description = '')
+{
+    global $fileConfig;
+
+    $validFiles = ['png', 'jpeg', 'jpg'];
+    $filename = $files['file']['name'];
+
+    if (strlen(trim($filename)) < 1) {
+        return ["message" => "Invalid File."];
+    }
+
+    $parts = explode(".", $filename);
+    $extension = strtolower($parts[count($parts) - 1]);
+
+    if (!in_array($extension, $validFiles)) {
+        return ["message" => "Invalid File."];
+    }
+
+    $newFilename = generateNewFileName().".".$extension;
+    if (@move_uploaded_file($files['file']['tmp_name'], $fileConfig['storage_path'].$newFilename)) {
+        correctImageOrientation($fileConfig['storage_path'].$newFilename);
+        runQuery(sprintf(
+            "INSERT INTO `gallery`(`path`, `parent_id`, `description`, `created_at`, `module`) VALUES ('%s', %s, '%s', NOW(), %s)",
+            $newFilename,
+            $parentId,
+            $description,
+            $module
+        ));
+        $data = getData(sprintf("SELECT `id` FROM `gallery` WHERE `path` = '%s'", $newFilename));
+        return ["message" => "", "id" => $data[0]['id'], "path" => $fileConfig['storage_path'].$newFilename];
+    }
+
+    return ["message" => "File is too large."];
+}
