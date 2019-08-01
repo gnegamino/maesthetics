@@ -7,6 +7,10 @@
         <img src="/assets/images/icons8-about-16.png">
         <span>About Content</span>
     </div>
+    <div class="side-bar-item" id="goto-services">
+        <img src="/assets/images/icons8-list-view-16.png">
+        <span>Services Content</span>
+    </div>
     <div class="side-bar-item" id="goto-change-password">
         <img src="/assets/images/icons8-password-16.png">
         <span>Change Password</span>
@@ -23,6 +27,9 @@
         });
         $("#goto-change-password").on("click", function(){
             window.location = "change-password";
+        });
+        $("#goto-services").on("click", function(){
+            window.location = "services";
         });
     });
 </script>
