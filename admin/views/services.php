@@ -6,14 +6,16 @@
                     <div class="window-title-bar">Category</div>
                     <div class="window-content">
                         <table id="category-table">
-                            <tr>
-                                <td class="category-selected">SURGERIES</td>
-                            </tr>
-                            <tr>
-                                <td>FACE, SKIN AND BODY</td>
-                            </tr>
-                            <tr>
-                                <td>LASERS AND MACHINES</td>
+                            <?php
+                                $data = getData("SELECT * FROM `Services`");
+                                foreach ($data as $key => $value) {
+                                    echo "<tr><td id='category_".$value['id']."'>";
+                                    echo $value['name'];
+                                    echo "</td></tr>";
+                                }
+                            ?>
+                            <tr id="category-row">
+                                <td id="category-add">+ ADD NEW</td>
                             </tr>
                         </table>
                     </div>
@@ -62,8 +64,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" align="right" class="featured-services-item-controls">
-                                        <a href="#">Edit Photos</a>
-                                        <a href="#">Edit Description</a>
+                                        <a href="#">Edit</a>
                                         <a href="#">Delete</a>
                                     </td>
                                 </tr>
@@ -100,96 +101,93 @@
     </table>
 </div>
 
-<style type="text/css">
-    #services-container {
-        width: 100%;
-        height: 100%
-    }
+<div id="text-input-modal" class="modal-body" style="visibility: hidden;">
+    <div class="text-input-modal-container">
+        <table style="width: 100%">
+            <tr>
+                <td align="left" id="modal-title">Input Title Here</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="modal-input-text" style="width: 100%">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <input type="button" name="" value="Save" id="modal-save">
+                    <input type="button" name="" value="Close" id="modal-close">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 
-    .window-title-bar {
-        color: #171717;
-        border-bottom: solid 3px #171717;
-        padding: 5px;
-        font-weight: bold;
-    }
+<script type="text/javascript">
+    $(function(){
 
-    .window-content {
-        padding: 10px;
-        height: 100%;
-        overflow-y: scroll;
-    }
+        var modalType = 0;
 
-    #category-window {
-        width: 300px;
-        height: calc(100vh - 155px);
-        height: -webkit-calc(100vh - 155px);
-        height: -moz-calc(100vh - 155px);
-        height: -o-calc(100vh - 155px);
-    }
+        function showInputModal(title, type)
+        {
+            modalType = type;
+            $("#modal-title").html(title);
+            $("#text-input-modal").css("visibility", "visible");
+            $("#modal-input-text").focus();
+        }
 
-    #detail-window {
-        width: calc(100vw - 535px);
-        width: -webkit-calc(100vw - 535px);
-        width: -moz-calc(100vw - 535px);
-        width: -o-calc(100vw - 535px);
-        height: calc(100vh - 155px);
-        height: -webkit-calc(100vh - 155px);
-        height: -moz-calc(100vh - 155px);
-        height: -o-calc(100vh - 155px);
-    }
+        $("#modal-close").on("click", function(){
+            $("#text-input-modal").css("visibility", "hidden");
+        });
 
-    #detail-window a{
-        padding-left: 5px;
-        font-size: 12px;
-    }
+        $("#modal-save").on("click", function(){
+            submitModal();
+        });
 
-    #category-table {
-        width: 100%;
-    }
+        $("#modal-input-text").on("keydown", function(e){
+            if (e.which == 13) {
+                submitModal();
+            }
+        });
 
-    #category-table td{
-        padding: 7px;
-        width: 100%;
-        cursor: pointer;
-    }
+        function submitModal()
+        {
+            switch(modalType) {
+                case 0:
+                    newCategory();
+                    break;
+                default:
+                    $("#text-input-modal").css("visibility", "hidden");
+                    app.loading(true);
+                    break;
+            }
+        }
 
-    #category-table td:hover, .category-selected{
-        background-color: #1f1f1f;
-        color: #fff;
-    }
+        $("#category-add").on("click", function(){
+            showInputModal("Add new Category", 0);
+        });
 
-    .category-background-image {
-        max-width: calc(100vw - 580px);
-        max-width: -webkit-calc(100vw - 580px);
-        max-width: -moz-calc(100vw - 580px);
-        max-width: -o-calc(100vw - 580px);
-    }
-
-    .featured-services-item {
-        display: block;
-        background-color: #fff;
-        padding: 10px;
-        margin-top: 5px;
-    }
-
-    .featured-services-thumbnail {
-        width: 100px;
-    }
-
-    #other-services-table {
-        width: 100%;
-    }
-
-    #other-services-table td{
-        padding: 5px;
-    }
-
-    #other-services-table tr:hover span{
-        color: #4f4f4f;
-    }
-
-    .other-services-control {
-        width: 100px;
-    }
-
-</style>
+        function newCategory()
+        {
+            app.loading(true);
+            $.ajax({
+                url: "new-service-category",
+                type: "post",
+                data: {
+                    name: $("#modal-input-text").val()
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $('<tr><td id="category_' + data.id + '">' + data.name + '</td></tr>').insertBefore("#category-row");
+                        app.alert("success", "Saved!");
+                        $("#modal-input-text").val('');
+                        $("#text-input-modal").css("visibility", "hidden");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
+    });
+</script>

@@ -18,3 +18,5 @@ addRoute('get-item-description', 'backend/get-item-description.php', true, false
 addRoute('save-item-description', 'backend/save-item-description.php', true, false);
 addRoute('delete-item', 'backend/delete-item.php', true, false);
 addRoute('delete-album', 'backend/delete-album.php', true, false);
+addRoute('new-service-category', 'backend/new-service-category.php', true, false);
+

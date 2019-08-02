@@ -31,3 +31,15 @@ ADD COLUMN `module` TINYINT(5) NULL DEFAULT 0 AFTER `created_at`;
 
 ALTER TABLE `gallery` 
 ADD INDEX `ix_module` (`module` ASC);
+
+CREATE TABLE `services` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(1024) DEFAULT '',
+  `background_image` varchar(1024) DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `ix_name` (`name`(767))
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `services` (`name`) VALUES ('SURGERIES');
+INSERT INTO `services` (`name`) VALUES ('FACE, SKIN AND BODY');
+INSERT INTO `services` (`name`) VALUES ('LASERS AND MACHINES');
