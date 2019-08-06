@@ -1,6 +1,7 @@
 <?php
 
 define('SERVICE_DEFAULT_BACKGROUND', 10);
+define('SERVICE_BACKGROUND', 11);
 
 require 'config/database.php';
 require 'config/file.php';

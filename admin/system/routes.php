@@ -23,3 +23,5 @@ addRoute('set-service-name', 'backend/set-service-name.php', true, false);
 addRoute('delete-service', 'backend/delete-service.php', true, false);
 addRoute('change-service-default-background', 'backend/change-service-default-background.php', true, false);
 addRoute('get-service-default-background', 'backend/get-service-default-background.php', true, false);
+addRoute('change-service-background', 'backend/change-service-background.php', true, false);
+addRoute('reset-service-background', 'backend/reset-service-background.php', true, false);

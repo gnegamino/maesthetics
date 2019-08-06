@@ -58,7 +58,7 @@
                         <img src="/assets/images/sample-1.jpg" class="category-background-image">
                         <br>
                         <a href="#" id="categorybackgroundedit_1" class="edit_category_background">Change Background</a>
-                        <a href="#" id="categorybackgrounddelete_1" class="delete_category_background">Reset Background to Default</a>
+                        <a href="#" id="categorybackgrounddelete_1" class="reset_category_background">Reset Background to Default</a>
                         <br>
                         <br>
                         <br>
@@ -168,6 +168,7 @@
 </div>
 
 <input type="file" id="file-upload-default-background" accept="image/x-png,image/gif,image/jpeg">
+<input type="file" id="file-upload-background" accept="image/x-png,image/gif,image/jpeg">
 
 <script type="text/javascript">
     $(function(){
@@ -177,6 +178,7 @@
 
         var confirmType = 0;
         var DELETE_SERVICE = 0;
+        var RESET_BACKGROUND = 1;
 
         var id = 0;
 
@@ -246,6 +248,9 @@
                 case DELETE_SERVICE:
                     deleteSerive();
                     break;
+                case RESET_BACKGROUND:
+                    resetBackground();
+                    break;
             }
         });
 
@@ -258,7 +263,7 @@
             $("#default-background-modal").css("visibility", "hidden");
         });
 
-         $("#change-default-background-button").on("click", function(){
+        $("#change-default-background-button").on("click", function(){
             $("#file-upload-default-background").click();
         });
 
@@ -267,6 +272,22 @@
                 return;
             }
             changeDefaultBackground();
+        });
+
+        $(".edit_category_background").on("click", function(){
+            $("#file-upload-background").click();
+        });
+
+        $("#file-upload-background").on("change", function(){
+            if ($("#file-upload-background").val() == "") {
+                return;
+            }
+            changeBackground();
+        });
+
+        $(".reset_category_background").on("click", function(){
+            confirmType = RESET_BACKGROUND;
+            app.confirm("Are you sure do you want to reset to default background?");
         });
 
         function selectCategory(id)
@@ -400,6 +421,53 @@
                     }
                     app.loading(false);
                     $("#file-upload-default-background").val('');
+                }
+            });
+        }
+
+        function changeBackground() {
+            app.loading(true);
+            var fileData = $("#file-upload-background").prop("files")[0];
+            var formData = new FormData();
+            formData.append('file', fileData);
+
+            $.ajax({
+                url: "change-service-background",
+                type: "post",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $(".category-background-image").attr("src", data.path);
+                        app.alert("success", "Success!");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                    $("#file-upload-background").val('');
+                }
+            });
+        }
+
+        function resetBackground()
+        {
+            app.loading(true);
+            $.ajax({
+                url: "reset-service-background",
+                type: "post",
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $(".category-background-image").attr("src", data.path);
+                        app.alert("success", "Success!");
+                    } else {
+                        $(".category-background-image").attr("src", data.path);
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
                 }
             });
         }
