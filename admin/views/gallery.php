@@ -9,8 +9,8 @@
                         COUNT(C.`id`) + 1 AS `total`,
                         P.`path`
                     FROM `gallery` AS P
-                    LEFT JOIN `gallery` AS C ON C.`parent_id` = P.`id`
-                    WHERE P.`parent_id` = 0
+                    LEFT JOIN `gallery` AS C ON C.`parent_id` = P.`id` AND C.`module` = 0
+                    WHERE P.`parent_id` = 0 AND P.`module` = 0
                     GROUP BY P.`id`
                     ORDER BY P.`created_at`';
             $data = getData($query);

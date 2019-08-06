@@ -48,6 +48,11 @@
                     $("input").removeAttr("disabled");
                 }
             }
+
+            app.getId = function getId(element) {
+                var parts = $(element).attr("id").split('_');
+                return parts[parts.length - 1];
+            }
         });
     </script>
     <div id="loading">

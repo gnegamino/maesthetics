@@ -19,4 +19,7 @@ addRoute('save-item-description', 'backend/save-item-description.php', true, fal
 addRoute('delete-item', 'backend/delete-item.php', true, false);
 addRoute('delete-album', 'backend/delete-album.php', true, false);
 addRoute('new-service-category', 'backend/new-service-category.php', true, false);
-
+addRoute('set-service-name', 'backend/set-service-name.php', true, false);
+addRoute('delete-service', 'backend/delete-service.php', true, false);
+addRoute('change-service-default-background', 'backend/change-service-default-background.php', true, false);
+addRoute('get-service-default-background', 'backend/get-service-default-background.php', true, false);
