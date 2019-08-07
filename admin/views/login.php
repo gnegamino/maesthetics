@@ -28,6 +28,8 @@
 
 <script type="text/javascript">
     $(function() {
+        $("#password-input").focus();
+
         $("#login-button").on("click", function(){
             login();
         });
