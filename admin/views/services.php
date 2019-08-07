@@ -299,6 +299,7 @@
                 dataType: "json",
                 success: function(data){
                     if (data.message == "") {
+                        $(".category-background-image").attr("src", data.path);
                         $(".category-data").removeClass("category-data-selected");
                         $("#category_" + id).addClass("category-data-selected");
                         $("#category-data-title").html($("#category_" + id).html());
@@ -446,6 +447,7 @@
             var fileData = $("#file-upload-background").prop("files")[0];
             var formData = new FormData();
             formData.append('file', fileData);
+            formData.append('id', id);
 
             $.ajax({
                 url: "change-service-background",
@@ -474,6 +476,9 @@
             $.ajax({
                 url: "reset-service-background",
                 type: "post",
+                data: {
+                    id: id
+                },
                 dataType: "json",
                 success: function(data){
                     if (data.message == "") {
