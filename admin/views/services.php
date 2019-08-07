@@ -289,16 +289,32 @@
 
         function selectCategory(id)
         {
-            $(".category-data").removeClass("category-data-selected");
-            $("#category_" + id).addClass("category-data-selected");
-            $("#category-data-title").html($("#category_" + id).html());
-            $(".edit_category").attr("id", "categoryedit_" + id);
-            $(".delete_category").attr("id", "categorydelete_" + id);
-            $(".edit_category_background").attr("id", "categorybackgroundedit_" + id);
-            $(".delete_category_background").attr("id", "categorybackgrounddelete_" + id);
-            $("#featured-services").html("");
-            $("#other-services-table").html("");
-            $(".window-content").css("visibility", "visible");
+            app.loading(true);
+            $.ajax({
+                url: "select-service",
+                type: "post",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $(".category-data").removeClass("category-data-selected");
+                        $("#category_" + id).addClass("category-data-selected");
+                        $("#category-data-title").html($("#category_" + id).html());
+                        $(".edit_category").attr("id", "categoryedit_" + id);
+                        $(".delete_category").attr("id", "categorydelete_" + id);
+                        $(".edit_category_background").attr("id", "categorybackgroundedit_" + id);
+                        $(".delete_category_background").attr("id", "categorybackgrounddelete_" + id);
+                        $("#featured-services").html("");
+                        $("#other-services-table").html("");
+                        $(".window-content").css("visibility", "visible");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
         }
 
         function newCategory()

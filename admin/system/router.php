@@ -18,6 +18,16 @@ function addRoute($url, $target, $wantsJson = false, $validatePageSession = true
     ];
 }
 
+function addRoutePage($url, $target, $validatePageSession = true)
+{
+    addRoute($url, $target, false, $validatePageSession);
+}
+
+function addRouteJson($url, $target)
+{
+    addRoute($url, $target, true, false);
+}
+
 function routeRequest()
 {
     global $routes;
