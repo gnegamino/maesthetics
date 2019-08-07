@@ -55,6 +55,7 @@
                     } else {
                         app.alert("error", data.message);
                         app.loading(false);
+                        $("#password-input").focus();
                     }
                 }
             });
