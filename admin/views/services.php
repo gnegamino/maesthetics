@@ -95,7 +95,7 @@
                         </div>
                         <br>
                         <br>
-                        <span>Other Services</span>&nbsp;&nbsp;<a href="#">Add New</a>
+                        <span>All Services</span>&nbsp;&nbsp;<a href="#">Add New</a>
                         <hr>
                         <table id="other-services-table">
                             <?php
@@ -226,9 +226,6 @@
         });
 
         $("#category-table").on("click", ".category-data", function(){
-            $(".category-data").removeClass("category-data-selected");
-            $(this).addClass("category-data-selected");
-            $("#category-data-title").html($(this).html());
             id = app.getId($(this));
             selectCategory(id)
         });
@@ -292,6 +289,9 @@
 
         function selectCategory(id)
         {
+            $(".category-data").removeClass("category-data-selected");
+            $("#category_" + id).addClass("category-data-selected");
+            $("#category-data-title").html($("#category_" + id).html());
             $(".edit_category").attr("id", "categoryedit_" + id);
             $(".delete_category").attr("id", "categorydelete_" + id);
             $(".edit_category_background").attr("id", "categorybackgroundedit_" + id);
