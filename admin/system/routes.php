@@ -29,3 +29,4 @@ addRouteJson('get-service-default-background', 'backend/services/get-service-def
 addRouteJson('change-service-background', 'backend/services/change-service-background.php');
 addRouteJson('reset-service-background', 'backend/services/reset-service-background.php');
 addRouteJson('select-service', 'backend/services/select-service.php');
+addRouteJson('new-featured-service', 'backend/services/new-featured-service.php');

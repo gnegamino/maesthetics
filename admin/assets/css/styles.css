@@ -616,6 +616,10 @@ input[type="button"]:hover {
     margin-top: 5px;
 }
 
+.featured-services-item table{
+    width: 100%;
+}
+
 .featured-services-thumbnail {
     width: 100px;
 }

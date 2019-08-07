@@ -62,7 +62,7 @@
                         <br>
                         <br>
                         <br>
-                        <span>Featured Services</span>&nbsp;&nbsp;<a href="#">Add New</a>
+                        <span>Featured Services</span>&nbsp;&nbsp;<a href="#" id="new-featured-service">Add New</a>
                         <hr>
                         <div id="featured-services">
                             <?php
@@ -175,6 +175,7 @@
         var modalType = 0;
         var NEW_CATEGORY = 0;
         var EDIT_CATEGORY_NAME = 1;
+        var NEW_FEATURED_SERVICE = 2;
 
         var confirmType = 0;
         var DELETE_SERVICE = 0;
@@ -214,12 +215,27 @@
                 case EDIT_CATEGORY_NAME:
                     setCategory();
                     break;
+                case NEW_FEATURED_SERVICE:
+                    newFeaturedService();
+                    break;
                 default:
                     $("#text-input-modal").css("visibility", "hidden");
                     app.loading(true);
                     break;
             }
         }
+
+        $("#confirm-yes").on("click", function(){
+            $("#confirm").css("visibility", "hidden");
+            switch(confirmType) {
+                case DELETE_SERVICE:
+                    deleteSerive();
+                    break;
+                case RESET_BACKGROUND:
+                    resetBackground();
+                    break;
+            }
+        });
 
         $("#category-add").on("click", function(){
             showInputModal("Add new Category", NEW_CATEGORY);
@@ -237,18 +253,6 @@
         $(".delete_category").on("click", function(){
             confirmType = DELETE_SERVICE;
             app.confirm("Are you sure do you want to delete service category?");
-        });
-
-         $("#confirm-yes").on("click", function(){
-            $("#confirm").css("visibility", "hidden");
-            switch(confirmType) {
-                case DELETE_SERVICE:
-                    deleteSerive();
-                    break;
-                case RESET_BACKGROUND:
-                    resetBackground();
-                    break;
-            }
         });
 
         $("#change-default-background").on("click", function(){
@@ -287,6 +291,10 @@
             app.confirm("Are you sure do you want to reset to default background?");
         });
 
+        $("#new-featured-service").on("click", function(){
+            showInputModal("Enter Name/Title (Description and Photos will be added later)", NEW_FEATURED_SERVICE);
+        });
+
         function selectCategory(id)
         {
             app.loading(true);
@@ -299,7 +307,6 @@
                 dataType: "json",
                 success: function(data){
                     if (data.message == "") {
-                        $(".category-background-image").attr("src", data.path);
                         $(".category-data").removeClass("category-data-selected");
                         $("#category_" + id).addClass("category-data-selected");
                         $("#category-data-title").html($("#category_" + id).html());
@@ -309,6 +316,18 @@
                         $(".delete_category_background").attr("id", "categorybackgrounddelete_" + id);
                         $("#featured-services").html("");
                         $("#other-services-table").html("");
+
+                        $(".category-background-image").attr("src", data.path);
+                        $.each(data.featured_services, function (index, value) {
+                            console.log(value.title);
+                            renderFeaturedServiceItem(
+                                value.id,
+                                value.title,
+                                value.description,
+                                value.path
+                            );
+                        });
+
                         $(".window-content").css("visibility", "visible");
                     } else {
                         app.alert("error", data.message);
@@ -491,6 +510,61 @@
                     app.loading(false);
                 }
             });
+        }
+
+        function newFeaturedService()
+        {
+            var title = $("#modal-input-text").val();
+            app.loading(true);
+            $.ajax({
+                url: "new-featured-service",
+                type: "post",
+                data: {
+                    id: id,
+                    name: title
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $("#modal-input-text").val('');
+                        $("#text-input-modal").css("visibility", "hidden");
+                        app.alert("success", "Saved!");
+                        renderFeaturedServiceItem(
+                            data.id,
+                            title,
+                            "<i>No description has been set</i>",
+                            "/assets/images/client-logo.png"
+                        );
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
+
+        function renderFeaturedServiceItem(id, title, description, src)
+        {
+            $("#featured-services").append(
+            '<div class="featured-services-item">' +
+                '<table>' +
+                    '<tr>' +
+                        '<td valign="center" class="featured-services-thumbnail">' +
+                            '<img src="' + src + '" class="featured-services-thumbnail">' +
+                        '</td>' +
+                        '<td valign="top" style="padding: 5px;">' +
+                            '<span style="font-weight: bold">' + title + '</span>' +
+                            '<p>' + description + '</p>' +
+                        '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td colspan="2" align="right" class="featured-services-item-controls">' +
+                            '<a href="#">Edit</a>' +
+                            '<a href="#">Delete</a>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</div>');
         }
     });
 </script>
