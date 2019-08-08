@@ -1,13 +1,17 @@
 <?php
 
-$request = escapeString(['id' => $_POST['id'], 'name' => $_POST['name']]);
+$request = escapeString(['id' => $_POST['id'], 'name' => trim($_POST['name'])]);
 
 if (strlen(trim($request['name'])) < 1) {
     response(["message" => "Please input Title."]);
     return;
 }
 
-$data = getData(sprintf("SELECT `title` FROM `services_featured` WHERE `title` = '%s'", $request['name']));
+$data = getData(sprintf(
+    "SELECT `title` FROM `services_featured` WHERE `title` = '%s' AND `services_id` = %s",
+    $request['name'],
+    $request['id']
+));
 if (count($data) > 0) {
     response(["message" => "Title already exists!"]);
     return;

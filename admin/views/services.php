@@ -149,7 +149,7 @@
                 Service Default Background
             </div>
             <div class="pb-header-icon">
-                <img src="/assets/images/icons8-delete-16.png" id="close-gallery" title="Close">
+                <img src="/assets/images/icons8-delete-16.png" class="close-photo-browser" id="close-gallery" title="Close">
             </div>
         </div>
         <div class="pb-content">
@@ -162,6 +162,66 @@
         <div class="pb-footer">
             <div class="control-bar">
                 <input type="button" value="Change Background" id="change-default-background-button">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="photo-browser" style="visibility: hidden;">
+    <div id="photo-browser-container">
+        <div class="pb-header">
+            <div class="pb-header-title">
+                Featured Service
+            </div>
+            <div class="pb-header-icon">
+                <img src="/assets/images/icons8-delete-16.png" class="close-photo-browser" id="close-gallery-featured" title="Close">
+            </div>
+        </div>
+        <div class="pb-content">
+            <div id="thumbnails">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="thumbnail-small ' + selectedClass + '" id="select_' + id + '">
+                                <img src="/assets/images/client-logo.png">
+                            </td>
+                            <td style="width: 100%" id="thumbnail-small-spacer"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="preview-holder">
+                <div><img src="/assets/images/client-logo.png" id="gallery-preview"></div>
+            </div>
+            <div class="edit-caption">
+                <input type="text" id="featured-service-detail-name" style="width: 100%" placeholder="Name/Title">
+                <br>
+                <br>
+                <textarea rows="8" id="featured-service-detail-description" placeholder="Description" id="text-description"></textarea>
+            </div>
+        </div>
+        <div class="pb-footer">
+            <div class="control-bar">
+                <div class="control-item">
+                    <img src="/assets/images/icons8-screen-resolution-26.png" id="full-preview">
+                    <span>Full Preview</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-preview-pane-26.png" id="save-detail">
+                    <span>Set Current Photo as Thumbnail</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-remove-image-26.png" id="delete-single-item">
+                    <span>Remove Current Photo</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-add-image-26.png" id="add-detail">
+                    <span>Add Photo</span>
+                </div>
+                <div class="control-item">
+                    <img src="/assets/images/icons8-save-26.png" id="featured-service-detail-save">
+                    <span>Save</span>
+                </div>
             </div>
         </div>
     </div>
@@ -180,8 +240,10 @@
         var confirmType = 0;
         var DELETE_SERVICE = 0;
         var RESET_BACKGROUND = 1;
+        var DELETE_FEATURED_SERVICE = 2;
 
         var id = 0;
+        var featuredServicesId = 0;
 
         function showInputModal(title, type, content = '')
         {
@@ -233,6 +295,9 @@
                     break;
                 case RESET_BACKGROUND:
                     resetBackground();
+                    break;
+                case DELETE_FEATURED_SERVICE:
+                    deleteFeaturedService();
                     break;
             }
         });
@@ -295,6 +360,25 @@
             showInputModal("Enter Name/Title (Description and Photos will be added later)", NEW_FEATURED_SERVICE);
         });
 
+        $("#featured-services").on("click", ".featured-services-edit", function(){
+            featuredServicesId = app.getId($(this));
+            loadFeaturedServiceDetail();
+        });
+
+        $("#close-gallery-featured").on("click", function() {
+            $("#photo-browser").css("visibility", "hidden");
+        });
+        
+        $("#featured-services").on("click", ".featured-services-delete", function() {
+            confirmType = DELETE_FEATURED_SERVICE;
+            featuredServicesId = app.getId($(this));
+            app.confirm("Are you sure do you want to delete this featured service?");
+        });
+
+        $("#featured-service-detail-save").on("click", function() {
+            saveFeaturedServiceDetail();
+        });
+
         function selectCategory(id)
         {
             app.loading(true);
@@ -319,7 +403,6 @@
 
                         $(".category-background-image").attr("src", data.path);
                         $.each(data.featured_services, function (index, value) {
-                            console.log(value.title);
                             renderFeaturedServiceItem(
                                 value.id,
                                 value.title,
@@ -543,10 +626,69 @@
             });
         }
 
+        function loadFeaturedServiceDetail()
+        {
+            app.loading(true);
+            $.ajax({
+                url: "load-featured-service-detail",
+                type: "post",
+                data: {
+                    id: featuredServicesId,
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        $("#featured-service-detail-name").val(data.title);
+                        $("#featured-service-detail-description").val(data.description);
+                        $("#photo-browser").css("visibility", "visible");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
+
+        function saveFeaturedServiceDetail()
+        {
+            var name = $("#featured-service-detail-name").val();
+            var description = $("#featured-service-detail-description").val();
+
+            app.loading(true);
+            $.ajax({
+                url: "save-featured-service-detail",
+                type: "post",
+                data: {
+                    service: id,
+                    id: featuredServicesId,
+                    title: name,
+                    description: description
+                },
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Saved!");
+                        $("#featured-service-item_" + featuredServicesId + " span").html(name);
+                        if (description.trim() == "") {
+                            description = "<i>No description has been set</i>"
+                        }
+                        $("#featured-service-item_" + featuredServicesId + " p").html(description);
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                }
+            });
+        }
+
+        function deleteFeaturedService()
+        {
+        }
+
         function renderFeaturedServiceItem(id, title, description, src)
         {
             $("#featured-services").append(
-            '<div class="featured-services-item">' +
+            '<div class="featured-services-item" id="featured-service-item_' + id + '">' +
                 '<table>' +
                     '<tr>' +
                         '<td valign="center" class="featured-services-thumbnail">' +
@@ -559,8 +701,8 @@
                     '</tr>' +
                     '<tr>' +
                         '<td colspan="2" align="right" class="featured-services-item-controls">' +
-                            '<a href="#">Edit</a>' +
-                            '<a href="#">Delete</a>' +
+                            '<a href="#edit" id="featured-services-edit_' + id + '" class="featured-services-edit">Edit</a>' +
+                            '<a href="#delete" id="featured-services-delete_' + id + '" class="featured-services-delete">Delete</a>' +
                         '</td>' +
                     '</tr>' +
                 '</table>' +

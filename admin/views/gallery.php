@@ -48,7 +48,7 @@
                 Preview
             </div>
             <div class="pb-header-icon">
-                <img src="/assets/images/icons8-delete-16.png" id="close-gallery" title="Close">
+                <img src="/assets/images/icons8-delete-16.png" class="close-photo-browser" id="close-gallery" title="Close">
             </div>
         </div>
         <div class="pb-content">

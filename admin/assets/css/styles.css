@@ -390,13 +390,13 @@ input[type="button"]:hover {
     border-bottom: solid 3px #6aa0f7;
 }
 
-#close-gallery {
+.close-photo-browser {
     cursor: pointer;
     padding: 3px;
     border-radius: 3px;
 }
 
-#close-gallery:hover {
+.close-photo-browser:hover {
     background-color: #000;
 }
 
