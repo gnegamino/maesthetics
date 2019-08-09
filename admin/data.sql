@@ -21,25 +21,36 @@ CREATE TABLE `gallery` (
   `path` varchar(500) DEFAULT '',
   `description` varchar(1024) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
+  `module` tinyint(5) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `ix_path` (`path`),
-  KEY `ix_parent_id` (`parent_id`)
+  KEY `ix_parent_id` (`parent_id`),
+  KEY `ix_module` (`module`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-ALTER TABLE `gallery` 
-ADD COLUMN `module` TINYINT(5) NULL DEFAULT 0 AFTER `created_at`;
-
-ALTER TABLE `gallery` 
-ADD INDEX `ix_module` (`module` ASC);
 
 CREATE TABLE `services` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(1024) DEFAULT '',
-  `background_image` varchar(1024) DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `ix_name` (`name`(767))
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `services` (`name`) VALUES ('SURGERIES');
-INSERT INTO `services` (`name`) VALUES ('FACE, SKIN AND BODY');
-INSERT INTO `services` (`name`) VALUES ('LASERS AND MACHINES');
+CREATE TABLE `services_featured` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `services_id` bigint(20) DEFAULT '0',
+  `title` varchar(512) DEFAULT '',
+  `description` mediumtext,
+  PRIMARY KEY (`id`),
+  KEY `ix_services_id` (`services_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `services_others` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `services_id` bigint(20) DEFAULT NULL,
+  `parent_id` bigint(20) DEFAULT NULL,
+  `name` varchar(512) DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `ix_name` (`name`),
+  KEY `ix_parent_id` (`parent_id`),
+  KEY `ix_service_id` (`services_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
