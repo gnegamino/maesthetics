@@ -32,7 +32,11 @@ function dbConnect()
     $password = $dbConfig['password'];
     $database = $dbConfig['database'];
 
-    $connection = mysqli_connect($host, $user, $password, $database) or die("Database connection Error.");
+    $connection = @mysqli_connect($host, $user, $password, $database);
+
+    if (!$connection) {
+        die(response(["message" => "Oh no! Something went wrong! Please contact the developers."]));
+    }
 
     return $connection;
 }
