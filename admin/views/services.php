@@ -215,7 +215,7 @@
                     <span>Remove Current Photo</span>
                 </div>
                 <div class="control-item">
-                    <img src="/assets/images/icons8-add-image-26.png" id="add-detail">
+                    <img src="/assets/images/icons8-add-image-26.png" id="featured-services-detail-add-photo">
                     <span>Add Photo</span>
                 </div>
                 <div class="control-item">
@@ -229,6 +229,7 @@
 
 <input type="file" id="file-upload-default-background" accept="image/x-png,image/gif,image/jpeg">
 <input type="file" id="file-upload-background" accept="image/x-png,image/gif,image/jpeg">
+<input type="file" id="file-upload-featured-service" accept="image/x-png,image/gif,image/jpeg">
 
 <script type="text/javascript">
     $(function(){
@@ -377,6 +378,17 @@
 
         $("#featured-service-detail-save").on("click", function() {
             saveFeaturedServiceDetail();
+        });
+
+        $("#featured-services-detail-add-photo").on("click", function() {
+            $("#file-upload-featured-service").click();
+        });
+
+        $("#file-upload-featured-service").on("change", function(){
+            if ($("#file-upload-featured-service").val() == "") {
+                return;
+            }
+            addFeatureServicePhoto();
         });
 
         function selectCategory(id)
@@ -641,6 +653,9 @@
                         $("#featured-service-detail-name").val(data.title);
                         $("#featured-service-detail-description").val(data.description);
                         $("#photo-browser").css("visibility", "visible");
+
+
+
                     } else {
                         app.alert("error", data.message);
                     }
@@ -648,6 +663,20 @@
                 }
             });
         }
+
+        function renderFeaturedServicePhotos(data)
+        {
+            $.each(data, function (index, value) {
+                renderFeaturedServiceItem(
+                    value.id,
+                    value.title,
+                    value.description,
+                    value.path
+                );
+            });
+        }
+
+        
 
         function saveFeaturedServiceDetail()
         {
@@ -683,6 +712,34 @@
 
         function deleteFeaturedService()
         {
+        }
+
+        function addFeatureServicePhoto()
+        {
+            app.loading(true);
+            var fileData = $("#file-upload-featured-service").prop("files")[0];
+            var formData = new FormData();
+            formData.append('file', fileData);
+            formData.append('id', featuredServicesId);
+
+            $.ajax({
+                url: "featured-services-add-photo",
+                type: "post",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+                success: function(data){
+                    if (data.message == "") {
+                        app.alert("success", "Photo added");
+                    } else {
+                        app.alert("error", data.message);
+                    }
+                    app.loading(false);
+                    $("#file-upload-featured-service").val("");
+                }
+            });
         }
 
         function renderFeaturedServiceItem(id, title, description, src)
