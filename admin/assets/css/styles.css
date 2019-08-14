@@ -390,6 +390,10 @@ input[type="button"]:hover {
     border-bottom: solid 3px #6aa0f7;
 }
 
+.thumbnail-small-display {
+    border: solid 3px #6aa0f7;
+}
+
 .close-photo-browser {
     cursor: pointer;
     padding: 3px;

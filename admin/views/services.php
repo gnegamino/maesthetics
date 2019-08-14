@@ -179,12 +179,9 @@
         </div>
         <div class="pb-content">
             <div id="thumbnails">
-                <table>
+                <table id="gallery-table">
                     <tbody>
                         <tr>
-                            <td class="thumbnail-small ' + selectedClass + '" id="select_' + id + '">
-                                <img src="/assets/images/client-logo.png">
-                            </td>
                             <td style="width: 100%" id="thumbnail-small-spacer"></td>
                         </tr>
                     </tbody>
@@ -389,6 +386,23 @@
                 return;
             }
             addFeatureServicePhoto();
+        });
+
+        var featuredServiceGalleryId = 0;
+        $("#thumbnails").on("click", ".thumbnail-small", function() {
+            $(".thumbnail-small").removeClass("thumbnail-small-selected");
+            $(this).addClass("thumbnail-small-selected");
+            var path = $("#" + $(this).attr("id") + " img").attr("src");
+            featuredServiceGalleryId = app.getId($(this));
+            $("#gallery-preview").attr("src", path);
+        });
+
+        $("#full-preview").on("click", function(){
+            window.open($("#select_" + featuredServiceGalleryId + " img").attr("src"));
+        });
+
+        $("#delete-single-item").on("click", function(){
+            app.confirm("Are you sure do you want to delete this photo?");
         });
 
         function selectCategory(id)
@@ -653,9 +667,7 @@
                         $("#featured-service-detail-name").val(data.title);
                         $("#featured-service-detail-description").val(data.description);
                         $("#photo-browser").css("visibility", "visible");
-
-
-
+                        renderFeaturedServicePhotos(data.gallery);
                     } else {
                         app.alert("error", data.message);
                     }
@@ -666,17 +678,23 @@
 
         function renderFeaturedServicePhotos(data)
         {
+            $(".thumbnail-small").remove();
+            $("#gallery-preview").attr("src", "/assets/images/client-logo.png");
+            var selectedClass = "thumbnail-small-selected";
             $.each(data, function (index, value) {
-                renderFeaturedServiceItem(
-                    value.id,
-                    value.title,
-                    value.description,
-                    value.path
-                );
+                if (index > 0) {
+                    selectedClass = "";
+                } else {
+                    $("#gallery-preview").attr("src", value.path);
+                }
+                if (value.is_thumbnail == 1) {
+                    selectedClass += " thumbnail-small-display";
+                }
+                $('<td class="thumbnail-small ' + selectedClass + '" id="select_' + value.id + '">' +
+                    '<img src="' + value.path + '">' +
+                '</td>').insertBefore("#thumbnail-small-spacer");
             });
         }
-
-        
 
         function saveFeaturedServiceDetail()
         {
@@ -732,6 +750,9 @@
                 dataType: "json",
                 success: function(data){
                     if (data.message == "") {
+                        $('<td class="thumbnail-small" id="select_' + data.id + '">' +
+                            '<img src="' + data.path + '">' +
+                        '</td>').insertBefore("#thumbnail-small-spacer");
                         app.alert("success", "Photo added");
                     } else {
                         app.alert("error", data.message);
