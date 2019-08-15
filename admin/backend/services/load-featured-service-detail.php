@@ -26,10 +26,13 @@ $data = getData(sprintf(
     SERVICE_FEATURED_THUMBNAIL
 ));
 
+$hasPhoto = 1;
+
 if (count($data) < 1) {
     $data[0]['id'] = 0;
     $data[0]['path'] = '/assets/images/client-logo.png';
     $data[0]['is_thumbnail'] = 1;
+    $hasPhoto = 0;
 }
 
 response(
@@ -37,6 +40,7 @@ response(
         "message" => "",
         "title" => $title,
         "description" => $description,
-        "gallery" => $data
+        "gallery" => $data,
+        "has_photo" => $hasPhoto
     ]
 );
