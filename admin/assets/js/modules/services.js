@@ -8,6 +8,7 @@ $(function(){
     var DELETE_SERVICE = 0;
     var RESET_BACKGROUND = 1;
     var DELETE_FEATURED_SERVICE = 2;
+    var DELETE_FEATURED_PHOTO = 3;
 
     var id = 0;
     var featuredServicesId = 0;
@@ -69,6 +70,9 @@ $(function(){
                 break;
             case DELETE_FEATURED_SERVICE:
                 deleteFeaturedService();
+                break;
+            case DELETE_FEATURED_PHOTO:
+                deleteFeaturedServicePhoto();
                 break;
         }
     });
@@ -174,7 +178,10 @@ $(function(){
     });
 
     $("#delete-single-item").on("click", function(){
-        app.confirm("Are you sure do you want to delete this photo?");
+        if (featuredServiceGalleryId != 0) {
+            confirmType = DELETE_FEATURED_PHOTO;
+            app.confirm("Are you sure do you want to delete this photo?");
+        }
     });
 
     function selectCategory(id)
@@ -459,6 +466,7 @@ $(function(){
                 selectedClass = "";
             } else {
                 $("#gallery-preview").attr("src", value.path);
+                featuredServiceGalleryId = value.id;
             }
             if (value.is_thumbnail == 1) {
                 selectedClass += " thumbnail-small-display";
@@ -528,6 +536,8 @@ $(function(){
                         $(".thumbnail-small").remove();
                         $("#gallery-preview").attr("src", data.path);
                         selectedClass = " thumbnail-small-display";
+                        selectedFeaturedServiceHasImage = 1;
+                        $("#featured-service-item_" + featuredServicesId + " .featured-services-thumbnail").attr("src", data.path);
                     }
                     $('<td class="thumbnail-small ' + selectedClass + '" id="select_' + data.id + '">' +
                         '<img src="' + data.path + '">' +
@@ -538,6 +548,41 @@ $(function(){
                 }
                 app.loading(false);
                 $("#file-upload-featured-service").val("");
+            }
+        });
+    }
+
+    function deleteFeaturedServicePhoto()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "featured-services-delete-photo",
+            type: "post",
+            data: {
+                id: featuredServiceGalleryId
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#select_" + featuredServiceGalleryId).remove();
+                    featuredServiceGalleryId = data.thumbnail_id;
+                    $("#select_" + data.thumbnail_id).removeClass("thumbnail-small-display");
+                    $("#select_" + data.thumbnail_id).removeClass("thumbnail-small-selected");
+                    $("#select_" + data.thumbnail_id).addClass("thumbnail-small-display");
+                    $("#select_" + data.thumbnail_id).addClass("thumbnail-small-selected");
+                    $("#select_" + data.thumbnail_id + " img").attr("src", data.path);
+                    if (data.thumbnail_id == 0) {
+                          $('<td class="thumbnail-small thumbnail-small-display thumbnail-small-selected" id="0">' +
+                                '<img src="' + data.path + '">' +
+                            '</td>').insertBefore("#thumbnail-small-spacer");
+                    }
+                    $("#featured-service-item_" + featuredServicesId + " .featured-services-thumbnail").attr("src", data.path);
+                    $("#gallery-preview").attr("src", data.path);
+                    app.alert("success", "Deleted");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
             }
         });
     }
