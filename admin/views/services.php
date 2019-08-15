@@ -204,7 +204,7 @@
                     <span>Full Preview</span>
                 </div>
                 <div class="control-item">
-                    <img src="/assets/images/icons8-preview-pane-26.png" id="save-detail">
+                    <img src="/assets/images/icons8-preview-pane-26.png" id="featured-service-detail-set-thumbail">
                     <span>Set Current Photo as Thumbnail</span>
                 </div>
                 <div class="control-item">

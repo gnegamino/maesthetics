@@ -16,8 +16,9 @@ if ($data[0]['module'] == SERVICE_FEATURED_THUMBNAIL) {
     runQuery(sprintf("DELETE FROM `gallery` WHERE `id` = %s", $request['id']));
     unlink($fileConfig['storage_path'].$data[0]['path']);
     $data = getData(sprintf(
-        "SELECT `id`, `path` FROM `gallery` WHERE `parent_id` = %s ORDER BY `created_at` LIMIT 1",
-        $serviceId
+        "SELECT `id`, `path` FROM `gallery` WHERE `parent_id` = %s AND `module` = %s ORDER BY `created_at` LIMIT 1",
+        $serviceId,
+        SERVICE_FEATURED
     ));
     if (!isset($data[0]['id'])) {
         response([

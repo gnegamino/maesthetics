@@ -9,6 +9,7 @@ $(function(){
     var RESET_BACKGROUND = 1;
     var DELETE_FEATURED_SERVICE = 2;
     var DELETE_FEATURED_PHOTO = 3;
+    var THUMBNAIL_FEATURED_PHOTO = 4;
 
     var id = 0;
     var featuredServicesId = 0;
@@ -73,6 +74,9 @@ $(function(){
                 break;
             case DELETE_FEATURED_PHOTO:
                 deleteFeaturedServicePhoto();
+                break;
+            case THUMBNAIL_FEATURED_PHOTO:
+                thumbnailFeaturedServicePhoto();
                 break;
         }
     });
@@ -181,6 +185,13 @@ $(function(){
         if (featuredServiceGalleryId != 0) {
             confirmType = DELETE_FEATURED_PHOTO;
             app.confirm("Are you sure do you want to delete this photo?");
+        }
+    });
+
+    $("#featured-service-detail-set-thumbail").on("click", function(){
+        if (featuredServiceGalleryId != 0) {
+            confirmType = THUMBNAIL_FEATURED_PHOTO;
+            app.confirm("Are you sure do you want to set this photo as thumbnail?");
         }
     });
 
@@ -579,6 +590,31 @@ $(function(){
                     $("#featured-service-item_" + featuredServicesId + " .featured-services-thumbnail").attr("src", data.path);
                     $("#gallery-preview").attr("src", data.path);
                     app.alert("success", "Deleted");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
+    }
+
+    function thumbnailFeaturedServicePhoto()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "featured-services-thumbnail-photo",
+            type: "post",
+            data: {
+                id: featuredServiceGalleryId
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $(".thumbnail-small").removeClass("thumbnail-small-display");
+                    $("#select_" + featuredServiceGalleryId).addClass("thumbnail-small-display");
+                    var path = $("#select_" + featuredServiceGalleryId + " img").attr("src");
+                    $("#featured-service-item_" + featuredServicesId + " .featured-services-thumbnail").attr("src", path);
+                    app.alert("success", "Success");
                 } else {
                     app.alert("error", data.message);
                 }
