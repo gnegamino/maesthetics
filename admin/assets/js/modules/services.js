@@ -522,6 +522,24 @@ $(function(){
 
     function deleteFeaturedService()
     {
+        app.loading(true);
+        $.ajax({
+            url: "delete-featured-service",
+            type: "post",
+            data: {
+                id: featuredServicesId,
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#featured-service-item_" + featuredServicesId).remove();
+                    app.alert("success", "Deleted");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
     }
 
     function addFeatureServicePhoto()
