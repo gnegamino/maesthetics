@@ -36,4 +36,17 @@ $command = "
 
 $featured = getData(sprintf($command, $fileConfig['storage_path'], SERVICE_FEATURED_THUMBNAIL, $id));
 
-response(["message" => "", "path" => $path, "featured_services" => $featured]);
+
+$command = "
+    SELECT
+        P.`services_id`,
+        C.`id`,
+        P.`id` AS `parent_id`,
+        C.`name`
+    FROM `services_all` AS P
+    LEFT JOIN `services_all` AS C ON (C.`parent_id` = P.`id` OR C.`id` = P.`id`) AND C.`services_id` = %s
+    WHERE P.`parent_id` = 0 AND P.`services_id` = %s";
+
+$all = getData(sprintf($command, $id, $id));
+
+response(["message" => "", "path" => $path, "featured_services" => $featured, "all_services" => $all]);

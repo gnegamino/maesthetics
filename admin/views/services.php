@@ -95,25 +95,62 @@
                         </div>
                         <br>
                         <br>
-                        <span>All Services</span>&nbsp;&nbsp;<a href="#">Add New</a>
+                        <span>All Services</span>&nbsp;&nbsp;<a href="#addNewServiceAll" id="add-new-service-all">Add New</a>
                         <hr>
-                        <table id="other-services-table">
-                            <?php
-                                for ($i=0; $i < 10; $i++) { 
-                            ?>
-                            <tr>
-                                <td>
-                                    <span>Item 1</span>
-                                </td>
-                                <td align="right" class="other-services-control">
-                                    <a href="#">Edit</a>
-                                    <a href="#">Delete</a>
-                                </td>
-                            </tr>
-                            <?php
-                                }
-                            ?>
-                        </table>
+                        <div id="tree">
+                            <div class="tree-parent">
+                                <table>
+                                    <tr>
+                                        <td class="label">Parent 1</td>
+                                        <td align="right" class="tree-controls">
+                                            <a href="#">Add Sub Category</a>
+                                            &nbsp;
+                                            <a href="#">Edit</a>
+                                            &nbsp;
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tree-child">
+                                <table>
+                                    <tr>
+                                        <td class="label">Child 1</td>
+                                        <td align="right" class="tree-controls">
+                                            <a href="#">Edit</a>
+                                            &nbsp;
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tree-child">
+                                <table>
+                                    <tr>
+                                        <td class="label">Parent 1</td>
+                                        <td align="right" class="tree-controls">
+                                            <a href="#">Edit</a>
+                                            &nbsp;
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tree-parent">
+                                <table>
+                                    <tr>
+                                        <td class="label">Parent 1</td>
+                                        <td align="right" class="tree-controls">
+                                            <a href="#">Add Sub Category</a>
+                                            &nbsp;
+                                            <a href="#">Edit</a>
+                                            &nbsp;
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </td>

@@ -3,6 +3,8 @@ $(function(){
     var NEW_CATEGORY = 0;
     var EDIT_CATEGORY_NAME = 1;
     var NEW_FEATURED_SERVICE = 2;
+    var NEW_ALL_SERVICE = 3;
+    var NEW_ALL_SERVICE_SUB = 4;
 
     var confirmType = 0;
     var DELETE_SERVICE = 0;
@@ -13,8 +15,8 @@ $(function(){
 
     var id = 0;
     var featuredServicesId = 0;
-
     var featuredServiceGalleryId = 0;
+    var allServiceId = 0;
 
     var selectedFeaturedServiceHasImage = 0;
 
@@ -52,6 +54,12 @@ $(function(){
                 break;
             case NEW_FEATURED_SERVICE:
                 newFeaturedService();
+                break;
+            case NEW_ALL_SERVICE:
+                newServiceAll();
+                break;
+            case NEW_ALL_SERVICE_SUB:
+                newServiceAllSub();
                 break;
             default:
                 $("#text-input-modal").css("visibility", "hidden");
@@ -195,6 +203,15 @@ $(function(){
         }
     });
 
+    $("#add-new-service-all").on("click", function(){
+        showInputModal("Add Service - All", NEW_ALL_SERVICE);
+    });
+
+    $("#tree").on("click", ".add-sub-node", function() {
+        allServiceId = app.getId($(this));
+        showInputModal("Add Sub Category", NEW_ALL_SERVICE_SUB);
+    });
+
     function selectCategory(id)
     {
         app.loading(true);
@@ -215,7 +232,7 @@ $(function(){
                     $(".edit_category_background").attr("id", "categorybackgroundedit_" + id);
                     $(".delete_category_background").attr("id", "categorybackgrounddelete_" + id);
                     $("#featured-services").html("");
-                    $("#other-services-table").html("");
+                    $("#tree").html("");
 
                     $(".category-background-image").attr("src", data.path);
                     $.each(data.featured_services, function (index, value) {
@@ -225,6 +242,10 @@ $(function(){
                             value.description,
                             value.path
                         );
+                    });
+
+                    $.each(data.all_services, function (index, value) {
+                        renderTreeNode(value.services_id, value.id, value.parent_id, value.name);
                     });
 
                     $(".window-content").css("visibility", "visible");
@@ -641,6 +662,56 @@ $(function(){
         });
     }
 
+    function newServiceAll()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "add-new-service-all",
+            type: "post",
+            data: {
+                id: id,
+                name: $("#modal-input-text").val()
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#text-input-modal").css("visibility", "hidden");
+                    renderAddParentNode(data.id, $("#modal-input-text").val());
+                    $("#modal-input-text").val("");
+                    app.alert("success", "Success");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
+    }
+
+    function newServiceAllSub()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "add-new-sub-service-all",
+            type: "post",
+            data: {
+                id: allServiceId,
+                name: $("#modal-input-text").val()
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#text-input-modal").css("visibility", "hidden");
+                    renderInsertChildNode(data.id, $("#modal-input-text").val(), allServiceId);
+                    $("#modal-input-text").val("");
+                    app.alert("success", "Success");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
+    }
+
     function renderFeaturedServiceItem(id, title, description, src)
     {
         $("#featured-services").append(
@@ -663,5 +734,66 @@ $(function(){
                 '</tr>' +
             '</table>' +
         '</div>');
+    }
+
+    function renderTreeNode(servicesId, id, parentId, name)
+    {
+        var isParent = id == parentId;
+
+        if (isParent) {
+            renderAddParentNode(id, name);
+        } else {
+            renderAddChildNode(id, name, parentId)
+        }
+    }
+
+    function renderAddParentNode(id, name)
+    {
+        $("#tree").append(
+            '<div class="tree-parent parent_of_' + id + '" id="tree_' + id + '">' +
+                '<table>' +
+                    '<tr>' +
+                        '<td class="label" id="tree_label_' + id + '">' + name + '</td>' +
+                        '<td align="right" class="tree-controls">' +
+                            '<a href="#addSub" class="add-sub-node" id="add_sub_node_' + id + '">Add Sub Category</a>&nbsp;' +
+                            '<a href="#edit" class="edit-node" id="edit_node_' + id + '">Edit</a>&nbsp;' +
+                            '<a href="#delete" class="delete-node" id="delete_node_' + id + '">Delete</a>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</div>'
+        );
+    }
+
+    function renderAddChildNode(id, name, parentId)
+    {
+        $("#tree").append(
+            '<div class="tree-child parent_of_' + parentId + '" id="tree_' + id + '">' +
+                '<table>' +
+                    '<tr>' +
+                        '<td class="label"  id="tree_label_' + id + '">' + name + '</td>' +
+                        '<td align="right" class="tree-controls">' +
+                            '<a href="#edit" class="edit-node" id="edit_node_' + id + '">Edit</a>&nbsp;' +
+                            '<a href="#delete" class="delete-node" id="delete_node_' + id + '">Delete</a>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</div>'
+        );
+    }
+
+    function renderInsertChildNode(id, name, parentId)
+    {
+        $('<div class="tree-child parent_of_' + parentId + '" id="tree_' + id + '">' +
+                '<table>' +
+                    '<tr>' +
+                        '<td class="label"  id="tree_label_' + id + '">' + name + '</td>' +
+                        '<td align="right" class="tree-controls">' +
+                            '<a href="#edit" class="edit-node" id="edit_node_' + id + '">Edit</a>&nbsp;' +
+                            '<a href="#delete" class="delete-node" id="delete_node_' + id + '">Delete</a>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</div>').insertAfter(".parent_of_" + parentId + ":last");
     }
 });

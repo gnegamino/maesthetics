@@ -36,3 +36,5 @@ addRouteJson('featured-services-add-photo', 'backend/services/featured-services-
 addRouteJson('featured-services-delete-photo', 'backend/services/featured-services-delete-photo.php');
 addRouteJson('featured-services-thumbnail-photo', 'backend/services/featured-services-thumbnail-photo.php');
 addRouteJson('delete-featured-service', 'backend/services/delete-featured-service.php');
+addRouteJson('add-new-service-all', 'backend/services/add-new-service-all.php');
+addRouteJson('add-new-sub-service-all', 'backend/services/add-new-sub-service-all.php');

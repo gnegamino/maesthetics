@@ -648,3 +648,35 @@ input[type="button"]:hover {
     
     font-weight: bold;
 }
+
+.tree-controls {
+    width: 250px;
+}
+
+.tree-parent {
+    margin-top: 7px;
+    width: 100%;
+    padding: 3px;
+}
+
+.tree-parent table {
+    width: 100%;
+}
+
+.tree-parent .label {
+    font-weight: bold;
+}
+
+.tree-child {
+    width: 100%;
+    padding: 3px;
+}
+
+.tree-child table {
+    width: 100%;
+    padding-left: 30px;
+}
+
+#tree div:hover {
+    background-color: #e8e8e8;
+}
