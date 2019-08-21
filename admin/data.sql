@@ -44,7 +44,7 @@ CREATE TABLE `services_featured` (
   KEY `ix_services_id` (`services_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `services_others` (
+CREATE TABLE `services_all` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `services_id` bigint(20) DEFAULT NULL,
   `parent_id` bigint(20) DEFAULT NULL,
