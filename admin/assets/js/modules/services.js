@@ -5,6 +5,7 @@ $(function(){
     var NEW_FEATURED_SERVICE = 2;
     var NEW_ALL_SERVICE = 3;
     var NEW_ALL_SERVICE_SUB = 4;
+    var EDIT_ALL_SERVICE_NODE = 5;
 
     var confirmType = 0;
     var DELETE_SERVICE = 0;
@@ -12,6 +13,8 @@ $(function(){
     var DELETE_FEATURED_SERVICE = 2;
     var DELETE_FEATURED_PHOTO = 3;
     var THUMBNAIL_FEATURED_PHOTO = 4;
+    var DELETE_ALL_SERVICE = 5;
+    var DELETE_ALL_SERVICE_SUB = 6;
 
     var id = 0;
     var featuredServicesId = 0;
@@ -61,6 +64,9 @@ $(function(){
             case NEW_ALL_SERVICE_SUB:
                 newServiceAllSub();
                 break;
+            case EDIT_ALL_SERVICE_NODE:
+                editAllServiceNode();
+                break;
             default:
                 $("#text-input-modal").css("visibility", "hidden");
                 app.loading(true);
@@ -85,6 +91,12 @@ $(function(){
                 break;
             case THUMBNAIL_FEATURED_PHOTO:
                 thumbnailFeaturedServicePhoto();
+                break;
+            case DELETE_ALL_SERVICE:
+                deleteAllServiceItem();
+                break;
+            case DELETE_ALL_SERVICE_SUB:
+                deleteAllServiceSubItem();
                 break;
         }
     });
@@ -210,6 +222,23 @@ $(function(){
     $("#tree").on("click", ".add-sub-node", function() {
         allServiceId = app.getId($(this));
         showInputModal("Add Sub Category", NEW_ALL_SERVICE_SUB);
+    });
+
+    $("#tree").on("click", ".edit-node", function() {
+        allServiceId = app.getId($(this));
+        showInputModal("Edit Service", EDIT_ALL_SERVICE_NODE, $("#tree_label_" + allServiceId).html());
+    });
+
+    $("#tree").on("click", ".delete-node", function() {
+        allServiceId = app.getId($(this));
+        confirmType = DELETE_ALL_SERVICE;
+        app.confirm("Are you sure do you want to this item? All sub categories will also be deleted.");
+    });
+
+    $("#tree").on("click", ".delete-node-child", function() {
+        allServiceId = app.getId($(this));
+        confirmType = DELETE_ALL_SERVICE_SUB;
+        app.confirm("Are you sure do you want to this item?");
     });
 
     function selectCategory(id)
@@ -712,6 +741,75 @@ $(function(){
         });
     }
 
+    function editAllServiceNode()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "edit-service-all",
+            type: "post",
+            data: {
+                id: allServiceId,
+                name: $("#modal-input-text").val()
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#tree_label_" + allServiceId).html($("#modal-input-text").val());
+                    $("#text-input-modal").css("visibility", "hidden");
+                    $("#modal-input-text").val("");
+                    app.alert("success", "Success");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
+    }
+
+    function deleteAllServiceItem()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "delete-service-all",
+            type: "post",
+            data: {
+                id: allServiceId,
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $(".parent_of_" + allServiceId).remove();
+                    app.alert("success", "Success");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
+    }
+
+    function deleteAllServiceSubItem()
+    {
+        app.loading(true);
+        $.ajax({
+            url: "delete-service-all-sub",
+            type: "post",
+            data: {
+                id: allServiceId,
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.message == "") {
+                    $("#tree_" + allServiceId).remove();
+                    app.alert("success", "Success");
+                } else {
+                    app.alert("error", data.message);
+                }
+                app.loading(false);
+            }
+        });
+    }
+
     function renderFeaturedServiceItem(id, title, description, src)
     {
         $("#featured-services").append(
@@ -774,7 +872,7 @@ $(function(){
                         '<td class="label"  id="tree_label_' + id + '">' + name + '</td>' +
                         '<td align="right" class="tree-controls">' +
                             '<a href="#edit" class="edit-node" id="edit_node_' + id + '">Edit</a>&nbsp;' +
-                            '<a href="#delete" class="delete-node" id="delete_node_' + id + '">Delete</a>' +
+                            '<a href="#delete" class="delete-node-child" id="delete_node_' + id + '">Delete</a>' +
                         '</td>' +
                     '</tr>' +
                 '</table>' +
@@ -790,7 +888,7 @@ $(function(){
                         '<td class="label"  id="tree_label_' + id + '">' + name + '</td>' +
                         '<td align="right" class="tree-controls">' +
                             '<a href="#edit" class="edit-node" id="edit_node_' + id + '">Edit</a>&nbsp;' +
-                            '<a href="#delete" class="delete-node" id="delete_node_' + id + '">Delete</a>' +
+                            '<a href="#delete" class="delete-node-child" id="delete_node_' + id + '">Delete</a>' +
                         '</td>' +
                     '</tr>' +
                 '</table>' +
